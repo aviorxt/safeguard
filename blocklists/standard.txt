@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard Standard
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 333019 unique domains
+! Modified aggregation of reviewed upstream lists; 333026 unique domains
 ! Expires: 1 day
 ||0-0.fr^
 ||0-02.net^
@@ -16370,6 +16370,7 @@
 ||ads.phunuvagiadinh.vn^
 ||ads.pinger.com^
 ||ads.pinger.com.cdn.cloudflare.net^
+||ads.pinterest.com^
 ||ads.planet.nl^
 ||ads.planetamd64.com^
 ||ads.planetwin365affiliate.com^
@@ -17265,6 +17266,7 @@
 ||adservice.aliexpress.com^
 ||adservice.com^
 ||adservice.dk^
+||adservice.google.com^
 ||adservice.hani.co.kr^
 ||adservice.hepsiburada.com^
 ||adservice.sbs.co.kr^
@@ -36194,6 +36196,7 @@
 ||appmetrica.mdigital.ru^
 ||appmetrica.sovcombank.ru^
 ||appmetrica.yandex.net^
+||appmetrica.yandex.ru^
 ||appmibio.uni-goettingen.de^
 ||appmminfoscdcterritoires.durablesites.com^
 ||appmobile.cn^
@@ -91157,6 +91160,7 @@
 ||doubleclick.de^
 ||doubleclick.host^
 ||doubleclick.ne.jp^
+||doubleclick.net^
 ||doubleclick.uk.net^
 ||doubleclickbygoogle.com^
 ||doubledelivery.xyz^
@@ -123941,6 +123945,7 @@
 ||googleads.googleapis.com^
 ||googleadsegitim.com^
 ||googleadservices-cn.com^
+||googleadservices.com^
 ||googleadsserving.cn^
 ||googleailesi.com^
 ||googleanalytics.com^
@@ -180983,6 +180988,7 @@
 ||metrika.myseldon.com^
 ||metrika.traff.space^
 ||metrika.yandex.com.tr^
+||metrika.yandex.ru^
 ||metrilo.com^
 ||metritisooes.info^
 ||metrix.behtarino.com^
@@ -244885,6 +244891,7 @@
 ||scoreaisle.com^
 ||scoreanattorney.com^
 ||scoreboard-live.com^
+||scorecardresearch.com^
 ||scorecardrewards-survey.com^
 ||scoredcasino-fr.fr^
 ||scoredcasino.fr^

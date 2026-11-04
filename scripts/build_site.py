@@ -32,6 +32,11 @@ def validate(root=ROOT):
     for source in report['sources']:
         if hashlib.sha256((root/f"sources/{source['id']}.txt").read_bytes()).hexdigest()!=source['sha256']:
             raise ValueError('Source checksum mismatch: '+source['id'])
+    for rule_id,entry in report.get('scoped_overrides',{}).items():
+        if rule_id not in {'ads-trackers','adult'} or entry['path']!=f'rules/{rule_id}.txt':
+            raise ValueError('Unexpected scoped override path')
+        if hashlib.sha256((root/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
+            raise ValueError('Scoped override checksum mismatch: '+rule_id)
     return report
 
 def build():
@@ -58,6 +63,7 @@ def build():
         html.write_text(text,encoding='utf-8',newline='\n')
     shutil.copytree(ROOT/'blocklists',dist/'blocklists')
     shutil.copytree(ROOT/'sources',dist/'sources')
+    shutil.copytree(ROOT/'rules',dist/'rules')
     shutil.copytree(ROOT/'licenses',dist/'licenses')
     for name in ('LICENSE','NOTICE','sources.json','catalog.json'):
         shutil.copyfile(ROOT/name,dist/name)
