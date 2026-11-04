@@ -54,7 +54,13 @@ async function loadStatus() {
     if(!response.ok) throw new Error('Report unavailable');
     const report=await response.json();
     const contributions=[...(report.community||[])].sort((a,b)=>Date.parse(b.accepted_utc)-Date.parse(a.accepted_utc));
-    if(contributions.length) $('community-credit').textContent='Last community update by @'+contributions[0].username+' · View contributor credits ↗';
+    if(contributions.length) {
+      const username=contributions[0].username;
+      $('community-credit').textContent='Last community update by @'+username+' · View contributor credits ↗';
+      const avatar=document.createElement('img');avatar.className='contributor-avatar';avatar.src='https://github.com/'+encodeURIComponent(username)+'.png?size=64';
+      avatar.alt='';avatar.width=32;avatar.height=32;avatar.loading='lazy';avatar.decoding='async';avatar.referrerPolicy='no-referrer';
+      avatar.addEventListener('error',()=>{avatar.hidden=true;});$('community-credit').prepend(avatar);
+    }
     categoryReport=report.profiles;
     const catalogResponse=await fetch('/catalog.json',{cache:'no-store'});
     if(!catalogResponse.ok) throw new Error('Category catalog unavailable');
