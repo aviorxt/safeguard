@@ -10,11 +10,13 @@ permissions:
   contents: write
   pull-requests: write
   actions: write
+  statuses: write
 concurrency:
   group: safeguard-publish
   cancel-in-progress: false
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
