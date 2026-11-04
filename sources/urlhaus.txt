@@ -1,5 +1,5 @@
 # Title: Malicious Hosts Blocklist
-# Updated: 2026-11-04T00:10:05Z
+# Updated: 2026-11-04T12:08:52Z
 # Expires: 12 hours (update frequency)
 # Homepage: https://gitlab.com/malware-filter/urlhaus-filter
 # License: https://gitlab.com/malware-filter/urlhaus-filter#license
@@ -14,6 +14,7 @@
 0.0.0.0 10.185.202.64.host.secureserver.net
 0.0.0.0 123.ywxww.net
 0.0.0.0 132.red-81-42-249.staticip.rima-tde.net
+0.0.0.0 14-0-204-188.static.pccw-hkt.com
 0.0.0.0 156.233.235.86.nip.io
 0.0.0.0 1717.1000uc.com
 0.0.0.0 172-104-49-49.ip.linodeusercontent.com
@@ -320,7 +321,6 @@
 0.0.0.0 cdw.omsules.life
 0.0.0.0 celebratingseniors.net
 0.0.0.0 centrodolce.screenconnect.com
-0.0.0.0 cepde.org
 0.0.0.0 ceramicasaosebastiao.com.br
 0.0.0.0 cfs10.blog.daum.net
 0.0.0.0 cfs13.tistory.com
@@ -379,7 +379,6 @@
 0.0.0.0 cold5.gofile.io
 0.0.0.0 colibrik.com
 0.0.0.0 compuserviceonline.com.br
-0.0.0.0 comumvidros.com.br
 0.0.0.0 configprovider.short.gy
 0.0.0.0 connectmagazineads.com
 0.0.0.0 contididit.conti.pk
@@ -402,6 +401,7 @@
 0.0.0.0 crazywickedaddiction.com
 0.0.0.0 creativit.fr
 0.0.0.0 crm.dline.com.tr
+0.0.0.0 crm.lanhsin.eu
 0.0.0.0 croco.cx
 0.0.0.0 crojam.com
 0.0.0.0 cryptomeshforge10.lol
@@ -414,6 +414,7 @@
 0.0.0.0 csgroup.host
 0.0.0.0 cta.edu.pe
 0.0.0.0 cu.srijanajha.com.np
+0.0.0.0 cube-60.com
 0.0.0.0 curlservice.com
 0.0.0.0 cutting-edge.in
 0.0.0.0 cyberleak.top
@@ -485,6 +486,7 @@
 0.0.0.0 db.foodbook.pk
 0.0.0.0 dc84406c-gei55kj16cf-d1fa3d9fc.fablegrid.cc
 0.0.0.0 dcfpp.com
+0.0.0.0 dcrun.co.uk
 0.0.0.0 dcwblida.dz
 0.0.0.0 dd4c2c-12bc35233b71.reunionstream.cc
 0.0.0.0 deagroup-ks.com
@@ -503,6 +505,7 @@
 0.0.0.0 demo.moolsap.com
 0.0.0.0 denizcerceve.com
 0.0.0.0 dermaclinicmd.com
+0.0.0.0 detek.com.mx
 0.0.0.0 dev7.devmicro7.workers.dev
 0.0.0.0 devs.kantales.life
 0.0.0.0 dezcom.com
@@ -592,7 +595,6 @@
 0.0.0.0 drastok.xyz
 0.0.0.0 dreambot.cc
 0.0.0.0 dreambot.info
-0.0.0.0 dreamwatchevent.com
 0.0.0.0 drgenov.com
 0.0.0.0 dropboxb3.duckdns.org
 0.0.0.0 dsfojsofsdofijdsofjisdofjisdofijsdfijsdiojsdo.com
@@ -606,6 +608,7 @@
 0.0.0.0 dulkir-mod.com
 0.0.0.0 dulkirmod.st
 0.0.0.0 dulkirsmod.net
+0.0.0.0 duller.qpon
 0.0.0.0 duo-strengthening-essex-ian.trycloudflare.com
 0.0.0.0 durakutihs.com
 0.0.0.0 dwh.multidex.life
@@ -615,6 +618,7 @@
 0.0.0.0 e76d78a-ab4760-db52-652cd4fy-u43jda.tidepull.cc
 0.0.0.0 easyaround.st
 0.0.0.0 easybillingsolutions.xyz
+0.0.0.0 easyfiles.cc
 0.0.0.0 eatcullt.com
 0.0.0.0 eccmice.com
 0.0.0.0 effectively32.infinityfree.me
@@ -629,6 +633,7 @@
 0.0.0.0 elrneba.com
 0.0.0.0 elxxvvx.xyz
 0.0.0.0 embalageral.hospedagemdesites.ws
+0.0.0.0 embedone.com
 0.0.0.0 emeraldstonegc.blog
 0.0.0.0 emphasis-friday-even-administrator.trycloudflare.com
 0.0.0.0 empty-violet-63e1.maskify.workers.dev
@@ -683,6 +688,7 @@
 0.0.0.0 femade.co.uk
 0.0.0.0 ferhfw.oss-cn-hongkong.aliyuncs.com
 0.0.0.0 fern-plume.com
+0.0.0.0 fern46.com
 0.0.0.0 ferncurrent14.com
 0.0.0.0 fibernetperu.pe
 0.0.0.0 ficus.in
@@ -822,7 +828,6 @@
 0.0.0.0 groverudder12.com
 0.0.0.0 growgreenhorizons.com
 0.0.0.0 grupocaprem.com
-0.0.0.0 grupohenry1.com
 0.0.0.0 grupomcperu.com
 0.0.0.0 gutando.com
 0.0.0.0 haeum.nfile.net
@@ -834,13 +839,13 @@
 0.0.0.0 happyduxkinglinog.duckdns.org
 0.0.0.0 hardly-signatures-loc-surf.trycloudflare.com
 0.0.0.0 hardwood-studio-obviously-briefing.trycloudflare.com
+0.0.0.0 hartford-consult.org
 0.0.0.0 hasalltalent.com
 0.0.0.0 hashedsolver.icu
 0.0.0.0 hasil-gov-my.shop
 0.0.0.0 hasilgov-my.my.id
 0.0.0.0 hasilgov-my.shop
 0.0.0.0 haven-post.com
-0.0.0.0 heajost.online
 0.0.0.0 helnivo.vu
 0.0.0.0 helpdesk09-26.com
 0.0.0.0 hf-offshores.cc
@@ -856,6 +861,7 @@
 0.0.0.0 hjha.ao
 0.0.0.0 hll912-1484535448.cos.ap-hongkong.myqcloud.com
 0.0.0.0 hnjgdl.geps.glodon.com
+0.0.0.0 hobobot.net
 0.0.0.0 horion-static.pages.dev
 0.0.0.0 host-195-103-203-106.business.telecomitalia.it
 0.0.0.0 host-95-230-215-65.business.telecomitalia.it
@@ -902,7 +908,6 @@
 0.0.0.0 importantdocumentscopys.s3.us-east-2.amazonaws.com
 0.0.0.0 infocardphoto.info
 0.0.0.0 injurylawsocal.com
-0.0.0.0 intelli-sys.co.zw
 0.0.0.0 intelligradeeducation.vicentecisnerospub.com
 0.0.0.0 internetlouisiana.com
 0.0.0.0 internetmissouri.com
@@ -921,7 +926,6 @@
 0.0.0.0 jam.cleverpondky.com
 0.0.0.0 java.omsules.life
 0.0.0.0 javb.omsules.life
-0.0.0.0 jawaratekno.com
 0.0.0.0 jd-forever.com
 0.0.0.0 jenniferloeffler.com
 0.0.0.0 jessespridecharters.com
@@ -1000,6 +1004,7 @@
 0.0.0.0 lebang.si
 0.0.0.0 lehmann-autohaus.de
 0.0.0.0 leindisncieamrocea-1341831283.cos.sa-saopaulo.myqcloud.com
+0.0.0.0 leisureconnecting.com
 0.0.0.0 lepafonso.bz
 0.0.0.0 letsupconfig.sbs
 0.0.0.0 liikepalvelu.com
@@ -1108,6 +1113,7 @@
 0.0.0.0 minnarasanen.com
 0.0.0.0 minpop.com
 0.0.0.0 miriamgualda.com.br
+0.0.0.0 misamasupply.com
 0.0.0.0 mitraperijinan.co.id
 0.0.0.0 mitreart.com
 0.0.0.0 mixierealty.com
@@ -1186,6 +1192,7 @@
 0.0.0.0 nova-client.com
 0.0.0.0 nova-client.st
 0.0.0.0 novagames.cc
+0.0.0.0 novasms.com.mx
 0.0.0.0 novrixs.net
 0.0.0.0 noxxclient.org
 0.0.0.0 ns.devmicro7.workers.dev
@@ -1224,10 +1231,12 @@
 0.0.0.0 oopz.app
 0.0.0.0 oopz.name
 0.0.0.0 opalcraftsmp.com
+0.0.0.0 opensolutions.sbs
 0.0.0.0 oper.atlas101.us.kg
 0.0.0.0 opsec-mod.com
 0.0.0.0 opsecmod.st
 0.0.0.0 oregano.brightleafrv.com
+0.0.0.0 orexports.com
 0.0.0.0 orienttaxtile.com
 0.0.0.0 origin.nemoclawcloud.com
 0.0.0.0 oringo-client.com
@@ -1247,6 +1256,7 @@
 0.0.0.0 p3.zbjimg.com
 0.0.0.0 paccbet.pages.dev
 0.0.0.0 packmate.in
+0.0.0.0 palharesinformatica.com.br
 0.0.0.0 panamgroup.com.pe
 0.0.0.0 pancar.lol
 0.0.0.0 panel.mkk9991999912.observer
@@ -1324,8 +1334,10 @@
 0.0.0.0 proishestviyagoodru.vercel.app
 0.0.0.0 projetodegente.com
 0.0.0.0 promnet.jp
+0.0.0.0 promotedial.com
 0.0.0.0 ps-ps.cc
 0.0.0.0 pub-00d54ae289e84e93a3c8640fb2301c5f.r2.dev
+0.0.0.0 pub-00f9bb8acaec41e6ba904da7d4d8e89a.r2.dev
 0.0.0.0 pub-0216fa08b2b94e129cb9e002cf7cb1f4.r2.dev
 0.0.0.0 pub-0462440f54f44b9fb3474df61e32d6ba.r2.dev
 0.0.0.0 pub-0478b308b8cf46709a73d0eed5afd633.r2.dev
@@ -1374,6 +1386,7 @@
 0.0.0.0 pub-b0f74488c3df4fc5a193cc220a0f3bf1.r2.dev
 0.0.0.0 pub-b98155d31c7b46ecbdf79eab5e37bae3.r2.dev
 0.0.0.0 pub-bbbdebc2599c4d74b04c5d53e439f7a7.r2.dev
+0.0.0.0 pub-bfc34934a91a4893817098f73415917a.r2.dev
 0.0.0.0 pub-c1aae4eecd22436e835dc3a91e470062.r2.dev
 0.0.0.0 pub-c3947f4f3f2947e680cbf4cd2a18055d.r2.dev
 0.0.0.0 pub-c6d653e19fd545129fdfd7d6f8cd8b17.r2.dev
@@ -1613,7 +1626,6 @@
 0.0.0.0 static.ilclock.com
 0.0.0.0 static.topxgun.com
 0.0.0.0 static.youdm.cn
-0.0.0.0 static.zongheng.com
 0.0.0.0 stdown.dinju.com
 0.0.0.0 steelstanleystaystrong.top
 0.0.0.0 stellaspicy.org
@@ -1638,7 +1650,6 @@
 0.0.0.0 svirtual.sanviatorperu.edu.pe
 0.0.0.0 swanrecovery.com
 0.0.0.0 swatting.wiki
-0.0.0.0 sweet-snowflake-8a7e.uploadesclintesss.workers.dev
 0.0.0.0 swervimgbackj.top
 0.0.0.0 swiftfusion.tech
 0.0.0.0 swiftonyx16.com
@@ -1693,7 +1704,6 @@
 0.0.0.0 thu-iphone-07.cfd
 0.0.0.0 tiacreation.club
 0.0.0.0 timelevel12.com
-0.0.0.0 timestampasa.howto.rocks
 0.0.0.0 tinyurls.in
 0.0.0.0 tiwanlinm.duckdns.org
 0.0.0.0 tk-1464303226.cos.ap-guangzhou.myqcloud.com
@@ -1733,7 +1743,6 @@
 0.0.0.0 tweakz-dream-launcher.lovable.app
 0.0.0.0 twejamaica.org
 0.0.0.0 twitch.tj
-0.0.0.0 twu-hwt.org
 0.0.0.0 tycons.com
 0.0.0.0 u87yy3f87b23f8293bfg83bgu94.bombamodzik.xyz
 0.0.0.0 uasputnik.com
@@ -1771,6 +1780,7 @@
 0.0.0.0 v-k.com.ua
 0.0.0.0 v-w-v.com
 0.0.0.0 v15.next.forgejo.org
+0.0.0.0 v5q.eu
 0.0.0.0 v7yp4wts.fourstarcampground.com
 0.0.0.0 vaamsmgfreocmroe-1342087530.cos.sa-saopaulo.myqcloud.com
 0.0.0.0 vaibhavtripathi.in
@@ -1908,7 +1918,6 @@
 0.0.0.0 ziio.oss-ap-southeast-1.aliyuncs.com
 0.0.0.0 zimzar.site
 0.0.0.0 zip.dailytechinsight.com
-0.0.0.0 zoredaye.com
 0.0.0.0 zumvu.net
 0.0.0.0 zunimar.cl
 0.0.0.0 zycdjz.com
