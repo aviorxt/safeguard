@@ -58,7 +58,15 @@ def main():
                 if run['conclusion']!='success':
                     raise RuntimeError('Update remains unmerged; validation failed: '+run['html_url'])
                 # The server independently enforces PR rules and required status checks.
-                result=api('pulls/'+str(pr['number'])+'/merge','PUT',{'merge_method':'squash','sha':sha,'commit_title':'Update validated Safeguard blocklists'})
+                for merge_attempt in range(6):
+                    try:
+                        result=api('pulls/'+str(pr['number'])+'/merge','PUT',{'merge_method':'squash','sha':sha,'commit_title':'Update validated Safeguard blocklists'})
+                        break
+                    except RuntimeError as exc:
+                        if merge_attempt==5 or 'HTTP 405' not in str(exc) or 'Required status check' not in str(exc):
+                            raise
+                        # GitHub may briefly lag between run completion and rule evaluation.
+                        time.sleep(15)
                 if not result.get('merged'):
                     raise RuntimeError('Update PR was not merged; review '+pr['html_url'])
                 print('Merged validated update:',result['sha'],flush=True)
