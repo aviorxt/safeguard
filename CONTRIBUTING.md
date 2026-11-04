@@ -12,9 +12,9 @@ Use an issue form for false positives, missed threats, bugs, source/category pro
 
 The required `Validate repository` check runs on source, rule, website and documentation PRs. Generated-only PRs touching `blocklists/` and `sources/` are validated by the publisher's explicit CI dispatch instead of triggering a duplicate approval-gated bot PR run. Do not hand-edit generated files; a human generated-only PR must also have a maintainer dispatch CI before it can merge. Fork PR jobs have read-only tokens and no repository secrets. GitHub may require a maintainer to approve a first-time contributor's workflow run.
 
-Main is protected by a repository ruleset: pull requests, the required validation check, resolved review threads, linear history, no force pushes and no branch deletion. No bypass actors are configured. An independent approval is encouraged but not required so a sole maintainer can merge their own passing PR.
+Main is protected by a repository ruleset: pull requests, the required `Safeguard validation` status, resolved review threads, linear history, no force pushes and no branch deletion. No bypass actors are configured. An independent approval is encouraged but not required so a sole maintainer can merge their own passing PR.
 
-Daily automation opens a generated-data PR, explicitly dispatches repository CI, and waits for successful validation before requesting a squash merge. The server enforces the same required check. The updater has only the repository-token permissions needed to push its temporary branch, create a PR, dispatch CI and merge a passing update; no PAT is stored. PR validation stays read-only. Failed validation leaves the update unmerged for review.
+Daily automation opens a generated-data PR, explicitly dispatches repository CI, and waits for successful validation before requesting a squash merge. A trusted status reporter maps the actual CI outcome to the tested commit; GitHub does not evaluate manually dispatched workflow-job checks directly for PR rules. The server enforces that required reported status. The updater has only the repository-token permissions needed to push its temporary branch, create a PR, dispatch CI and merge a passing update; no PAT is stored. PR validation stays read-only. Failed validation leaves the update unmerged for review.
 
 ## Domain changes
 

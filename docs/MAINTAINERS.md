@@ -10,9 +10,9 @@ The publication workflow runs after successful updates and every six hours. It c
 
 ## Branch policy
 
-The active main ruleset requires pull requests, the GitHub Actions `Validate repository` check, resolved review threads and linear history. It blocks force pushes and deletion. There is no human/admin bypass entry. A second person's approval is encouraged but not required for a sole-maintainer project.
+The active main ruleset requires pull requests, the `Safeguard validation` commit status, resolved review threads and linear history. It blocks force pushes and deletion. There is no human/admin bypass entry. A second person's approval is encouraged but not required for a sole-maintainer project.
 
-No automation bypass is configured. The publisher pushes generated data to a temporary automation branch, creates a PR, explicitly dispatches the required CI using the repository token, waits for success and requests a squash merge. Main protection still enforces the required check and up-to-date branch. CI failures or merge conflicts leave the PR open for review. PR creation is enabled in repository Actions settings; default token permissions are read-only, with explicit contents/pull-requests/actions writes only in the main-only publisher.
+No automation bypass is configured. The publisher pushes generated data to a temporary automation branch, creates a PR, explicitly dispatches the required CI using the repository token, waits for success and requests a squash merge. Main protection enforces the required reported status and up-to-date branch. The trusted `Report validation status` workflow verifies the canonical CI workflow and reads only GitHub metadata; it never checks out contributor code or downloads artifacts. This reports the real validation result on the tested commit because workflow-dispatch job checks are not evaluated directly by PR rules. CI failures or merge conflicts leave the PR open for review. PR creation is enabled in repository Actions settings; default token permissions are read-only, with explicit contents/pull-requests/actions writes only in the main-only publisher.
 
 The site builder fingerprints CSS and JavaScript filenames so new HTML cannot accidentally reuse an old cached bundle.
 

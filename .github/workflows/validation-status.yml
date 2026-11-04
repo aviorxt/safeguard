@@ -1,0 +1,45 @@
+name: Report validation status
+on:
+  workflow_run:
+    workflows: ['Validate repository']
+    types: [requested, in_progress, completed]
+permissions:
+  actions: read
+  statuses: write
+jobs:
+  report:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Report the actual CI result on its tested commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          from pathlib import Path
+          event=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          run=event['workflow_run']
+          repo=os.environ['GITHUB_REPOSITORY']
+          token=os.environ['GH_TOKEN']
+          def api(path, data=None):
+              request=urllib.request.Request('https://api.github.com/repos/'+repo+'/'+path,
+                  headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'Safeguard-validation-status'},
+                  data=json.dumps(data).encode() if data is not None else None)
+              with urllib.request.urlopen(request,timeout=60) as response:
+                  return json.loads(response.read())
+          canonical=api('actions/workflows/ci.yml')
+          if run['workflow_id']!=canonical['id'] or run['repository']['full_name']!=repo:
+              raise RuntimeError('Refusing to report a different workflow or repository')
+          if run['path'].split('@')[0]!='.github/workflows/ci.yml':
+              raise RuntimeError('Unexpected validation workflow path')
+          # Read only GitHub metadata. No PR checkout, artifact, or contributor code is executed.
+          latest=api('actions/workflows/ci.yml/runs?head_sha='+run['head_sha']+'&per_page=30')['workflow_runs']
+          latest=[item for item in latest if item['head_sha']==run['head_sha']]
+          current=max(latest,key=lambda item:(item['id'],item['run_attempt'])) if latest else run
+          state='pending' if current['status']!='completed' else ('success' if current['conclusion']=='success' else 'failure')
+          api('statuses/'+run['head_sha'], {'state':state,'context':'Safeguard validation',
+              'description':'Repository CI: '+(current.get('conclusion') or current['status']),
+              'target_url':current['html_url']})
+          print('Reported',state,'for',run['head_sha'])
+          PY
