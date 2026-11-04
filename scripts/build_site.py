@@ -43,6 +43,19 @@ def build():
             raise ValueError('Unsafe build directory')
         shutil.rmtree(dist)
     shutil.copytree(ROOT/'site',dist)
+    # Content-addressed URLs prevent new HTML from using stale browser-cached code.
+    replacements={}
+    for name in ('style.css','app.js'):
+        data=(dist/name).read_bytes()
+        stem,extension=name.rsplit('.',1)
+        versioned=stem+'.'+hashlib.sha256(data).hexdigest()[:12]+'.'+extension
+        (dist/versioned).write_bytes(data)
+        replacements['/'+name]='/'+versioned
+    for html in dist.glob('*.html'):
+        text=html.read_text(encoding='utf-8')
+        for original,versioned in replacements.items():
+            text=text.replace('"'+original+'"','"'+versioned+'"')
+        html.write_text(text,encoding='utf-8',newline='\n')
     shutil.copytree(ROOT/'blocklists',dist/'blocklists')
     shutil.copytree(ROOT/'sources',dist/'sources')
     shutil.copytree(ROOT/'licenses',dist/'licenses')
