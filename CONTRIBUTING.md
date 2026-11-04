@@ -10,7 +10,7 @@ Use an issue form for false positives, missed threats, bugs, source/category pro
 4. Run `python -m unittest discover -s tests`, `python scripts/build.py`, `python scripts/build_site.py`, and `node --check site/app.js`.
 5. Open a PR using the supplied template. Explain behavior, evidence, tests, breaking changes and rollback steps. Generated changes must be reproducible.
 
-The required `Validate repository` check runs on every PR, including documentation-only changes. Fork PR jobs have read-only tokens and no repository secrets. GitHub may require a maintainer to approve a first-time contributor's workflow run.
+The required `Validate repository` check runs on source, rule, website and documentation PRs. Generated-only PRs touching `blocklists/` and `sources/` are validated by the publisher's explicit CI dispatch instead of triggering a duplicate approval-gated bot PR run. Do not hand-edit generated files; a human generated-only PR must also have a maintainer dispatch CI before it can merge. Fork PR jobs have read-only tokens and no repository secrets. GitHub may require a maintainer to approve a first-time contributor's workflow run.
 
 Main is protected by a repository ruleset: pull requests, the required validation check, resolved review threads, linear history, no force pushes and no branch deletion. No bypass actors are configured. An independent approval is encouraged but not required so a sole maintainer can merge their own passing PR.
 
