@@ -23,9 +23,30 @@ class BuilderTests(unittest.TestCase):
     def test_allowlist_descendants(self):
         result,_=b.apply_allow({'a.example.com','bad.com'},{'example.com'})
         self.assertEqual(result,{'bad.com'})
+    def test_hosts_source_and_audited_exclusion(self):
+        self.assertEqual(b.parse('0.0.0.0 ads.example.com'),{'ads.example.com'})
+        result,excluded=b.parse_source(('0.0.0.0 good.example.com\n'*200)+'0.0.0.0 not_portable.example.com',{'exclude_invalid_hostnames':True})
+        self.assertEqual(result,{'good.example.com'})
+        self.assertEqual(excluded[0]['line'],201)
+        with self.assertRaises(ValueError):
+            b.parse_source('||example.com^',{'exclude_invalid_hostnames':True})
+    def test_categories_and_formats_remain_consistent(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'rules').mkdir()
+            (root/'rules/allow.txt').write_text('');(root/'rules/block.txt').write_text('')
+            (root/'catalog.json').write_text(json.dumps([{'id':x,'name':x} for x in ['family','standard','gambling']]))
+            (root/'sources.json').write_text(json.dumps([{'id':'privacy','url':'privacy','minimum':1,'profiles':['family','standard']},{'id':'gambling','url':'gambling','minimum':1,'profiles':['gambling']}]))
+            with patch.object(b,'ROOT',root),patch.object(b,'download',side_effect=lambda url: b'||ads.example.com^' if url=='privacy' else b'||bets.example.com^'):
+                b.build()
+            self.assertNotIn('bets.example.com',(root/'blocklists/family.txt').read_text())
+            self.assertIn('bets.example.com',(root/'blocklists/gambling.txt').read_text())
+            self.assertIn('local=/ads.example.com/',(root/'blocklists/family-dnsmasq.conf').read_text())
+            self.assertIn('local-zone: "ads.example.com" always_nxdomain',(root/'blocklists/family-unbound.conf').read_text())
+            self.assertIn('*.ads.example.com CNAME .',(root/'blocklists/family-rpz.zone').read_text())
     def test_failed_source_preserves_published_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
+            (root/'catalog.json').write_text('[{"id":"family","name":"Family"}]')
             (root/'blocklists').mkdir()
             published=root/'blocklists/family.txt'
             published.write_text('previous valid publication')
@@ -37,6 +58,7 @@ class BuilderTests(unittest.TestCase):
     def test_unexpected_shrink_preserves_publication(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
+            (root/'catalog.json').write_text('[{"id":"family","name":"Family"}]')
             (root/'sources').mkdir()
             previous=root/'sources/normal.txt'
             previous.write_text('||one.example.com^\n||two.example.com^\n||three.example.com^\n')

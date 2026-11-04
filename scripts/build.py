@@ -38,6 +38,11 @@ def parse(text):
         line=raw.strip()
         if not line or line.startswith(('!','#','[')):
             continue
+        if line.startswith(('0.0.0.0 ', '0.0.0.0\t')):
+            fields=line.split()
+            if len(fields)!=2:
+                raise ValueError(f'Unsupported hosts rule at line {number}')
+            line=fields[1]
         if line.startswith('||') and line.endswith('^'):
             line=line[2:-1]
         try:
@@ -48,6 +53,26 @@ def parse(text):
 
 def related(a,b):
     return a==b or a.endswith('.'+b) or b.endswith('.'+a)
+
+def parse_source(text,source):
+    if not source.get('exclude_invalid_hostnames',False):
+        return parse(text),[]
+    result=set(); rejected=[]; total=0
+    for number,line in enumerate(text.splitlines(),1):
+        if not line.strip() or line.startswith(('!','#','[')):
+            continue
+        # Reviewed hosts-only feeds may contain syntactically invalid hostnames.
+        # Preserve their full source and audit every exclusion; never relax DNS syntax.
+        if not re.fullmatch(r'0\.0\.0\.0\s+\S+',line):
+            raise ValueError(f'Unexpected source syntax at line {number}')
+        total+=1
+        try:
+            result.update(parse(line))
+        except ValueError:
+            rejected.append({'line':number,'rule':line,'reason':'Not a portable DNS hostname'})
+    if len(rejected)>total*.01:
+        raise ValueError('More than 1% invalid hostnames in source')
+    return result,rejected
 
 def apply_allow(blocked, allowed):
     # Enumerate ancestors, avoiding quadratic scans across large family lists.
@@ -62,8 +87,12 @@ def apply_allow(blocked, allowed):
     return blocked-remove, sorted(blocked & remove)
 
 def download(url):
-    if not url.startswith('https://raw.githubusercontent.com/hagezi/dns-blocklists/'):
-        raise ValueError('Source must be an approved HTTPS HaGeZi URL')
+    approved=('https://raw.githubusercontent.com/hagezi/dns-blocklists/',
+              'https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/',
+              'https://curbengh.github.io/phishing-filter/',
+              'https://curbengh.github.io/malware-filter/')
+    if not url.startswith(approved):
+        raise ValueError('Source must be on the reviewed HTTPS source allowlist')
     for attempt in range(3):
         try:
             with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'AVRXT-Safeguard/1.0'}),timeout=90) as response:
@@ -79,21 +108,27 @@ def download(url):
 def build():
     manifest=json.loads((ROOT/'sources.json').read_text())
     stage={}
-    profiles={'standard':set(),'family':set()}
+    catalog=json.loads((ROOT/'catalog.json').read_text())
+    if len({item['id'] for item in catalog}) != len(catalog):
+        raise ValueError('Duplicate catalog IDs')
+    if not all(re.fullmatch('[a-z0-9-]+',item['id']) for item in catalog):
+        raise ValueError('Unsafe catalog ID')
+    profiles={item['id']:set() for item in catalog}
     report={'generated_utc':datetime.now(timezone.utc).isoformat(),'sources':[],'profiles':{}}
     for source in manifest:
         source_id=source['id']
         if not re.fullmatch('[a-z0-9-]+',source_id):
             raise ValueError('Invalid source ID')
         data=download(source['url'])
-        entries=parse(data.decode('utf-8-sig'))
+        entries,rejected=parse_source(data.decode('utf-8-sig'),source)
         previous=ROOT/'sources'/f'{source_id}.txt'
         if len(entries)<source['minimum']:
             raise ValueError(f'{source_id}: below minimum')
-        if previous.exists() and len(entries)<len(parse(previous.read_text(encoding='utf-8-sig')))*.75:
+        if previous.exists() and len(entries)<len(parse_source(previous.read_text(encoding='utf-8-sig'),source)[0])*.75:
             raise ValueError(f'{source_id}: unexpected reduction over 25%')
         stage[f'sources/{source_id}.txt']=data
-        report['sources'].append({**source,'domains':len(entries),'sha256':hashlib.sha256(data).hexdigest(),'rejected_rules':0})
+        stage[f'sources/{source_id}-excluded.json']=(json.dumps(rejected,indent=2)+'\n').encode()
+        report['sources'].append({**source,'domains':len(entries),'sha256':hashlib.sha256(data).hexdigest(),'rejected_rules':len(rejected)})
         for profile in source['profiles']:
             profiles[profile].update(entries)
     allowed=parse((ROOT/'rules/allow.txt').read_text())
@@ -101,10 +136,17 @@ def build():
     for name,entries in profiles.items():
         entries,suppressed=apply_allow(entries|custom,allowed)
         ordered=sorted(entries)
-        header=f'! Title: AVRXT Safeguard {name.title()}\n! Homepage: https://github.com/aviorxt/safeguard\n! License: GPL-3.0; see LICENSE, NOTICE and sources/\n! Modified aggregation of HaGeZi lists; {len(entries)} unique domains\n! Expires: 1 day\n'
+        if not entries:
+            raise ValueError('Empty profile: '+name)
+        title=next(item['name'] for item in catalog if item['id']==name)
+        header=f'! Title: AVRXT Safeguard {title}\n! Homepage: https://github.com/aviorxt/safeguard\n! License: GPL-3.0; MIT notices in licenses/; see NOTICE\n! Modified aggregation of reviewed upstream lists; {len(entries)} unique domains\n! Expires: 1 day\n'
         stage[f'blocklists/{name}.txt']=(header+''.join('||'+d+'^\n' for d in ordered)).encode()
         stage[f'blocklists/{name}-domains.txt']=('\n'.join(ordered)+'\n').encode()
         stage[f'blocklists/{name}-hosts.txt']=('# AVRXT Safeguard; GPL-3.0; see NOTICE\n'+''.join('0.0.0.0 '+d+'\n' for d in ordered)).encode()
+        stage[f'blocklists/{name}-dnsmasq.conf']=('# AVRXT Safeguard; GPL-3.0; see NOTICE\n'+''.join('local=/'+d+'/\n' for d in ordered)).encode()
+        stage[f'blocklists/{name}-unbound.conf']=('# AVRXT Safeguard; include inside server:; GPL-3.0; see NOTICE\n'+''.join('local-zone: "'+d+'" always_nxdomain\n' for d in ordered)).encode()
+        rpz='; AVRXT Safeguard; GPL-3.0; see NOTICE\n$TTL 60\n@ IN SOA localhost. hostmaster.localhost. ( '+str(int(datetime.now(timezone.utc).timestamp()))+' 3600 600 86400 60 )\n@ IN NS localhost.\n'
+        stage[f'blocklists/{name}-rpz.zone']=(rpz+''.join(d+' CNAME .\n*.'+d+' CNAME .\n' for d in ordered)).encode()
         report['profiles'][name]={'domains':len(entries),'suppressed_by_allowlist':suppressed}
     report['outputs']={k:hashlib.sha256(v).hexdigest() for k,v in stage.items() if k.startswith('blocklists/')}
     stage['blocklists/report.json']=(json.dumps(report,indent=2)+'\n').encode()

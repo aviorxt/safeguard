@@ -1,0 +1,64 @@
+{
+  "name": "False positive",
+  "description": "A legitimate domain is blocked.",
+  "title": "[False positive]: ",
+  "body": [
+    {
+      "type": "checkboxes",
+      "id": "privacy",
+      "attributes": {
+        "label": "Before submitting",
+        "options": [
+          {
+            "label": "I searched existing issues and included no credentials, private client IDs, personal browsing URLs or private logs.",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "input",
+      "id": "domain",
+      "attributes": {
+        "label": "Affected domain",
+        "description": "Domain names only; do not include private URL paths."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "profile",
+      "attributes": {
+        "label": "Subscription and format",
+        "description": "Example: Family / Pi-hole domains."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "reason",
+      "attributes": {
+        "label": "Why this should be allowed",
+        "description": "What legitimate function breaks? Include public evidence and the matching rule/source if known."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "reproduce",
+      "attributes": {
+        "label": "How to reproduce",
+        "description": "Resolver/version, expected behavior, actual behavior and whether the problem stops when this list is disabled."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

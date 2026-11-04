@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 import time
 import urllib.request
 from datetime import datetime, timezone
@@ -23,14 +24,21 @@ def verify(base):
         raise ValueError('Published lists have not refreshed within 48 hours')
     if report != repo:
         raise ValueError('Cloudflare Pages is behind the repository report')
+    catalog=json.loads(fetch(base+'/catalog.json'))
+    if catalog!=json.loads(fetch(REPO+'catalog.json')):
+        raise ValueError('Published category catalog is behind GitHub')
+    if {item['id'] for item in catalog} != set(repo['profiles']):
+        raise ValueError('Published category catalog and list report disagree')
     for path,digest in repo['outputs'].items():
+        if not re.fullmatch(r'blocklists/[a-z0-9-]+\.(txt|conf|zone)',path):
+            raise ValueError('Invalid output manifest path')
         if hashlib.sha256(fetch(base+'/'+path)).hexdigest()!=digest:
             raise ValueError('Published list checksum mismatch: '+path)
     deployment=json.loads(fetch(base+'/deployment.json'))
     page=fetch(base+'/').decode()
     if 'AVRXT Safeguard' not in page or len(deployment['commit'])!=40:
         raise ValueError('Unexpected site response or missing deployment identity')
-    print('PASS: HTTPS site, all six list checksums, GitHub report sync, and <48h freshness')
+    print(f"PASS: HTTPS site, all {len(repo['outputs'])} list checksums, category catalog sync, GitHub report sync, and <48h freshness")
     print('Deployed commit:',deployment['commit'])
     print('Last successful list update:',report['generated_utc'])
 

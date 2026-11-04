@@ -13,11 +13,12 @@ spec.loader.exec_module(b)
 class PublicationTests(unittest.TestCase):
     def fixture(self, root):
         (root/'blocklists').mkdir()
+        (root/'catalog.json').write_text('[{"id":"standard"},{"id":"family"}]')
         report={'generated_utc':datetime.now(timezone.utc).isoformat(),'outputs':{},'profiles':{},'sources':[]}
         for profile in ('standard','family'):
             report['profiles'][profile]={'domains':1}
-            for suffix,content in (('',b'||ads.example.com^\n'),('-domains',b'ads.example.com\n'),('-hosts',b'0.0.0.0 ads.example.com\n')):
-                name=f'blocklists/{profile}{suffix}.txt'
+            for suffix,content in (('.txt',b'||ads.example.com^\n'),('-domains.txt',b'ads.example.com\n'),('-hosts.txt',b'0.0.0.0 ads.example.com\n'),('-dnsmasq.conf',b'local=/ads.example.com/\n'),('-unbound.conf',b'local-zone: "ads.example.com" always_nxdomain\n'),('-rpz.zone',b'ads.example.com CNAME .\n*.ads.example.com CNAME .\n')):
+                name=f'blocklists/{profile}{suffix}'
                 (root/name).write_bytes(content)
                 report['outputs'][name]=hashlib.sha256(content).hexdigest()
         (root/'blocklists/report.json').write_text(json.dumps(report))

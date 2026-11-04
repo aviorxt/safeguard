@@ -1,0 +1,64 @@
+{
+  "name": "Category or source request",
+  "description": "Propose a new category or upstream feed.",
+  "title": "[Source/category]: ",
+  "body": [
+    {
+      "type": "checkboxes",
+      "id": "privacy",
+      "attributes": {
+        "label": "Before submitting",
+        "options": [
+          {
+            "label": "I searched existing issues and included no credentials, private client IDs, personal browsing URLs or private logs.",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "proposal",
+      "attributes": {
+        "label": "Proposed change",
+        "description": "New category/source or an adjustment to existing coverage."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "source",
+      "attributes": {
+        "label": "Upstream source and license",
+        "description": "Public feed URL, maintainer, license URL, refresh cycle and expected domain count."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "scope",
+      "attributes": {
+        "label": "Scope, overlap and risks",
+        "description": "What does it block, what is already covered, and what legitimate features may break?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "evidence",
+      "attributes": {
+        "label": "Validation and example domains",
+        "description": "Public evidence and format compatibility details. No private data."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

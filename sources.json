@@ -5,7 +5,8 @@
     "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
     "profiles": [
       "standard",
-      "family"
+      "family",
+      "ads-trackers"
     ],
     "minimum": 50000
   },
@@ -15,7 +16,8 @@
     "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.mini.txt",
     "profiles": [
       "standard",
-      "family"
+      "family",
+      "threats"
     ],
     "minimum": 10000
   },
@@ -24,8 +26,143 @@
     "name": "HaGeZi NSFW",
     "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt",
     "profiles": [
-      "family"
+      "family",
+      "adult"
     ],
     "minimum": 1000
+  },
+  {
+    "id": "gambling-mini",
+    "name": "HaGeZi Gambling MINI",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.mini.txt",
+    "profiles": [
+      "gambling"
+    ],
+    "minimum": 1000
+  },
+  {
+    "id": "social",
+    "name": "HaGeZi Social Networks",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/social.txt",
+    "profiles": [
+      "social"
+    ],
+    "minimum": 100
+  },
+  {
+    "id": "native-winoffice",
+    "name": "HaGeZi Windows & Office",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.winoffice.txt",
+    "profiles": [
+      "windows"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-apple",
+    "name": "HaGeZi Apple",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.apple.txt",
+    "profiles": [
+      "apple"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-samsung",
+    "name": "HaGeZi Samsung",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.samsung.txt",
+    "profiles": [
+      "samsung"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-xiaomi",
+    "name": "HaGeZi Xiaomi",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.xiaomi.txt",
+    "profiles": [
+      "xiaomi"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-oppo-realme",
+    "name": "HaGeZi OPPO & Realme",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.oppo-realme.txt",
+    "profiles": [
+      "oppo-realme"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-amazon",
+    "name": "HaGeZi Amazon",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.amazon.txt",
+    "profiles": [
+      "amazon"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-lgwebos",
+    "name": "HaGeZi LG webOS",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.lgwebos.txt",
+    "profiles": [
+      "smart-tv"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "native-roku",
+    "name": "HaGeZi Roku",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/native.roku.txt",
+    "profiles": [
+      "smart-tv"
+    ],
+    "minimum": 5
+  },
+  {
+    "id": "nocoin",
+    "name": "NoCoin cryptomining",
+    "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt",
+    "profiles": [
+      "standard",
+      "family",
+      "threats",
+      "cryptomining"
+    ],
+    "minimum": 50,
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/LICENSE"
+  },
+  {
+    "id": "phishing-feed",
+    "name": "Phishing URL Blocklist",
+    "url": "https://curbengh.github.io/phishing-filter/phishing-filter-hosts.txt",
+    "profiles": [
+      "standard",
+      "family",
+      "threats",
+      "phishing"
+    ],
+    "minimum": 100,
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/curbengh/phishing-filter/main/LICENSE",
+    "exclude_invalid_hostnames": true
+  },
+  {
+    "id": "urlhaus",
+    "name": "URLhaus malware domains",
+    "url": "https://curbengh.github.io/malware-filter/urlhaus-filter-hosts.txt",
+    "profiles": [
+      "standard",
+      "family",
+      "threats",
+      "malware"
+    ],
+    "minimum": 20,
+    "license": "MIT",
+    "license_url": "https://raw.githubusercontent.com/curbengh/urlhaus-filter/main/LICENSE",
+    "exclude_invalid_hostnames": true
   }
 ]

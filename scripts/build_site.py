@@ -14,10 +14,15 @@ def validate(root=ROOT):
     age=(datetime.now(timezone.utc)-stamp).total_seconds()
     if not -300 <= age <= 48*3600:
         raise ValueError('Blocklist report is stale or future-dated')
-    expected={f'blocklists/{profile}{suffix}.txt' for profile in ('standard','family') for suffix in ('','-domains','-hosts')}
+    catalog=json.loads((root/'catalog.json').read_text())
+    if set(report['profiles'])!={item['id'] for item in catalog}:
+        raise ValueError('Catalog and report profiles do not match')
+    expected={f'blocklists/{profile}{suffix}' for profile in report['profiles'] for suffix in ('.txt','-domains.txt','-hosts.txt','-dnsmasq.conf','-unbound.conf','-rpz.zone')}
     if set(report['outputs']) != expected:
         raise ValueError('Missing or unexpected output manifest entries')
     for name,digest in report['outputs'].items():
+        if (root/name).stat().st_size > 25*1024*1024:
+            raise ValueError('Output exceeds Cloudflare Pages 25 MiB file limit: '+name)
         if hashlib.sha256((root/name).read_bytes()).hexdigest()!=digest:
             raise ValueError('Output checksum mismatch: '+name)
     for profile,details in report['profiles'].items():
@@ -40,7 +45,8 @@ def build():
     shutil.copytree(ROOT/'site',dist)
     shutil.copytree(ROOT/'blocklists',dist/'blocklists')
     shutil.copytree(ROOT/'sources',dist/'sources')
-    for name in ('LICENSE','NOTICE','sources.json'):
+    shutil.copytree(ROOT/'licenses',dist/'licenses')
+    for name in ('LICENSE','NOTICE','sources.json','catalog.json'):
         shutil.copyfile(ROOT/name,dist/name)
     # Capture the exact deployed commit so the monitor can detect stale deployments.
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()

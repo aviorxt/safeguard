@@ -1,0 +1,121 @@
+[
+  {
+    "id": "family",
+    "name": "Family",
+    "group": "Combined",
+    "description": "Standard protection plus adult-content domains.",
+    "warning": "Includes adult blocking. Does not include the optional gambling or social-network lists."
+  },
+  {
+    "id": "standard",
+    "name": "Standard",
+    "group": "Combined",
+    "description": "Balanced privacy and threat-domain protection.",
+    "warning": "Adult content is not included."
+  },
+  {
+    "id": "ads-trackers",
+    "name": "Ads & trackers",
+    "group": "Security",
+    "description": "Balanced advertising, tracking and unwanted-domain filtering.",
+    "warning": "Based on HaGeZi NORMAL; also contains security domains. Included in Standard and Family."
+  },
+  {
+    "id": "threats",
+    "name": "Threat protection",
+    "group": "Security",
+    "description": "Combined threat intelligence for malware, phishing, scams and cryptomining.",
+    "warning": "Combines TIF MINI with NoCoin, phishing and URLhaus-derived feeds. Included in Standard and Family."
+  },
+  {
+    "id": "adult",
+    "name": "Adult content",
+    "group": "Content",
+    "description": "Adult-content domain filtering.",
+    "warning": "Included in Family. Classification may have false positives."
+  },
+  {
+    "id": "gambling",
+    "name": "Gambling",
+    "group": "Content",
+    "description": "Size-optimized gambling-domain restrictions.",
+    "warning": "Optional. Intentionally blocks access to gambling services; not included in Family or Standard."
+  },
+  {
+    "id": "social",
+    "name": "Social networks",
+    "group": "Content",
+    "description": "Restrictions for classic social-network domains.",
+    "warning": "Optional. May prevent social sign-in and embeds; not included in Family or Standard."
+  },
+  {
+    "id": "windows",
+    "name": "Windows & Office",
+    "group": "Devices",
+    "description": "Microsoft ecosystem telemetry and native tracking domains.",
+    "warning": "Optional. Device tracking lists may affect diagnostics or connected features."
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "group": "Devices",
+    "description": "Native tracking domains in the Apple ecosystem.",
+    "warning": "Optional. May affect diagnostics or connected features."
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "group": "Devices",
+    "description": "Native tracking domains used by Samsung devices.",
+    "warning": "Optional. May affect diagnostics or connected features."
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi",
+    "group": "Devices",
+    "description": "Native tracking domains used by Xiaomi devices.",
+    "warning": "Optional. May affect diagnostics or connected features."
+  },
+  {
+    "id": "oppo-realme",
+    "name": "OPPO & Realme",
+    "group": "Devices",
+    "description": "Native tracking domains for OPPO and Realme devices.",
+    "warning": "Optional. May affect diagnostics or connected features."
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon devices",
+    "group": "Devices",
+    "description": "Native tracking domains across Amazon devices and services.",
+    "warning": "Optional. May affect diagnostics or connected features."
+  },
+  {
+    "id": "smart-tv",
+    "name": "Smart TV",
+    "group": "Devices",
+    "description": "Combined LG webOS and Roku native tracking domains.",
+    "warning": "Optional. May affect diagnostics or connected TV features."
+  },
+  {
+    "id": "cryptomining",
+    "name": "Cryptomining",
+    "group": "Security",
+    "description": "Known mining domains from NoCoin.",
+    "warning": "Included in Threat Protection, Standard and Family. Domain filtering does not inspect URL paths."
+  },
+  {
+    "id": "phishing",
+    "name": "Phishing",
+    "group": "Security",
+    "description": "Domain-only phishing intelligence from the Phishing URL Blocklist.",
+    "warning": "Included in Threat Protection, Standard and Family. Domain filtering does not inspect URL paths."
+  },
+  {
+    "id": "malware",
+    "name": "Malware",
+    "group": "Security",
+    "description": "Malware-distribution domains from the URLhaus-derived feed.",
+    "warning": "Included in Threat Protection, Standard and Family. Domain filtering does not inspect URL paths."
+  }
+]

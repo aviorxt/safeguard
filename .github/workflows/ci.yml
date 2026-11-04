@@ -1,0 +1,34 @@
+name: Validate repository
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    name: Validate repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests
+      - run: node --check site/app.js
+      - run: python scripts/build_site.py
+      - name: Install native format validators
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq bind9-utils dnsmasq-base unbound
+      - name: Validate RPZ, dnsmasq and Unbound syntax
+        run: |
+          named-checkzone safeguard.rpz blocklists/family-rpz.zone
+          dnsmasq --test --conf-file=blocklists/family-dnsmasq.conf
+          python -c 'from pathlib import Path; Path("/tmp/safeguard-unbound.conf").write_text("server:\n  include: \"" + str(Path("blocklists/family-unbound.conf").resolve()) + "\"\n")'
+          unbound-checkconf /tmp/safeguard-unbound.conf

@@ -1,44 +1,89 @@
-# AVRXT Safeguard
+<p align="center"><a href="https://safeguard.avrxt.tech"><img src="docs/banner.svg" alt="AVRXT Safeguard — A cleaner connection" width="100%"></a></p>
 
-A reproducible DNS blocklist maintained by AVRXT. Combines curated upstream intelligence with AVRXT overrides; upstream maintainers deserve credit for their research. This is an aggregation, not a claim of independently discovering every threat.
+<p align="center">
+<a href="https://github.com/aviorxt/safeguard/actions/workflows/update.yml"><img src="https://github.com/aviorxt/safeguard/actions/workflows/update.yml/badge.svg" alt="Daily updates"></a>
+<a href="https://github.com/aviorxt/safeguard/actions/workflows/ci.yml"><img src="https://github.com/aviorxt/safeguard/actions/workflows/ci.yml/badge.svg" alt="Validation"></a>
+<a href="https://github.com/aviorxt/safeguard/actions/workflows/check.yml"><img src="https://github.com/aviorxt/safeguard/actions/workflows/check.yml/badge.svg" alt="Published list checks"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-eeeeee?labelColor=151515" alt="GPL-3.0"></a>
+</p>
 
-## Website and update checks
+<p align="center"><b>Open-source DNS blocklists for privacy, security and family protection.</b><br>Daily updates. Transparent sources. Formats for popular DNS resolvers.</p>
 
-Public site: https://safeguard.avrxt.tech
+<p align="center"><a href="https://safeguard.avrxt.tech">Website</a> · <a href="#subscriptions">Subscriptions</a> · <a href="COMPATIBILITY.md">Compatibility</a> · <a href="CONTRIBUTING.md">Contribute</a> · <a href="https://github.com/aviorxt/safeguard/issues/new/choose">Report an issue</a></p>
 
-Cloudflare Pages builds from `main` using `python scripts/build_site.py` with output directory `dist`. The build verifies all six output hashes, domain counts, deduplication, source snapshot hashes, and a report age under 48 hours before packaging. It does not download new rules during deployment: the site and downloads are the exact validated repository snapshot. Daily GitHub builds run at 03:17 UTC (08:47 IST); Pages redeploys the resulting commits. GitHub schedules may be delayed and can be disabled by GitHub after prolonged inactivity in public repositories.
+## Choose your protection
 
-The `Check published blocklists` workflow runs after each successful daily build, every six hours, and on manual request. It allows up to ten attempts, spaced 30 seconds apart, for Pages to deploy. It verifies HTTPS availability, all published output SHA-256 hashes, equality with GitHub's current report, and a last successful list build within 48 hours. Failures appear in GitHub Actions; email delivery depends on your GitHub notification settings. Run it locally with `python scripts/check_updates.py`. The landing page refreshes its displayed report every five minutes and marks reports older than 48 hours as overdue. Its badge is report freshness, not a live security audit.
+| Profile | Includes | Subscription |
+| :--- | :--- | :--- |
+| **Family** | Ads, trackers, threat domains and adult content | [AdGuard](https://safeguard.avrxt.tech/blocklists/family.txt) · [Pi-hole / domains](https://safeguard.avrxt.tech/blocklists/family-domains.txt) |
+| **Standard** | Ads, trackers and threat domains | [AdGuard](https://safeguard.avrxt.tech/blocklists/standard.txt) · [Pi-hole / domains](https://safeguard.avrxt.tech/blocklists/standard-domains.txt) |
 
-Local site build: `python scripts/build_site.py`, then `python -m http.server --directory dist`. Pages requires no runtime API credentials. No analytics, accounts or server-side database are used.
+**Family includes Standard. Choose one combined profile.** Add optional categories only when you need them; gambling, social-network restrictions and device-specific lists are not automatically added to either profile.
 
-## Downloads
+```text
+https://safeguard.avrxt.tech/blocklists/family.txt
+```
 
-| Profile | AdGuard Home subscription |
-| --- | --- |
-| **Family — all in one**: ads, trackers, threat domains and adult content | `https://raw.githubusercontent.com/aviorxt/safeguard/main/blocklists/family.txt` |
-| Standard: ads, trackers and threat domains | `https://raw.githubusercontent.com/aviorxt/safeguard/main/blocklists/standard.txt` |
+Use the [website](https://safeguard.avrxt.tech/#categories) to select a format and copy its URL in one click. Import the URL into your resolver and keep subscription refresh enabled. See the [compatibility guide](COMPATIBILITY.md) for setup details.
 
-Add one URL under AdGuard Home → Filters → DNS blocklists. Family includes Standard; do not add both. `blocklists/*-domains.txt` contains bare domains, and `*-hosts.txt` contains hosts-format equivalents. All outputs are derived from domain-wide rules; browser cosmetic rules and URL paths are deliberately unsupported.
+## Subscriptions
 
-## Coverage and limits
+| Category | Group | Coverage | Subscribe |
+| :--- | :--- | :--- | :--- |
+| **Ads & trackers** | Security | Balanced advertising, tracking and unwanted-domain filtering. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Threat protection** | Security | Threat-intelligence domains covering malware, phishing, scams and cryptomining. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Adult content** | Content | Adult-content domain filtering. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Gambling** | Content | Size-optimized gambling-domain restrictions. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Social networks** | Content | Restrictions for classic social-network domains. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Windows & Office** | Devices | Microsoft ecosystem telemetry and native tracking domains. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Apple** | Devices | Native tracking domains in the Apple ecosystem. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Samsung** | Devices | Native tracking domains used by Samsung devices. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Xiaomi** | Devices | Native tracking domains used by Xiaomi devices. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **OPPO & Realme** | Devices | Native tracking domains for OPPO and Realme devices. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Amazon devices** | Devices | Native tracking domains across Amazon devices and services. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Smart TV** | Devices | Combined LG webOS and Roku native tracking domains. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Cryptomining** | Security | Known mining domains from NoCoin. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Phishing** | Security | Domain-only phishing intelligence from the Phishing URL Blocklist. | [Get URL](https://safeguard.avrxt.tech/#categories) |
+| **Malware** | Security | Malware-distribution domains from the URLhaus-derived feed. | [Get URL](https://safeguard.avrxt.tech/#categories) |
 
-HaGeZi NORMAL supplies balanced advertising/tracking and unwanted-domain protection; TIF MINI adds threat intelligence including malware, phishing, scams and cryptomining domains. Family additionally includes NSFW adult domains. See [sources.json](sources.json) for exact inputs and [build report](blocklists/report.json) for counts, source SHA-256 digests and rejected syntax. The upstream inputs are copied verbatim into `sources/` on each successful build for inspection and license compliance.
+Content restrictions are opt-in. Device lists may affect diagnostics or connected features. Category overlap is normal; adding every list does not necessarily improve protection.
 
-DNS lists cannot block every threat, remove same-domain YouTube ads, inspect HTTPS paths, or enforce Safe Search. Keep AdGuard Safe Search, parental classification, Safe Browsing and DNSSEC enabled separately. No gambling, social-media or VPN blanket blocks are included. False positives and missed threats are possible. A blocked domain does not prove every page on it is malicious.
+## Supported formats
 
-## Updates and review
+| Format | Intended consumers | Family download |
+| :--- | :--- | :--- |
+| Adblock DNS | AdGuard Home and compatible DNS-filter importers | [family.txt](https://safeguard.avrxt.tech/blocklists/family.txt) |
+| Domains | Pi-hole, Blocky, Technitium and other domain-list importers | [family-domains.txt](https://safeguard.avrxt.tech/blocklists/family-domains.txt) |
+| Hosts | Hosts-compatible filters and operating-system hosts files | [family-hosts.txt](https://safeguard.avrxt.tech/blocklists/family-hosts.txt) |
+| dnsmasq | Local-zone configuration include | [family-dnsmasq.conf](https://safeguard.avrxt.tech/blocklists/family-dnsmasq.conf) |
+| Unbound | `server:` configuration include | [family-unbound.conf](https://safeguard.avrxt.tech/blocklists/family-unbound.conf) |
+| RPZ | BIND and resolvers with compatible RPZ support, including PowerDNS Recursor | [family-rpz.zone](https://safeguard.avrxt.tech/blocklists/family-rpz.zone) |
 
-GitHub Actions builds daily at 03:17 UTC and on changes to the builder, source manifest or overrides. Manual runs are supported. The workflow publishes only after tests and all downloads pass. Source counts below the configured floor, reductions over 25% compared with the last snapshot, unsupported rules, and unexpectedly broad suffix rules fail the build. A failed run leaves the previous published files intact. Review Actions failures rather than lowering safeguards without investigation.
+Every category is available in all six formats. Import support and matching behavior depend on the resolver/version. Hosted DNS services without custom-list imports cannot subscribe directly. [Read compatibility details →](COMPATIBILITY.md)
 
-Run locally with Python 3.11+: `python -m unittest discover -s tests`, then `python scripts/build.py`. No dependencies or API credentials are required. Change the source manifest or overrides through a reviewed commit. To remove a source intentionally, remove its entry from `sources.json`; consider its license before redistribution.
+## Sources and updates
 
-Allowlist entries override blocked domains and descendants. An allowlist entry inside a broader blocked suffix suppresses that broader rule too, to keep all three output formats consistent; it may unblock siblings. The report records these suppressed rules for review. Do not place broad exceptions here without considering that effect.
+Safeguard combines maintained community intelligence from **HaGeZi**, **NoCoin**, **Phishing URL Blocklist**, and the **URLhaus-derived filter**. Source attribution, license notices and verbatim snapshots are preserved. We do not claim independent discovery of every domain.
 
-## Reports
+- [Source manifest](sources.json) and [source snapshots](sources/)
+- [Category catalog](catalog.json) and [build report](https://safeguard.avrxt.tech/blocklists/report.json)
+- [Daily update status](https://github.com/aviorxt/safeguard/actions/workflows/update.yml) and [publication checks](https://github.com/aviorxt/safeguard/actions/workflows/check.yml)
+- [Changelog](CHANGELOG.md)
 
-Open a GitHub issue for a false positive or missing threat; include the domain, matching profile and a short explanation, without sensitive browsing URLs or personal data. Private contact: **dns@avrxt.tech**. Requests are reviewed, never automatically allowed.
+Updates are normalized, deduplicated and validated before publication. Failed downloads, suspicious count reductions or validation errors stop publishing and preserve the last successful lists. Invalid hostnames in selected hosts feeds are excluded with an audit record; unsupported rule syntax is not silently widened. The build report records counts, hashes and exclusions.
 
-## Attribution and licensing
+## Contributing
 
-Sources: [HaGeZi DNS Blocklists](https://github.com/hagezi/dns-blocklists), maintained by Gerd HaGeZi and contributors, GPL-3.0. AVRXT combines, normalizes, deduplicates and applies overrides to those lists. Upstream notices are preserved in the source snapshots. See [LICENSE](LICENSE) and [NOTICE](NOTICE). AVRXT-authored build code and modifications are also GPL-3.0-or-later. Provided without warranty.
+Fork the repository, create a focused branch, and submit a pull request with the supplied template. Include what changed, why, tests and any migration/rollback steps. Read [CONTRIBUTING.md](CONTRIBUTING.md) before editing rules or adding sources.
+
+Use an [issue form](https://github.com/aviorxt/safeguard/issues/new/choose) for false positives, missed threats, bugs, source requests or migrations. For repository/subscription changes, see [MIGRATION.md](MIGRATION.md). Do not post credentials, private client IDs, personal browsing URLs or private logs.
+
+## Limits and support
+
+DNS lists cannot inspect HTTPS paths, remove same-domain video ads, enforce Safe Search by themselves, or guarantee complete protection. False positives and missed threats are possible. Keep resolver protections such as DNSSEC and Safe Search configured separately.
+
+Contact: **dns@avrxt.tech**. Sensitive vulnerabilities: [SECURITY.md](SECURITY.md).
+
+## License
+
+GPL-3.0, with preserved MIT source notices and font OFL notices. AVRXT-authored code and modifications are GPL-3.0-or-later. See [LICENSE](LICENSE), [NOTICE](NOTICE), and [licenses/](licenses/). Provided without warranty.

@@ -4,3 +4,9 @@ Copyright: Gerd HaGeZi and contributors; consult preserved source headers.
 Upstream license: GNU GPL version 3 (LICENSE).
 AVRXT modifications: normalization, combination, overrides, build automation and output formats.
 Full upstream inputs and notices are preserved in sources/.
+
+Additional independently maintained source feeds:
+NoCoin (Hosh and contributors), MIT: https://github.com/hoshsadiq/adblock-nocoin-list
+Phishing URL Blocklist (Ming Di Leom and contributors), MIT: https://github.com/curbengh/phishing-filter
+URLhaus filter (Ming Di Leom and contributors), MIT: https://github.com/curbengh/urlhaus-filter
+Their complete MIT notices are preserved in licenses/; upstream source headers remain in sources/.
