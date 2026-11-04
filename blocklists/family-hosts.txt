@@ -19122,6 +19122,7 @@
 0.0.0.0 ads.phunuvagiadinh.vn
 0.0.0.0 ads.pinger.com
 0.0.0.0 ads.pinger.com.cdn.cloudflare.net
+0.0.0.0 ads.pinterest.com
 0.0.0.0 ads.planet.nl
 0.0.0.0 ads.planetamd64.com
 0.0.0.0 ads.planetwin365affiliate.com
@@ -20018,6 +20019,7 @@
 0.0.0.0 adservice.aliexpress.com
 0.0.0.0 adservice.com
 0.0.0.0 adservice.dk
+0.0.0.0 adservice.google.com
 0.0.0.0 adservice.hani.co.kr
 0.0.0.0 adservice.hepsiburada.com
 0.0.0.0 adservice.sbs.co.kr
@@ -41823,6 +41825,7 @@
 0.0.0.0 appmetrica.mdigital.ru
 0.0.0.0 appmetrica.sovcombank.ru
 0.0.0.0 appmetrica.yandex.net
+0.0.0.0 appmetrica.yandex.ru
 0.0.0.0 appmibio.uni-goettingen.de
 0.0.0.0 appmminfoscdcterritoires.durablesites.com
 0.0.0.0 appmobile.cn
@@ -110737,6 +110740,7 @@
 0.0.0.0 doubleclick.de
 0.0.0.0 doubleclick.host
 0.0.0.0 doubleclick.ne.jp
+0.0.0.0 doubleclick.net
 0.0.0.0 doubleclick.uk.net
 0.0.0.0 doubleclickbygoogle.com
 0.0.0.0 doubledelivery.xyz
@@ -155141,6 +155145,7 @@
 0.0.0.0 googleads.googleapis.com
 0.0.0.0 googleadsegitim.com
 0.0.0.0 googleadservices-cn.com
+0.0.0.0 googleadservices.com
 0.0.0.0 googleadsserving.cn
 0.0.0.0 googleailesi.com
 0.0.0.0 googleanalytics.com
@@ -228696,6 +228701,7 @@
 0.0.0.0 metrika.myseldon.com
 0.0.0.0 metrika.traff.space
 0.0.0.0 metrika.yandex.com.tr
+0.0.0.0 metrika.yandex.ru
 0.0.0.0 metrilo.com
 0.0.0.0 metritisooes.info
 0.0.0.0 metrix.behtarino.com
@@ -312437,6 +312443,7 @@
 0.0.0.0 scoreaisle.com
 0.0.0.0 scoreanattorney.com
 0.0.0.0 scoreboard-live.com
+0.0.0.0 scorecardresearch.com
 0.0.0.0 scorecardrewards-survey.com
 0.0.0.0 scoreclassics.com
 0.0.0.0 scoredatscore.com

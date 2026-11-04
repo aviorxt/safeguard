@@ -19121,6 +19121,7 @@ ads.phunusuckhoe.vn
 ads.phunuvagiadinh.vn
 ads.pinger.com
 ads.pinger.com.cdn.cloudflare.net
+ads.pinterest.com
 ads.planet.nl
 ads.planetamd64.com
 ads.planetwin365affiliate.com
@@ -20017,6 +20018,7 @@ adservfnt-eu.dsp-api.moloco.com
 adservice.aliexpress.com
 adservice.com
 adservice.dk
+adservice.google.com
 adservice.hani.co.kr
 adservice.hepsiburada.com
 adservice.sbs.co.kr
@@ -41822,6 +41824,7 @@ appmetr.com
 appmetrica.mdigital.ru
 appmetrica.sovcombank.ru
 appmetrica.yandex.net
+appmetrica.yandex.ru
 appmibio.uni-goettingen.de
 appmminfoscdcterritoires.durablesites.com
 appmobile.cn
@@ -110736,6 +110739,7 @@ doubleclick.ctfile.com
 doubleclick.de
 doubleclick.host
 doubleclick.ne.jp
+doubleclick.net
 doubleclick.uk.net
 doubleclickbygoogle.com
 doubledelivery.xyz
@@ -155140,6 +155144,7 @@ googleads-cn.com
 googleads.googleapis.com
 googleadsegitim.com
 googleadservices-cn.com
+googleadservices.com
 googleadsserving.cn
 googleailesi.com
 googleanalytics.com
@@ -228695,6 +228700,7 @@ metrika.lookmovie2.to
 metrika.myseldon.com
 metrika.traff.space
 metrika.yandex.com.tr
+metrika.yandex.ru
 metrilo.com
 metritisooes.info
 metrix.behtarino.com
@@ -312436,6 +312442,7 @@ score-live.org
 scoreaisle.com
 scoreanattorney.com
 scoreboard-live.com
+scorecardresearch.com
 scorecardrewards-survey.com
 scoreclassics.com
 scoredatscore.com

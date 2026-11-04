@@ -1,0 +1,12 @@
+# Reviewed AVRXT advertising/tracking supplement. Domain rules include subdomains.
+# Evidence: AdGuard DNS filter and HaGeZi Pro; see rules/README.md.
+ads.pinterest.com
+adservice.google.com
+appmetrica.yandex.ru
+criteo.net
+doubleclick.net
+googleadservices.com
+googlesyndication.com
+metrika.yandex.ru
+quantserve.com
+scorecardresearch.com

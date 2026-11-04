@@ -66,6 +66,7 @@ Every category is available in all six formats. Import support and matching beha
 Safeguard combines maintained community intelligence from **HaGeZi**, **NoCoin**, **Phishing URL Blocklist**, and the **URLhaus-derived filter**. Source attribution, license notices and verbatim snapshots are preserved. We do not claim independent discovery of every domain.
 
 - [Source manifest](sources.json) and [source snapshots](sources/)
+- [Reviewed domain supplements](rules/README.md) for confirmed advertising gaps and explicit family-policy domains
 - [Category catalog](catalog.json) and [build report](https://safeguard.avrxt.tech/blocklists/report.json)
 - [Daily update status](https://github.com/aviorxt/safeguard/actions/workflows/update.yml) and [publication checks](https://github.com/aviorxt/safeguard/actions/workflows/check.yml)
 - [Changelog](CHANGELOG.md)

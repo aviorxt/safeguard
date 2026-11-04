@@ -58,6 +58,7 @@ def build():
         html.write_text(text,encoding='utf-8',newline='\n')
     shutil.copytree(ROOT/'blocklists',dist/'blocklists')
     shutil.copytree(ROOT/'sources',dist/'sources')
+    shutil.copytree(ROOT/'rules',dist/'rules')
     shutil.copytree(ROOT/'licenses',dist/'licenses')
     for name in ('LICENSE','NOTICE','sources.json','catalog.json'):
         shutil.copyfile(ROOT/name,dist/name)

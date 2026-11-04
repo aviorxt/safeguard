@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793788264 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793795723 3600 600 86400 60 )
 @ IN NS localhost.
 0-02.net CNAME .
 *.0-02.net CNAME .
@@ -23824,6 +23824,8 @@ ads.pinger.com CNAME .
 *.ads.pinger.com CNAME .
 ads.pinger.com.cdn.cloudflare.net CNAME .
 *.ads.pinger.com.cdn.cloudflare.net CNAME .
+ads.pinterest.com CNAME .
+*.ads.pinterest.com CNAME .
 ads.planet.nl CNAME .
 *.ads.planet.nl CNAME .
 ads.planetamd64.com CNAME .
@@ -25566,6 +25568,8 @@ adservice.com CNAME .
 *.adservice.com CNAME .
 adservice.dk CNAME .
 *.adservice.dk CNAME .
+adservice.google.com CNAME .
+*.adservice.google.com CNAME .
 adservice.hani.co.kr CNAME .
 *.adservice.hani.co.kr CNAME .
 adservice.hepsiburada.com CNAME .
@@ -48812,6 +48816,8 @@ appmetrica.sovcombank.ru CNAME .
 *.appmetrica.sovcombank.ru CNAME .
 appmetrica.yandex.net CNAME .
 *.appmetrica.yandex.net CNAME .
+appmetrica.yandex.ru CNAME .
+*.appmetrica.yandex.ru CNAME .
 appmobile.cn CNAME .
 *.appmobile.cn CNAME .
 appmobilelinkgen.com CNAME .
@@ -101612,6 +101618,8 @@ doubleclick.host CNAME .
 *.doubleclick.host CNAME .
 doubleclick.ne.jp CNAME .
 *.doubleclick.ne.jp CNAME .
+doubleclick.net CNAME .
+*.doubleclick.net CNAME .
 doubleclick.uk.net CNAME .
 *.doubleclick.uk.net CNAME .
 doubleclickbygoogle.com CNAME .
@@ -135746,6 +135754,8 @@ googleads.googleapis.com CNAME .
 *.googleads.googleapis.com CNAME .
 googleadservices-cn.com CNAME .
 *.googleadservices-cn.com CNAME .
+googleadservices.com CNAME .
+*.googleadservices.com CNAME .
 googleadsserving.cn CNAME .
 *.googleadsserving.cn CNAME .
 googleailesi.com CNAME .
@@ -198064,6 +198074,8 @@ metrika.traff.space CNAME .
 *.metrika.traff.space CNAME .
 metrika.yandex.com.tr CNAME .
 *.metrika.yandex.com.tr CNAME .
+metrika.yandex.ru CNAME .
+*.metrika.yandex.ru CNAME .
 metrilo.com CNAME .
 *.metrilo.com CNAME .
 metrix.behtarino.com CNAME .
@@ -260878,6 +260890,8 @@ scorchsorchic.com CNAME .
 *.scorchsorchic.com CNAME .
 scoreaisle.com CNAME .
 *.scoreaisle.com CNAME .
+scorecardresearch.com CNAME .
+*.scorecardresearch.com CNAME .
 scoredcasino-fr.fr CNAME .
 *.scoredcasino-fr.fr CNAME .
 scoreparade.com CNAME .

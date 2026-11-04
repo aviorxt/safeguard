@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793788264 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793795722 3600 600 86400 60 )
 @ IN NS localhost.
 0-0.fr CNAME .
 *.0-0.fr CNAME .
@@ -32736,6 +32736,8 @@ ads.pinger.com CNAME .
 *.ads.pinger.com CNAME .
 ads.pinger.com.cdn.cloudflare.net CNAME .
 *.ads.pinger.com.cdn.cloudflare.net CNAME .
+ads.pinterest.com CNAME .
+*.ads.pinterest.com CNAME .
 ads.planet.nl CNAME .
 *.ads.planet.nl CNAME .
 ads.planetamd64.com CNAME .
@@ -34526,6 +34528,8 @@ adservice.com CNAME .
 *.adservice.com CNAME .
 adservice.dk CNAME .
 *.adservice.dk CNAME .
+adservice.google.com CNAME .
+*.adservice.google.com CNAME .
 adservice.hani.co.kr CNAME .
 *.adservice.hani.co.kr CNAME .
 adservice.hepsiburada.com CNAME .
@@ -72384,6 +72388,8 @@ appmetrica.sovcombank.ru CNAME .
 *.appmetrica.sovcombank.ru CNAME .
 appmetrica.yandex.net CNAME .
 *.appmetrica.yandex.net CNAME .
+appmetrica.yandex.ru CNAME .
+*.appmetrica.yandex.ru CNAME .
 appmibio.uni-goettingen.de CNAME .
 *.appmibio.uni-goettingen.de CNAME .
 appmminfoscdcterritoires.durablesites.com CNAME .
@@ -182310,6 +182316,8 @@ doubleclick.host CNAME .
 *.doubleclick.host CNAME .
 doubleclick.ne.jp CNAME .
 *.doubleclick.ne.jp CNAME .
+doubleclick.net CNAME .
+*.doubleclick.net CNAME .
 doubleclick.uk.net CNAME .
 *.doubleclick.uk.net CNAME .
 doubleclickbygoogle.com CNAME .
@@ -247878,6 +247886,8 @@ googleadsegitim.com CNAME .
 *.googleadsegitim.com CNAME .
 googleadservices-cn.com CNAME .
 *.googleadservices-cn.com CNAME .
+googleadservices.com CNAME .
+*.googleadservices.com CNAME .
 googleadsserving.cn CNAME .
 *.googleadsserving.cn CNAME .
 googleailesi.com CNAME .
@@ -361962,6 +361972,8 @@ metrika.traff.space CNAME .
 *.metrika.traff.space CNAME .
 metrika.yandex.com.tr CNAME .
 *.metrika.yandex.com.tr CNAME .
+metrika.yandex.ru CNAME .
+*.metrika.yandex.ru CNAME .
 metrilo.com CNAME .
 *.metrilo.com CNAME .
 metritisooes.info CNAME .
@@ -489766,6 +489778,8 @@ scoreanattorney.com CNAME .
 *.scoreanattorney.com CNAME .
 scoreboard-live.com CNAME .
 *.scoreboard-live.com CNAME .
+scorecardresearch.com CNAME .
+*.scorecardresearch.com CNAME .
 scorecardrewards-survey.com CNAME .
 *.scorecardrewards-survey.com CNAME .
 scoredcasino-fr.fr CNAME .
