@@ -1,5 +1,5 @@
 ! Title: AVRXT Safeguard Family
-! Homepage: https://github.com/avrxtcloud/safeguard
+! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; see LICENSE, NOTICE and sources/
 ! Modified aggregation of HaGeZi lists; 407412 unique domains
 ! Expires: 1 day

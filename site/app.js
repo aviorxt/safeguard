@@ -44,7 +44,7 @@ async function loadStatus() {
     const deployment=await response.json();
     if(!/^[a-f0-9]{40}$/.test(deployment.commit)) throw new Error('Invalid revision');
     $('revision').textContent=deployment.commit.slice(0,8)+' ↗';
-    $('revision').href='https://github.com/avrxtcloud/safeguard/commit/'+deployment.commit;
+    $('revision').href='https://github.com/aviorxt/safeguard/commit/'+deployment.commit;
   } catch { $('revision').textContent='View GitHub history ↗'; }
 }
 loadStatus();

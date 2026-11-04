@@ -6,7 +6,7 @@ import time
 import urllib.request
 from datetime import datetime, timezone
 
-REPO='https://raw.githubusercontent.com/avrxtcloud/safeguard/main/'
+REPO='https://raw.githubusercontent.com/aviorxt/safeguard/main/'
 
 def fetch(url,limit=30_000_000):
     with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'AVRXT-Safeguard-Monitor/1.0','Cache-Control':'no-cache'}),timeout=60) as response:

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-04T09:19:12.928883+00:00",
+  "generated_utc": "2026-11-04T09:30:34.452496+00:00",
   "sources": [
     {
       "id": "normal",
@@ -51,10 +51,10 @@
     }
   },
   "outputs": {
-    "blocklists/standard.txt": "85e17b781c4c5669287d65c171d16396c99d172e21de257c5f800c01f5a9e609",
+    "blocklists/standard.txt": "c76dd96fdd082094dcb8d09ce663fe67205565a375a7919d1c624cce0e98226b",
     "blocklists/standard-domains.txt": "768e2505e0b5a7cdc4c806de1d61f0ed617c6ec0e38cf5877a7c31a288d5177e",
     "blocklists/standard-hosts.txt": "2a343f954c2f76a25f2f4facf3156c326bf6ae73ff877ec858dab33af059f9c6",
-    "blocklists/family.txt": "92250cc9946ff63233110c8db69898591cf9a8eaca1162c45d1f2856e5d25380",
+    "blocklists/family.txt": "3e04e33719e51d78fa5a21132dd76d2a97a969bfc173a2fd513afee63a088bd4",
     "blocklists/family-domains.txt": "909a04ab764d83de93b8f096cbf0aeca1a7eaa1d3a0b87ddb1dd3b49ef2bc276",
     "blocklists/family-hosts.txt": "56cc587541406d1f57ad864d334f27bba812c3de4aa20339186af0473fd6ba1a"
   }

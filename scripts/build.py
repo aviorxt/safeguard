@@ -101,7 +101,7 @@ def build():
     for name,entries in profiles.items():
         entries,suppressed=apply_allow(entries|custom,allowed)
         ordered=sorted(entries)
-        header=f'! Title: AVRXT Safeguard {name.title()}\n! Homepage: https://github.com/avrxtcloud/safeguard\n! License: GPL-3.0; see LICENSE, NOTICE and sources/\n! Modified aggregation of HaGeZi lists; {len(entries)} unique domains\n! Expires: 1 day\n'
+        header=f'! Title: AVRXT Safeguard {name.title()}\n! Homepage: https://github.com/aviorxt/safeguard\n! License: GPL-3.0; see LICENSE, NOTICE and sources/\n! Modified aggregation of HaGeZi lists; {len(entries)} unique domains\n! Expires: 1 day\n'
         stage[f'blocklists/{name}.txt']=(header+''.join('||'+d+'^\n' for d in ordered)).encode()
         stage[f'blocklists/{name}-domains.txt']=('\n'.join(ordered)+'\n').encode()
         stage[f'blocklists/{name}-hosts.txt']=('# AVRXT Safeguard; GPL-3.0; see NOTICE\n'+''.join('0.0.0.0 '+d+'\n' for d in ordered)).encode()

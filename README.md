@@ -16,8 +16,8 @@ Local site build: `python scripts/build_site.py`, then `python -m http.server --
 
 | Profile | AdGuard Home subscription |
 | --- | --- |
-| **Family — all in one**: ads, trackers, threat domains and adult content | `https://raw.githubusercontent.com/avrxtcloud/safeguard/main/blocklists/family.txt` |
-| Standard: ads, trackers and threat domains | `https://raw.githubusercontent.com/avrxtcloud/safeguard/main/blocklists/standard.txt` |
+| **Family — all in one**: ads, trackers, threat domains and adult content | `https://raw.githubusercontent.com/aviorxt/safeguard/main/blocklists/family.txt` |
+| Standard: ads, trackers and threat domains | `https://raw.githubusercontent.com/aviorxt/safeguard/main/blocklists/standard.txt` |
 
 Add one URL under AdGuard Home → Filters → DNS blocklists. Family includes Standard; do not add both. `blocklists/*-domains.txt` contains bare domains, and `*-hosts.txt` contains hosts-format equivalents. All outputs are derived from domain-wide rules; browser cosmetic rules and URL paths are deliberately unsupported.
 
