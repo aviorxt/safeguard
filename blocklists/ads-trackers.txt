@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard Ads & trackers
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 179500 unique domains
+! Modified aggregation of reviewed upstream lists; 179501 unique domains
 ! Expires: 1 day
 ||0-02.net^
 ||0-btc.com^
@@ -155528,6 +155528,7 @@
 ||track.noder.se^
 ||track.nopaperforms.com^
 ||track.nvdev.de^
+||track.nxtdev.xyz^
 ||track.oasis.magictavern.com^
 ||track.olx.com.br^
 ||track.onef.pro^

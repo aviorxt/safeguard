@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793797849 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793799142 3600 600 86400 60 )
 @ IN NS localhost.
 0-casino.info CNAME .
 *.0-casino.info CNAME .
