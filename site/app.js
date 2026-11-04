@@ -12,6 +12,9 @@ document.addEventListener('click', async event => {
     input.focus(); input.select(); $('copy-status').textContent='Select and copy the subscription URL manually.';
   }
 });
+document.querySelectorAll('.main-format').forEach(select=>select.addEventListener('change',()=>{
+  $(select.dataset.profile+'-url').value='https://safeguard.avrxt.tech/blocklists/'+select.dataset.profile+select.value;
+}));
 let categoryCatalog=[], categoryReport={}, selectedGroup='All';
 function renderCategories() {
   const query=$('category-search').value.trim().toLowerCase();
