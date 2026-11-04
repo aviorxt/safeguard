@@ -12,7 +12,9 @@ The publication workflow runs after successful updates and every six hours. It c
 
 The active main ruleset requires pull requests, the GitHub Actions `Validate repository` check, resolved review threads and linear history. It blocks force pushes and deletion. There is no human/admin bypass entry. A second person's approval is encouraged but not required for a sole-maintainer project.
 
-The `github-actions[bot]` user has an explicit automation bypass for the existing publisher. GitHub rejected using the built-in Actions integration as a bypass actor on this personal repository; the bot-user actor is used instead. The bypass is broad to that bot within this repository, not cryptographically scoped to one workflow. Keep every PR job read-only and review any change that grants write permissions to other workflows. No new PAT or deployment secret is used.
+No automation bypass is configured. The publisher pushes generated data to a temporary automation branch, creates a PR, explicitly dispatches the required CI using the repository token, waits for success and requests a squash merge. Main protection still enforces the required check and up-to-date branch. CI failures or merge conflicts leave the PR open for review. PR creation is enabled in repository Actions settings; default token permissions are read-only, with explicit contents/pull-requests/actions writes only in the main-only publisher.
+
+The site builder fingerprints CSS and JavaScript filenames so new HTML cannot accidentally reuse an old cached bundle.
 
 ## Validation and recovery
 
