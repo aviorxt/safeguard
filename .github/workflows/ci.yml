@@ -1,6 +1,9 @@
 name: Validate repository
 on:
   pull_request:
+    paths-ignore:
+      - 'blocklists/**'
+      - 'sources/**'
   push:
     branches: [main]
   workflow_dispatch:
