@@ -5,6 +5,7 @@ import subprocess
 import time
 import urllib.request
 import urllib.error
+import urllib.parse
 
 def git(*args):
     return subprocess.check_output(['git',*args],text=True).strip()
@@ -19,13 +20,27 @@ def main():
         request=urllib.request.Request('https://api.github.com/repos/'+repo+'/'+path,method=method,
             headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'Safeguard-publisher','X-GitHub-Api-Version':'2022-11-28'},
             data=json.dumps(data).encode() if data is not None else None)
-        try:
-            with urllib.request.urlopen(request,timeout=60) as response:
-                body=response.read()
-                return json.loads(body) if body else {}
-        except urllib.error.HTTPError as exc:
-            # Only fixed GitHub API paths are used; never include token-bearing URLs.
-            raise RuntimeError(f'GitHub API {method} {path}: HTTP {exc.code}: '+exc.read().decode()) from None
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(request,timeout=60) as response:
+                    body=response.read()
+                    return json.loads(body) if body else {}
+            except urllib.error.HTTPError as exc:
+                detail=exc.read().decode()
+                if exc.code>=500:
+                    # A server error can arrive after a mutation succeeded.
+                    if method=='POST' and path=='pulls':
+                        prior=api('pulls?state=open&head='+urllib.parse.quote(repo.split('/')[0]+':'+branch,safe=''))
+                        if prior:
+                            return prior[0]
+                    if method=='PUT' and path.endswith('/merge'):
+                        prior=api(path.rsplit('/',1)[0])
+                        if prior.get('merged'):
+                            return {'merged':True,'sha':prior['merge_commit_sha']}
+                    if attempt<2:
+                        time.sleep(2**attempt)
+                        continue
+                raise RuntimeError(f'GitHub API {method} {path}: HTTP {exc.code}: '+detail) from None
     git('add','blocklists','sources')
     if not git('diff','--cached','--name-only'):
         print('No generated changes to publish.')
@@ -70,7 +85,10 @@ def main():
                 if not result.get('merged'):
                     raise RuntimeError('Update PR was not merged; review '+pr['html_url'])
                 print('Merged validated update:',result['sha'],flush=True)
-                api('git/refs/heads/'+branch,'DELETE')
+                try:
+                    api('git/refs/heads/'+branch,'DELETE')
+                except RuntimeError:
+                    print('Update merged; temporary branch cleanup can be completed later.')
                 return
         time.sleep(15)
     raise RuntimeError('Validation timed out; update PR remains open for review: '+pr['html_url'])
