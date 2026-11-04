@@ -1,5 +1,12 @@
 'use strict';
 const el=id=>document.getElementById(id);
+function contributorAvatar(username) {
+  const image=document.createElement('img');image.className='contributor-avatar';
+  image.src='https://github.com/'+encodeURIComponent(username)+'.png?size=64';
+  image.alt='';image.width=32;image.height=32;image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
+  image.addEventListener('error',()=>{image.hidden=true;});
+  return image;
+}
 let categories=[];
 function normalizeDomain(raw) {
   if(/[\s/@:#?*\\]/.test(raw)||!raw.includes('.')) throw new Error('Enter one domain, without a URL, port, wildcard, or path.');
@@ -39,11 +46,13 @@ async function load() {
     const entries=(await response.json()).community||[];
     entries.sort((a,b)=>Date.parse(b.accepted_utc)-Date.parse(a.accepted_utc));
     el('last-contributor').textContent=entries.length?'Last updated by @'+entries[0].username+' · accepted '+new Date(entries[0].accepted_utc).toLocaleDateString():'No community submissions have been published yet. Your discovery could be the first.';
+    if(entries.length) el('last-contributor').prepend(contributorAvatar(entries[0].username));
     for(const entry of entries.slice(0,20)) {
       const row=document.createElement('article');row.className='contribution-row';
       const domain=document.createElement('strong');domain.textContent=entry.domain;
       const category=document.createElement('span');category.textContent=entry.category;
       const credit=document.createElement('a');credit.textContent='@'+entry.username+' ↗';credit.href='https://github.com/aviorxt/safeguard/issues/'+Number(entry.issue);
+      credit.className='contributor-credit';credit.prepend(contributorAvatar(entry.username));
       row.append(domain,category,credit);el('contribution-list').append(row);
     }
   } catch {el('last-contributor').textContent='Contribution history is unavailable. View requests on GitHub.';}

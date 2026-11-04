@@ -46,5 +46,5 @@ def markdown(entries):
     text+='Last updated by [@'+latest['username']+'](https://github.com/'+latest['username']+').\n\n'
     text+='| Contributor | Domain | Category | Accepted (UTC) | Request |\n| --- | --- | --- | --- | --- |\n'
     for entry in ordered:
-        text+='| [@'+entry['username']+'](https://github.com/'+entry['username']+') | `'+entry['domain']+'` | '+entry['category']+' | '+entry['accepted_utc'][:10]+' | [#'+str(entry['issue'])+'](https://github.com/aviorxt/safeguard/issues/'+str(entry['issue'])+') |\n'
+        text+='| <img src="https://github.com/'+entry['username']+'.png?size=64" width="32" height="32" alt=""> [@'+entry['username']+'](https://github.com/'+entry['username']+') | `'+entry['domain']+'` | '+entry['category']+' | '+entry['accepted_utc'][:10]+' | [#'+str(entry['issue'])+'](https://github.com/aviorxt/safeguard/issues/'+str(entry['issue'])+') |\n'
     return text
