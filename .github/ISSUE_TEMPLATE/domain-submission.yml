@@ -1,0 +1,80 @@
+{
+  "name": "Domain submission",
+  "description": "Suggest one domain for a reviewed community blocklist update.",
+  "title": "[Domain submission]: ",
+  "body": [
+    {
+      "type": "input",
+      "id": "username",
+      "attributes": {
+        "label": "GitHub username",
+        "description": "Must match the GitHub account submitting this issue."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "category",
+      "attributes": {
+        "label": "Category",
+        "options": [
+          "ads-trackers",
+          "threats",
+          "adult",
+          "gambling",
+          "social",
+          "windows",
+          "apple",
+          "samsung",
+          "xiaomi",
+          "oppo-realme",
+          "amazon",
+          "smart-tv",
+          "cryptomining",
+          "phishing",
+          "malware"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "domain",
+      "attributes": {
+        "label": "Domain",
+        "description": "One domain only; no URL, path, wildcard, or IP address."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "evidence",
+      "attributes": {
+        "label": "Evidence",
+        "description": "Explain the category and unwanted behavior. Public reputation links are welcome; do not link to payloads."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "checkboxes",
+      "id": "consent",
+      "attributes": {
+        "label": "Before submitting",
+        "options": [
+          {
+            "label": "This request is public, contains no private information, and requires maintainer review before publication.",
+            "required": true
+          }
+        ]
+      }
+    }
+  ]
+}

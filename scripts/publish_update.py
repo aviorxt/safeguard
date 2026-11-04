@@ -15,6 +15,13 @@ def main():
         raise RuntimeError('Publishing is allowed only from main')
     repo=os.environ['GITHUB_REPOSITORY']
     token=os.environ['GH_TOKEN']
+    title='Update validated Safeguard blocklists'
+    contribution=''
+    if os.environ.get('GITHUB_EVENT_NAME')=='issues':
+        event=json.load(open(os.environ['GITHUB_EVENT_PATH'],encoding='utf-8'))
+        number=event['issue']['number']
+        title='Publish reviewed community domain #'+str(number)
+        contribution='\n\n## Community contribution\nCloses #'+str(number)+'. Authorship is verified against the GitHub issue author. Category-scoped policy and contributor credit are included in the generated report.'
     branch='automation/blocklists-'+os.environ['GITHUB_RUN_ID']+'-'+os.environ['GITHUB_RUN_ATTEMPT']
     def api(path,method='GET',data=None):
         request=urllib.request.Request('https://api.github.com/repos/'+repo+'/'+path,method=method,
@@ -41,14 +48,14 @@ def main():
                         time.sleep(2**attempt)
                         continue
                 raise RuntimeError(f'GitHub API {method} {path}: HTTP {exc.code}: '+detail) from None
-    git('add','blocklists','sources')
+    git('add','blocklists','sources','rules/community.json','CONTRIBUTORS.md')
     if not git('diff','--cached','--name-only'):
         print('No generated changes to publish.')
         return
     git('config','user.name','github-actions[bot]')
     git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
     git('switch','-c',branch)
-    git('commit','-m','Update validated Safeguard blocklists')
+    git('commit','-m',title)
     sha=git('rev-parse','HEAD')
     for attempt in range(3):
         try:
@@ -58,8 +65,8 @@ def main():
             if attempt==2:
                 raise
             time.sleep(2**attempt)
-    pr=api('pulls','POST',{'title':'Update validated Safeguard blocklists','head':branch,'base':'main',
-        'body':'## Generated update\nRefresh reviewed upstream feeds and regenerate every subscription format.\n\n## Validation\nSource safeguards, unit tests and site integrity validation passed before this PR. The publisher dispatches the required repository validation and waits for its result before merging. Native RPZ, dnsmasq and Unbound checks run in that validation.\n\n## Compatibility\nExisting subscription URLs and category policy are preserved. Review the report diff for source counts, exclusions and hashes.\n\n## Rollback\nRevert this generated-data commit through a validated pull request and rerun the updater.'})
+    pr=api('pulls','POST',{'title':title,'head':branch,'base':'main',
+        'body':'## Generated update\nRefresh reviewed upstream feeds and regenerate every subscription format.\n\n## Validation\nSource safeguards, unit tests and site integrity validation passed before this PR. The publisher dispatches the required repository validation and waits for its result before merging. Native RPZ, dnsmasq and Unbound checks run in that validation.\n\n## Compatibility\nExisting subscription URLs and category policy are preserved. Review the report diff for source counts, exclusions and hashes.\n\n## Rollback\nRevert this generated-data commit through a validated pull request and rerun the updater.'+contribution})
     print('Generated update PR:',pr['html_url'],flush=True)
     api('statuses/'+sha,'POST',{'state':'pending','context':'Safeguard validation',
         'description':'Waiting for dispatched repository CI','target_url':pr['html_url']})
@@ -83,7 +90,7 @@ def main():
                 # The server independently enforces PR rules and required status checks.
                 for merge_attempt in range(6):
                     try:
-                        result=api('pulls/'+str(pr['number'])+'/merge','PUT',{'merge_method':'squash','sha':sha,'commit_title':'Update validated Safeguard blocklists'})
+                        result=api('pulls/'+str(pr['number'])+'/merge','PUT',{'merge_method':'squash','sha':sha,'commit_title':title})
                         break
                     except RuntimeError as exc:
                         if merge_attempt==5 or 'HTTP 405' not in str(exc) or 'Required status check' not in str(exc):

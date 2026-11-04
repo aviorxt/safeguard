@@ -15,6 +15,9 @@ def validate(root=ROOT):
     if not -300 <= age <= 48*3600:
         raise ValueError('Blocklist report is stale or future-dated')
     catalog=json.loads((root/'catalog.json').read_text())
+    from community import load
+    if report.get('community',[])!=load(root):
+        raise ValueError('Community policy must be rebuilt before publishing')
     if set(report['profiles'])!={item['id'] for item in catalog}:
         raise ValueError('Catalog and report profiles do not match')
     expected={f'blocklists/{profile}{suffix}' for profile in report['profiles'] for suffix in ('.txt','-domains.txt','-hosts.txt','-dnsmasq.conf','-unbound.conf','-rpz.zone')}
@@ -50,7 +53,7 @@ def build():
     shutil.copytree(ROOT/'site',dist)
     # Content-addressed URLs prevent new HTML from using stale browser-cached code.
     replacements={}
-    for name in ('style.css','app.js'):
+    for name in ('style.css','app.js','submit.js'):
         data=(dist/name).read_bytes()
         stem,extension=name.rsplit('.',1)
         versioned=stem+'.'+hashlib.sha256(data).hexdigest()[:12]+'.'+extension

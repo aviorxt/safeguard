@@ -1,6 +1,8 @@
+import sys
 import importlib.util
 from pathlib import Path
 import unittest
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import tempfile
 import json
 from unittest.mock import patch
@@ -36,12 +38,16 @@ class BuilderTests(unittest.TestCase):
             (root/'rules/allow.txt').write_text('');(root/'rules/block.txt').write_text('')
             (root/'rules/ads-trackers.txt').write_text('extra-ads.example.com')
             (root/'rules/adult.txt').write_text('adult.example.com')
+            (root/'rules/community.json').write_text(json.dumps([{'domain':'community-bets.example.com','category':'gambling','username':'contributor','issue':1,'accepted_utc':'2026-11-04T12:00:00+00:00'}]))
             (root/'catalog.json').write_text(json.dumps([{'id':x,'name':x} for x in ['family','standard','gambling']]))
             (root/'sources.json').write_text(json.dumps([{'id':'privacy','url':'privacy','minimum':1,'profiles':['family','standard']},{'id':'gambling','url':'gambling','minimum':1,'profiles':['gambling']}]))
             with patch.object(b,'ROOT',root),patch.object(b,'download',side_effect=lambda url: b'||ads.example.com^' if url=='privacy' else b'||bets.example.com^'):
                 b.build()
             self.assertNotIn('bets.example.com',(root/'blocklists/family.txt').read_text())
             self.assertIn('bets.example.com',(root/'blocklists/gambling.txt').read_text())
+            self.assertIn('community-bets.example.com',(root/'blocklists/gambling.txt').read_text())
+            self.assertNotIn('community-bets.example.com',(root/'blocklists/family.txt').read_text())
+            self.assertIn('@contributor',(root/'CONTRIBUTORS.md').read_text())
             self.assertIn('extra-ads.example.com',(root/'blocklists/standard.txt').read_text())
             self.assertNotIn('adult.example.com',(root/'blocklists/standard.txt').read_text())
             self.assertIn('adult.example.com',(root/'blocklists/family.txt').read_text())
