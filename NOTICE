@@ -1,0 +1,6 @@
+AVRXT Safeguard is a modified aggregation of HaGeZi DNS Blocklists.
+Upstream: https://github.com/hagezi/dns-blocklists
+Copyright: Gerd HaGeZi and contributors; consult preserved source headers.
+Upstream license: GNU GPL version 3 (LICENSE).
+AVRXT modifications: normalization, combination, overrides, build automation and output formats.
+Full upstream inputs and notices are preserved in sources/.

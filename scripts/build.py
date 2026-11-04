@@ -1,0 +1,121 @@
+"""Build strict DNS-only blocklists. Standard library only; Python 3.11+."""
+import hashlib
+import ipaddress
+import json
+import re
+import time
+import urllib.request
+from datetime import datetime, timezone
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+LABEL = re.compile(r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$")
+MAX_BYTES = 50_000_000
+
+def domain(value):
+    try:
+        value = value.rstrip('.').encode('idna').decode('ascii').lower()
+        ipaddress.ip_address(value)
+        raise ValueError('IP addresses are not domains')
+    except UnicodeError:
+        raise ValueError('Invalid IDN')
+    except ValueError as exc:
+        if str(exc) == 'IP addresses are not domains':
+            raise
+    parts = value.split('.')
+    if len(value)>253 or len(parts)<2 or not all(LABEL.fullmatch(p) for p in parts):
+        raise ValueError('Invalid domain: '+value)
+    if parts[-1].isdigit() or parts[-1] in {'local','localhost','invalid','test','example','internal'}:
+        raise ValueError('Reserved domain')
+    # Reject broad registry suffixes; trusted manifest inputs still require review.
+    if value in {'co.uk','org.uk','ac.uk','gov.uk','com.au','net.au','org.au','co.in','net.in','org.in','co.jp','co.nz','co.za','com.br','com.cn','com.sg','com.mx','com.tr'}:
+        raise ValueError('Broad registry suffix')
+    return value
+
+def parse(text):
+    result=set()
+    for number, raw in enumerate(text.splitlines(),1):
+        line=raw.strip()
+        if not line or line.startswith(('!','#','[')):
+            continue
+        if line.startswith('||') and line.endswith('^'):
+            line=line[2:-1]
+        try:
+            result.add(domain(line))
+        except ValueError as exc:
+            raise ValueError(f'Unsupported rule at line {number}: {raw[:100]}') from exc
+    return result
+
+def related(a,b):
+    return a==b or a.endswith('.'+b) or b.endswith('.'+a)
+
+def apply_allow(blocked, allowed):
+    # Enumerate ancestors, avoiding quadratic scans across large family lists.
+    remove=set()
+    for a in allowed:
+        p=a.split('.')
+        remove.update('.'.join(p[i:]) for i in range(len(p)-1))
+    for b in blocked:
+        p=b.split('.')
+        if any('.'.join(p[i:]) in allowed for i in range(len(p)-1)):
+            remove.add(b)
+    return blocked-remove, sorted(blocked & remove)
+
+def download(url):
+    if not url.startswith('https://raw.githubusercontent.com/hagezi/dns-blocklists/'):
+        raise ValueError('Source must be an approved HTTPS HaGeZi URL')
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'AVRXT-Safeguard/1.0'}),timeout=90) as response:
+                data=response.read(MAX_BYTES+1)
+            if len(data)>MAX_BYTES:
+                raise ValueError('Source too large')
+            return data
+        except (OSError,TimeoutError):
+            if attempt==2:
+                raise
+            time.sleep(2**attempt)
+
+def build():
+    manifest=json.loads((ROOT/'sources.json').read_text())
+    stage={}
+    profiles={'standard':set(),'family':set()}
+    report={'generated_utc':datetime.now(timezone.utc).isoformat(),'sources':[],'profiles':{}}
+    for source in manifest:
+        source_id=source['id']
+        if not re.fullmatch('[a-z0-9-]+',source_id):
+            raise ValueError('Invalid source ID')
+        data=download(source['url'])
+        entries=parse(data.decode('utf-8-sig'))
+        previous=ROOT/'sources'/f'{source_id}.txt'
+        if len(entries)<source['minimum']:
+            raise ValueError(f'{source_id}: below minimum')
+        if previous.exists() and len(entries)<len(parse(previous.read_text(encoding='utf-8-sig')))*.75:
+            raise ValueError(f'{source_id}: unexpected reduction over 25%')
+        stage[f'sources/{source_id}.txt']=data
+        report['sources'].append({**source,'domains':len(entries),'sha256':hashlib.sha256(data).hexdigest(),'rejected_rules':0})
+        for profile in source['profiles']:
+            profiles[profile].update(entries)
+    allowed=parse((ROOT/'rules/allow.txt').read_text())
+    custom=parse((ROOT/'rules/block.txt').read_text())
+    for name,entries in profiles.items():
+        entries,suppressed=apply_allow(entries|custom,allowed)
+        ordered=sorted(entries)
+        header=f'! Title: AVRXT Safeguard {name.title()}\n! Homepage: https://github.com/avrxtcloud/safeguard\n! License: GPL-3.0; see LICENSE, NOTICE and sources/\n! Modified aggregation of HaGeZi lists; {len(entries)} unique domains\n! Expires: 1 day\n'
+        stage[f'blocklists/{name}.txt']=(header+''.join('||'+d+'^\n' for d in ordered)).encode()
+        stage[f'blocklists/{name}-domains.txt']=('\n'.join(ordered)+'\n').encode()
+        stage[f'blocklists/{name}-hosts.txt']=('# AVRXT Safeguard; GPL-3.0; see NOTICE\n'+''.join('0.0.0.0 '+d+'\n' for d in ordered)).encode()
+        report['profiles'][name]={'domains':len(entries),'suppressed_by_allowlist':suppressed}
+    report['outputs']={k:hashlib.sha256(v).hexdigest() for k,v in stage.items() if k.startswith('blocklists/')}
+    stage['blocklists/report.json']=(json.dumps(report,indent=2)+'\n').encode()
+    # All downloads/validation complete before any published file is touched.
+    for path,data in stage.items():
+        dest=ROOT/path
+        dest.parent.mkdir(parents=True,exist_ok=True)
+        temp=dest.with_suffix(dest.suffix+'.tmp')
+        temp.write_bytes(data)
+        temp.replace(dest)
+    print(json.dumps(report['profiles'],indent=2))
+
+if __name__=='__main__':
+    build()

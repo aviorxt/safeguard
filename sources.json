@@ -1,0 +1,31 @@
+[
+  {
+    "id": "normal",
+    "name": "HaGeZi Multi NORMAL",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+    "profiles": [
+      "standard",
+      "family"
+    ],
+    "minimum": 50000
+  },
+  {
+    "id": "threats",
+    "name": "HaGeZi Threat Intelligence Feeds MINI",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.mini.txt",
+    "profiles": [
+      "standard",
+      "family"
+    ],
+    "minimum": 10000
+  },
+  {
+    "id": "adult",
+    "name": "HaGeZi NSFW",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nsfw.txt",
+    "profiles": [
+      "family"
+    ],
+    "minimum": 1000
+  }
+]

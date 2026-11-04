@@ -1,0 +1,1 @@
+# One domain per line. Applied to both profiles. Never add URLs or IP addresses.
