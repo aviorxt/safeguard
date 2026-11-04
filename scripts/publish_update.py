@@ -61,6 +61,8 @@ def main():
     pr=api('pulls','POST',{'title':'Update validated Safeguard blocklists','head':branch,'base':'main',
         'body':'## Generated update\nRefresh reviewed upstream feeds and regenerate every subscription format.\n\n## Validation\nSource safeguards, unit tests and site integrity validation passed before this PR. The publisher dispatches the required repository validation and waits for its result before merging. Native RPZ, dnsmasq and Unbound checks run in that validation.\n\n## Compatibility\nExisting subscription URLs and category policy are preserved. Review the report diff for source counts, exclusions and hashes.\n\n## Rollback\nRevert this generated-data commit through a validated pull request and rerun the updater.'})
     print('Generated update PR:',pr['html_url'],flush=True)
+    api('statuses/'+sha,'POST',{'state':'pending','context':'Safeguard validation',
+        'description':'Waiting for dispatched repository CI','target_url':pr['html_url']})
     # workflow_dispatch is one of the events permitted to trigger from GITHUB_TOKEN.
     api('actions/workflows/ci.yml/dispatches','POST',{'ref':branch})
     deadline=time.monotonic()+600
@@ -71,7 +73,13 @@ def main():
             run=max(matching,key=lambda item:item['id'])
             if run['status']=='completed':
                 if run['conclusion']!='success':
+                    api('statuses/'+sha,'POST',{'state':'failure','context':'Safeguard validation',
+                        'description':'Repository CI: '+run['conclusion'],'target_url':run['html_url']})
                     raise RuntimeError('Update remains unmerged; validation failed: '+run['html_url'])
+                # GITHUB_TOKEN-dispatched CI does not trigger a downstream workflow_run.
+                # Attest only the actual canonical CI run's success on this exact SHA.
+                api('statuses/'+sha,'POST',{'state':'success','context':'Safeguard validation',
+                    'description':'Dispatched repository CI passed','target_url':run['html_url']})
                 # The server independently enforces PR rules and required status checks.
                 for merge_attempt in range(6):
                     try:
@@ -91,6 +99,8 @@ def main():
                     print('Update merged; temporary branch cleanup can be completed later.')
                 return
         time.sleep(15)
+    api('statuses/'+sha,'POST',{'state':'error','context':'Safeguard validation',
+        'description':'Repository validation timed out','target_url':pr['html_url']})
     raise RuntimeError('Validation timed out; update PR remains open for review: '+pr['html_url'])
 
 if __name__=='__main__':

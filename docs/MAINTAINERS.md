@@ -21,3 +21,5 @@ The site builder fingerprints CSS and JavaScript filenames so new HTML cannot ac
 Run tests, site packaging and JavaScript syntax checks locally. CI additionally uses native BIND, dnsmasq and Unbound validators against the full Family outputs. If a source fails or shrinks sharply, review it rather than automatically reducing safeguards. For approved hosts feeds, non-portable hostnames are excluded with audit records; over 1% invalid hostnames fails the build.
 
 To revert a bad source or rule change, open a PR reverting the input change, pass validation and merge it, then run Update Safeguard. Keep existing subscription URLs available. The public report and deployment.json identify the last successful snapshot and deployed revision.
+
+For bot-dispatched update validation, GitHub suppresses the downstream reporter event. The trusted main-only publisher reports the canonical CI run's actual result on its exact commit SHA before requesting a merge. Human PRs use the independent reporter. Both paths require successful validation, use repository-scoped tokens, and keep fork PR CI read-only.

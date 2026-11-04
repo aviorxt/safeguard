@@ -27,3 +27,5 @@ New restrictions belong in optional categories unless they clearly fit the docum
 Keep GPL/MIT and font notices, source snapshots and attribution. Replace project URLs and branding if you operate your own service. Review `sources.json` and the HTTPS source allowlist together. GitHub scheduled workflows may need enabling on forks; set up your own hosting only if you want a public download service. Do not copy credentials or assume access to AVRXT infrastructure.
 
 See MIGRATION.md for URL/profile changes and SECURITY.md for private vulnerability reports.
+
+For bot-dispatched update validation, GitHub suppresses the downstream reporter event. The trusted main-only publisher reports the canonical CI run's actual result on its exact commit SHA before requesting a merge. Human PRs use the independent reporter. Both paths require successful validation, use repository-scoped tokens, and keep fork PR CI read-only.
