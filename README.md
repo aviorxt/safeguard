@@ -2,6 +2,16 @@
 
 A reproducible DNS blocklist maintained by AVRXT. Combines curated upstream intelligence with AVRXT overrides; upstream maintainers deserve credit for their research. This is an aggregation, not a claim of independently discovering every threat.
 
+## Website and update checks
+
+Public site: https://safeguard.avrxt.tech
+
+Cloudflare Pages builds from `main` using `python scripts/build_site.py` with output directory `dist`. The build verifies all six output hashes, domain counts, deduplication, source snapshot hashes, and a report age under 48 hours before packaging. It does not download new rules during deployment: the site and downloads are the exact validated repository snapshot. Daily GitHub builds run at 03:17 UTC (08:47 IST); Pages redeploys the resulting commits. GitHub schedules may be delayed and can be disabled by GitHub after prolonged inactivity in public repositories.
+
+The `Check published blocklists` workflow runs every six hours and can be started manually. It verifies HTTPS availability, all published output SHA-256 hashes, equality with GitHub's current report, and a last successful list build within 48 hours. Failures appear in GitHub Actions; email delivery depends on your GitHub notification settings. Run it locally with `python scripts/check_updates.py`. The landing page refreshes its displayed report every five minutes and marks reports older than 48 hours as overdue. Its badge is report freshness, not a live security audit.
+
+Local site build: `python scripts/build_site.py`, then `python -m http.server --directory dist`. Pages requires no runtime API credentials. No analytics, accounts or server-side database are used.
+
 ## Downloads
 
 | Profile | AdGuard Home subscription |
