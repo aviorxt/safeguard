@@ -53,7 +53,7 @@ def build():
     shutil.copytree(ROOT/'site',dist)
     # Content-addressed URLs prevent new HTML from using stale browser-cached code.
     replacements={}
-    for name in ('style.css','app.js','submit.js'):
+    for name in ('style.css','app.js','submit.js','select.js'):
         data=(dist/name).read_bytes()
         stem,extension=name.rsplit('.',1)
         versioned=stem+'.'+hashlib.sha256(data).hexdigest()[:12]+'.'+extension
