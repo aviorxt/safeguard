@@ -35,7 +35,14 @@ def main():
     git('switch','-c',branch)
     git('commit','-m','Update validated Safeguard blocklists')
     sha=git('rev-parse','HEAD')
-    git('push','origin',branch)
+    for attempt in range(3):
+        try:
+            git('push','origin',branch)
+            break
+        except subprocess.CalledProcessError:
+            if attempt==2:
+                raise
+            time.sleep(2**attempt)
     pr=api('pulls','POST',{'title':'Update validated Safeguard blocklists','head':branch,'base':'main',
         'body':'## Generated update\nRefresh reviewed upstream feeds and regenerate every subscription format.\n\n## Validation\nSource safeguards, unit tests and site integrity validation passed before this PR. The publisher dispatches the required repository validation and waits for its result before merging. Native RPZ, dnsmasq and Unbound checks run in that validation.\n\n## Compatibility\nExisting subscription URLs and category policy are preserved. Review the report diff for source counts, exclusions and hashes.\n\n## Rollback\nRevert this generated-data commit through a validated pull request and rerun the updater.'})
     print('Generated update PR:',pr['html_url'],flush=True)
