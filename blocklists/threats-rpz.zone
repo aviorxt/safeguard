@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793786170 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793786823 3600 600 86400 60 )
 @ IN NS localhost.
 0-0.fr CNAME .
 *.0-0.fr CNAME .
