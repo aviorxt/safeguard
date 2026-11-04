@@ -12,7 +12,7 @@ Use an issue form for false positives, missed threats, bugs, source/category pro
 
 The required `Validate repository` check runs on every PR, including documentation-only changes. Fork PR jobs have read-only tokens and no repository secrets. GitHub may require a maintainer to approve a first-time contributor's workflow run.
 
-Main is protected by a repository ruleset: pull requests, the required validation check, resolved review threads, linear history, no force pushes and no branch deletion. No human/admin bypass is configured. An independent approval is encouraged but not required so a sole maintainer can merge their own passing PR. The GitHub Actions integration has a bypass for the existing daily generated-data publisher; it runs tests and build validation before publishing. Do not add write permissions to PR workflows. That automation exception is not a contributor bypass.
+Main is protected by a repository ruleset: pull requests, the required validation check, resolved review threads, linear history, no force pushes and no branch deletion. No human/admin bypass is configured. An independent approval is encouraged but not required so a sole maintainer can merge their own passing PR. The GitHub Actions bot account (`github-actions[bot]`) has a bypass for the existing daily generated-data publisher; it runs tests and build validation before publishing. Do not add write permissions to PR workflows. That automation exception is not a contributor bypass.
 
 ## Domain changes
 
