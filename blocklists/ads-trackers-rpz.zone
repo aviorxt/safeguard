@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793797848 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793799141 3600 600 86400 60 )
 @ IN NS localhost.
 0-02.net CNAME .
 *.0-02.net CNAME .
@@ -311052,6 +311052,8 @@ track.nopaperforms.com CNAME .
 *.track.nopaperforms.com CNAME .
 track.nvdev.de CNAME .
 *.track.nvdev.de CNAME .
+track.nxtdev.xyz CNAME .
+*.track.nxtdev.xyz CNAME .
 track.oasis.magictavern.com CNAME .
 *.track.oasis.magictavern.com CNAME .
 track.olx.com.br CNAME .
