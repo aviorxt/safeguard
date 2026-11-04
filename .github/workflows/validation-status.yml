@@ -16,7 +16,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python - <<'PY'
-          import json, os, urllib.request
+          import json, os, time, urllib.request, urllib.error
           from pathlib import Path
           event=json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
           run=event['workflow_run']
@@ -26,8 +26,14 @@ jobs:
               request=urllib.request.Request('https://api.github.com/repos/'+repo+'/'+path,
                   headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'Safeguard-validation-status'},
                   data=json.dumps(data).encode() if data is not None else None)
-              with urllib.request.urlopen(request,timeout=60) as response:
-                  return json.loads(response.read())
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(request,timeout=60) as response:
+                          return json.loads(response.read())
+                  except urllib.error.HTTPError as exc:
+                      if exc.code<500 or attempt==2:
+                          raise
+                      time.sleep(2**attempt)
           canonical=api('actions/workflows/ci.yml')
           if run['workflow_id']!=canonical['id'] or run['repository']['full_name']!=repo:
               raise RuntimeError('Refusing to report a different workflow or repository')
