@@ -32,6 +32,11 @@ def validate(root=ROOT):
     for source in report['sources']:
         if hashlib.sha256((root/f"sources/{source['id']}.txt").read_bytes()).hexdigest()!=source['sha256']:
             raise ValueError('Source checksum mismatch: '+source['id'])
+    for rule_id,entry in report.get('scoped_overrides',{}).items():
+        if rule_id not in {'ads-trackers','adult'} or entry['path']!=f'rules/{rule_id}.txt':
+            raise ValueError('Unexpected scoped override path')
+        if hashlib.sha256((root/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
+            raise ValueError('Scoped override checksum mismatch: '+rule_id)
     return report
 
 def build():

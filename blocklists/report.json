@@ -295,7 +295,7 @@
         "family",
         "standard"
       ],
-      "sha256": "fb410b6f1e1c739e9e58d16c5ef73bc383da463b0d042728a7562ccb026166a5"
+      "sha256": "a8ae0dbcf6f1cb814771ca26d7e5cbd90806f91fd37c01f92880edd61f089680"
     },
     "adult": {
       "path": "rules/adult.txt",
@@ -304,7 +304,7 @@
         "adult",
         "family"
       ],
-      "sha256": "051ae391d4c5462230494ebd9d73e0e52a38d967057bef6cc737dcf3c7428a35"
+      "sha256": "efa63c921c46ac85abe62ad27fa5c2153687540b5de026dba50ea2eef6dec715"
     }
   },
   "outputs": {
