@@ -1,0 +1,36 @@
+name: Accept reviewed domain
+on:
+  issues:
+    types: [labeled]
+permissions:
+  issues: read
+  contents: write
+  pull-requests: write
+  actions: write
+  statuses: write
+concurrency:
+  group: safeguard-publish
+  cancel-in-progress: false
+jobs:
+  accept:
+    if: github.event.label.name == 'approved-domain'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: main
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: '3.12'
+      - name: Validate approved submission and authenticated attribution
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/accept_submission.py
+      - run: python -m unittest discover -s tests
+      - run: python scripts/build.py
+      - run: python scripts/build_site.py
+      - name: Publish through required repository validation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/publish_update.py

@@ -1,6 +1,8 @@
+import sys
 import importlib.util
 from pathlib import Path
 import unittest
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 import tempfile
 import json
 from unittest.mock import patch

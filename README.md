@@ -88,3 +88,9 @@ Contact: **dns@avrxt.tech**. Sensitive vulnerabilities: [SECURITY.md](SECURITY.m
 ## License
 
 GPL-3.0, with preserved MIT source notices and font OFL notices. AVRXT-authored code and modifications are GPL-3.0-or-later. See [LICENSE](LICENSE), [NOTICE](NOTICE), and [licenses/](licenses/). Provided without warranty.
+
+### Suggest a domain
+
+Use the [community submission page](https://safeguard.avrxt.tech/update-list) to choose a category and prepare a GitHub request. Submit from your own account. Maintainer-approved requests pass validation before the lists change, and published contributions retain your GitHub credit.
+
+See the [community contributor credits](CONTRIBUTORS.md) and [published contributions](https://safeguard.avrxt.tech/update-list#recent). Accepted submissions include the contributor, domain, category, date, and original request.

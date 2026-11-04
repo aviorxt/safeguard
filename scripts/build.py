@@ -135,12 +135,17 @@ def build():
     custom=parse((ROOT/'rules/block.txt').read_text())
     scoped={}
     report['scoped_overrides']={}
+    from community import load, targets, markdown
+    contributions=load(ROOT)
+    report['community']=contributions
+    stage['CONTRIBUTORS.md']=markdown(contributions).encode('utf-8')
     for rule_id,targets in [('ads-trackers',{'standard','family','ads-trackers'}),('adult',{'family','adult'})]:
         path=ROOT/'rules'/f'{rule_id}.txt'
         data=path.read_bytes() if path.exists() else b''
         scoped[rule_id]=(parse(data.decode('utf-8')),targets)
         report['scoped_overrides'][rule_id]={'path':f'rules/{rule_id}.txt','domains':len(scoped[rule_id][0]),'profiles':sorted(targets),'sha256':hashlib.sha256(data).hexdigest()}
     for name,entries in profiles.items():
+        entries=entries|{item['domain'] for item in contributions if name in targets(item['category'])}
         for extra,targets in scoped.values():
             if name in targets:
                 entries=entries|extra

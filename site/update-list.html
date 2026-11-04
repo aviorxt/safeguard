@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suggest a domain — AVRXT Safeguard</title>
+<meta name="description" content="Help improve Safeguard. Submit a domain for review and see published community contributions.">
+<meta name="theme-color" content="#050505"><link rel="icon" href="/assets/avrxt-nexus-ligature.png"><link rel="stylesheet" href="/style.css"><script src="/submit.js" defer></script>
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap"><a class="brand" href="/"><img src="/assets/avrxt-nexus-ligature.png" width="44" height="44" alt=""><span>AVRXT<span class="brand-sub">SAFEGUARD</span></span></a><nav aria-label="Main navigation"><a href="/#lists">Blocklists</a><a href="/update-list" aria-current="page">Contribute</a><a href="https://github.com/aviorxt/safeguard">GitHub ↗</a></nav></header>
+<main id="main">
+<section class="hero wrap submit-hero"><div class="eyebrow"><span class="signal"></span> COMMUNITY POWERED. CAREFULLY REVIEWED.</div><h1>LESS NOISE.<br><span>TOGETHER.</span></h1><div class="hero-bottom"><p>Found a domain we missed?<br>Help make the next connection cleaner.</p><a class="text-link" href="#recent">Published contributions ↓</a></div></section>
+<section class="wrap section contribution-layout"><div><span class="eyebrow">01 / SUGGEST A DOMAIN</span><h2>Your discovery.<br>Everyone’s protection.</h2><p class="submission-intro">Choose a category, add one domain, and tell us why it belongs. You’ll confirm the submission on GitHub with your own account.</p><ol class="submission-steps"><li>Submit your request on GitHub.</li><li>A maintainer checks the domain and category.</li><li>Accepted changes pass automated checks and publish with your GitHub credit.</li></ol><p class="note">Requests are public. Include no passwords, private browsing links, or personal data. Submissions do not immediately block a domain.</p></div>
+<form id="domain-form" class="submission-form">
+<label for="github-username">GitHub username <span>Use the account you’ll submit from.</span></label><input id="github-username" name="username" required maxlength="39" autocomplete="username" placeholder="your-username" pattern="[A-Za-z0-9]([A-Za-z0-9-]{0,37}[A-Za-z0-9])?">
+<label for="domain-category">Domain category</label><select id="domain-category" name="category" required><option value="">Loading categories…</option></select>
+<p class="note category-policy" id="category-policy"></p>
+<label for="domain-name">Domain <span>A hostname only, without https:// or a path.</span></label><input id="domain-name" name="domain" required maxlength="253" autocapitalize="none" spellcheck="false" placeholder="ads.example.com">
+<label for="domain-evidence">Why should it be blocked? <span>Describe the behavior or include a public reputation report.</span></label><textarea id="domain-evidence" name="evidence" required minlength="10" maxlength="1500" rows="4" placeholder="Advertising, tracking, harmful behavior, or category evidence…"></textarea>
+<button class="button light" type="submit" id="submit-domain" disabled>Submit on GitHub <span aria-hidden="true">↗</span></button><p id="submission-status" class="note" role="status" aria-live="polite">Your request is submitted only after you confirm it on GitHub.</p>
+<noscript><p class="note">Enable JavaScript to prepare a request, or <a href="https://github.com/aviorxt/safeguard/issues/new?template=domain-submission.yml">use the GitHub submission form</a>.</p></noscript>
+</form></section>
+<section class="wrap section" id="recent"><div class="section-heading"><div><span class="eyebrow">02 / CREDIT WHERE IT’S DUE</span><h2>Made better.<br>By the community.</h2></div><a class="text-link" href="https://github.com/aviorxt/safeguard/issues?q=is%3Aissue+%22Domain+submission%22">View requests ↗</a></div><p id="last-contributor" class="note" role="status">Loading published contributions…</p><div id="contribution-list" class="contribution-list"></div></section>
+</main><footer class="wrap"><a href="https://www.avrxt.dev">AVRXT ↗</a><span>SAFEGUARD / BUILT FOR A CLEANER INTERNET.</span><a href="/">BACK TO SAFEGUARD ↗</a></footer>
+</body></html>

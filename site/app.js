@@ -53,6 +53,8 @@ async function loadStatus() {
     const response=await fetch('/blocklists/report.json',{cache:'no-store'});
     if(!response.ok) throw new Error('Report unavailable');
     const report=await response.json();
+    const contributions=[...(report.community||[])].sort((a,b)=>Date.parse(b.accepted_utc)-Date.parse(a.accepted_utc));
+    if(contributions.length) $('community-credit').textContent='Last community update by @'+contributions[0].username+' · View contributor credits ↗';
     categoryReport=report.profiles;
     const catalogResponse=await fetch('/catalog.json',{cache:'no-store'});
     if(!catalogResponse.ok) throw new Error('Category catalog unavailable');

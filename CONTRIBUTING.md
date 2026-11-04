@@ -29,3 +29,7 @@ Keep GPL/MIT and font notices, source snapshots and attribution. Replace project
 See MIGRATION.md for URL/profile changes and SECURITY.md for private vulnerability reports.
 
 For bot-dispatched update validation, GitHub suppresses the downstream reporter event. The trusted main-only publisher reports the canonical CI run's actual result on its exact commit SHA before requesting a merge. Human PRs use the independent reporter. Both paths require successful validation, use repository-scoped tokens, and keep fork PR CI read-only.
+
+## Community domain submissions
+
+Use https://safeguard.avrxt.tech/update-list or the Domain submission issue form. Enter the GitHub username you submit from, one domain, a category, and evidence. Maintainers verify classification and false-positive risk before adding the `approved-domain` label. That label starts the trusted default-branch workflow, which checks maintainer permissions and authenticated authorship, builds all formats, and publishes through a validated pull request. Published credit comes from the GitHub issue author, never an unverified username. Adult rules remain outside Standard; optional categories stay optional.

@@ -1,9 +1,11 @@
+import sys
 import hashlib
 import importlib.util
 import json
 from pathlib import Path
 import tempfile
 import unittest
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"scripts"))
 from datetime import datetime, timezone, timedelta
 
 spec=importlib.util.spec_from_file_location('site_builder',Path(__file__).resolve().parents[1]/'scripts/build_site.py')
