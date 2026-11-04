@@ -135,7 +135,7 @@ def build():
     custom=parse((ROOT/'rules/block.txt').read_text())
     scoped={}
     report['scoped_overrides']={}
-    from community import load, targets, markdown
+    from community import load, targets as community_targets, markdown
     contributions=load(ROOT)
     report['community']=contributions
     stage['CONTRIBUTORS.md']=markdown(contributions).encode('utf-8')
@@ -145,7 +145,7 @@ def build():
         scoped[rule_id]=(parse(data.decode('utf-8')),targets)
         report['scoped_overrides'][rule_id]={'path':f'rules/{rule_id}.txt','domains':len(scoped[rule_id][0]),'profiles':sorted(targets),'sha256':hashlib.sha256(data).hexdigest()}
     for name,entries in profiles.items():
-        entries=entries|{item['domain'] for item in contributions if name in targets(item['category'])}
+        entries=entries|{item['domain'] for item in contributions if name in community_targets(item['category'])}
         for extra,targets in scoped.values():
             if name in targets:
                 entries=entries|extra
