@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793876680 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1793962873 3600 600 86400 60 )
 @ IN NS localhost.
 acr.roku.com CNAME .
 *.acr.roku.com CNAME .

@@ -1,5 +1,5 @@
 # Title: Malicious Hosts Blocklist
-# Updated: 2026-11-05T00:10:03Z
+# Updated: 2026-11-06T00:10:45Z
 # Expires: 12 hours (update frequency)
 # Homepage: https://gitlab.com/malware-filter/urlhaus-filter
 # License: https://gitlab.com/malware-filter/urlhaus-filter#license
@@ -18,13 +18,13 @@
 0.0.0.0 1717.1000uc.com
 0.0.0.0 172-104-49-49.ip.linodeusercontent.com
 0.0.0.0 178-83-121-204.cprapid.com
-0.0.0.0 178.248.3.202.ll.sta.mana.pf
 0.0.0.0 179.248.3.202.ll.sta.mana.pf
 0.0.0.0 198-144-179-82-host.colocrossing.com
 0.0.0.0 198-macros.com
 0.0.0.0 198348.gl
 0.0.0.0 198macros.org
 0.0.0.0 1rvrental.com
+0.0.0.0 221.37.167.72.host.secureserver.net
 0.0.0.0 22qq-client.com
 0.0.0.0 26usdm.oss-cn-beijing.aliyuncs.com
 0.0.0.0 297-47d1-852d-0f1a190c45.garbagestress.cc
@@ -119,6 +119,7 @@
 0.0.0.0 angefundsu.sbs
 0.0.0.0 anibusclientpro.netlify.app
 0.0.0.0 anthonyspizzeriainc.com
+0.0.0.0 antibotchecker.pro
 0.0.0.0 anubis-client-site.vercel.app
 0.0.0.0 anubisclient.co.uk
 0.0.0.0 aolgepacklng.com
@@ -212,6 +213,7 @@
 0.0.0.0 bauble.cleverpondky.com
 0.0.0.0 bb2c6-42dfkea8-9fhh47-927aebce12d4.fasterflogging.cc
 0.0.0.0 beacon.ltdglobal.co.uk
+0.0.0.0 beak.in
 0.0.0.0 beamtechmacros.com
 0.0.0.0 becof.org
 0.0.0.0 beinke-aufzuege.de
@@ -219,6 +221,7 @@
 0.0.0.0 benshamcentre.co.uk
 0.0.0.0 benzinclick.live
 0.0.0.0 beoauto.alexion.rs
+0.0.0.0 bergdorfgoodmanbag.com
 0.0.0.0 bergmann-automobile.de
 0.0.0.0 beschaffung-portal.de
 0.0.0.0 beschaffungszentrale.de
@@ -409,7 +412,6 @@
 0.0.0.0 croco.cx
 0.0.0.0 crojam.com
 0.0.0.0 cryptomeshforge10.lol
-0.0.0.0 cryptomeshforge5.lol
 0.0.0.0 cryptovectorhub1.lol
 0.0.0.0 crystalbranchtw.blog
 0.0.0.0 crystalpvp.ru
@@ -520,6 +522,7 @@
 0.0.0.0 dipre.com.tr
 0.0.0.0 dir.sonikjp.org
 0.0.0.0 discordzapretik.sbs
+0.0.0.0 disk.360.yandex.ru
 0.0.0.0 disk.accord1key.cn
 0.0.0.0 divinex.to
 0.0.0.0 dklak.cam
@@ -570,7 +573,6 @@
 0.0.0.0 donutsmputilitys.netlify.app
 0.0.0.0 down.fwqlt.com
 0.0.0.0 down.pcclear.com
-0.0.0.0 down.qqfarmer.com.cn
 0.0.0.0 down.ruanmei.com
 0.0.0.0 down.stellarcedar.live
 0.0.0.0 down.unicron-cdn.click
@@ -593,6 +595,7 @@
 0.0.0.0 download.tg1101.com
 0.0.0.0 download.vertex-software.digital
 0.0.0.0 download.youlovemybiba.com
+0.0.0.0 download2.huduntech.com
 0.0.0.0 downloader.exeexe.workers.dev
 0.0.0.0 downloads.go-xlr.com
 0.0.0.0 draft-loop.com
@@ -625,7 +628,6 @@
 0.0.0.0 easyfiles.cc
 0.0.0.0 eatcullt.com
 0.0.0.0 eccmice.com
-0.0.0.0 effectively32.infinityfree.me
 0.0.0.0 einzigartigfrei.de
 0.0.0.0 ela-bo.com
 0.0.0.0 eldertechsupport.com
@@ -684,6 +686,8 @@
 0.0.0.0 fastsrunners.com
 0.0.0.0 fat-tracking-josh-strongly.trycloudflare.com
 0.0.0.0 fb6390d5.infinityindians.pages.dev
+0.0.0.0 fcitantibot.pro
+0.0.0.0 fcmelle.de
 0.0.0.0 fd.v2downf.shop
 0.0.0.0 fdrv.beeyuskincare.co.nz
 0.0.0.0 fe29jf323.kesug.com
@@ -693,7 +697,6 @@
 0.0.0.0 ferhfw.oss-cn-hongkong.aliyuncs.com
 0.0.0.0 fern-plume.com
 0.0.0.0 fern46.com
-0.0.0.0 ferncurrent14.com
 0.0.0.0 fibernetperu.pe
 0.0.0.0 ficus.in
 0.0.0.0 fil.immortales.life
@@ -764,6 +767,7 @@
 0.0.0.0 game.dualuoilocphu.com
 0.0.0.0 gammanort.thekielement.com
 0.0.0.0 gaode11223.oss-ap-southeast-7.aliyuncs.com
+0.0.0.0 gapi.amplebatch.in.net
 0.0.0.0 garden-82.com
 0.0.0.0 gd.ozzhlb.net
 0.0.0.0 geaix.com
@@ -824,7 +828,6 @@
 0.0.0.0 goxlrutility.net
 0.0.0.0 gpsmarocpro.com
 0.0.0.0 graficaminascard.com.br
-0.0.0.0 gray-dyane-31.tiiny.site
 0.0.0.0 greatwhite.me
 0.0.0.0 green-breeze-ca3a.fortunespromailsd.workers.dev
 0.0.0.0 greenf.alexion.rs
@@ -857,7 +860,6 @@
 0.0.0.0 hhtdyj.com
 0.0.0.0 hickamhealthcare.com
 0.0.0.0 higreens.co.in
-0.0.0.0 hindustanagency.com
 0.0.0.0 hindustancargologistic.com
 0.0.0.0 hip-hop-comms.com
 0.0.0.0 hitman-pro.ru
@@ -921,6 +923,7 @@
 0.0.0.0 ircftp.net
 0.0.0.0 isiore.com.co
 0.0.0.0 itbakersfield.com
+0.0.0.0 itco.pe
 0.0.0.0 itsmystik.com
 0.0.0.0 itssprout.com
 0.0.0.0 iyn4ce9o.casero.store
@@ -929,6 +932,7 @@
 0.0.0.0 jam.cleverpondky.com
 0.0.0.0 java.omsules.life
 0.0.0.0 javb.omsules.life
+0.0.0.0 jawaratekno.com
 0.0.0.0 jd-forever.com
 0.0.0.0 jenniferloeffler.com
 0.0.0.0 jessespridecharters.com
@@ -941,6 +945,7 @@
 0.0.0.0 jozefinskiatelje.si
 0.0.0.0 jscdncloude.beer
 0.0.0.0 jswen.com
+0.0.0.0 jubex.eu
 0.0.0.0 jumalputty.com
 0.0.0.0 justturtle.com
 0.0.0.0 k3p8wz1n.bvcbx.store
@@ -1028,7 +1033,6 @@
 0.0.0.0 lol.exodustrala.dpdns.org
 0.0.0.0 lomejordesalamanca.es
 0.0.0.0 lomeqpe.com
-0.0.0.0 londonairportstransfer.co.uk
 0.0.0.0 long-wildflower-b4f5.gustavosoftware.workers.dev
 0.0.0.0 loop-lumen.com
 0.0.0.0 lorelion.cloud
@@ -1037,7 +1041,6 @@
 0.0.0.0 lsmdngnakjbgazxv.com
 0.0.0.0 lucky-shadow-703a.modpages.workers.dev
 0.0.0.0 luizmatoso.com.br
-0.0.0.0 lumacrea.com
 0.0.0.0 luminexclient.com
 0.0.0.0 luminexclient.net
 0.0.0.0 luminouspower.com.pk
@@ -1056,7 +1059,6 @@
 0.0.0.0 mail.windycreekbc.pro
 0.0.0.0 mail.zanyyewuh.pro
 0.0.0.0 maildeveloper.site
-0.0.0.0 mailglobalsbg.com
 0.0.0.0 mailservicesgroup.org
 0.0.0.0 mailto-carmen-connected-paying.trycloudflare.com
 0.0.0.0 makemewin.club
@@ -1086,7 +1088,6 @@
 0.0.0.0 meeting.supply-reflection.shop
 0.0.0.0 meissner.ae
 0.0.0.0 melonandworld.top
-0.0.0.0 meridia.rs
 0.0.0.0 mersped.mycpanel.rs
 0.0.0.0 metabolism-effectively-logo-chrome.trycloudflare.com
 0.0.0.0 meteor-sites-one.vercel.app
@@ -1146,6 +1147,7 @@
 0.0.0.0 multiculturalbridge.screenconnect.com
 0.0.0.0 multisavcx.xyz
 0.0.0.0 munihuacho.gob.pe
+0.0.0.0 mx9x.com
 0.0.0.0 mxh4h.com
 0.0.0.0 my-buck01.s3.cubbit.eu
 0.0.0.0 myhpsd2.screenconnect.com
@@ -1202,6 +1204,7 @@
 0.0.0.0 ns.devmicro7.workers.dev
 0.0.0.0 nsci.space
 0.0.0.0 nsgggg.com
+0.0.0.0 nurse-trader.conohawing.com
 0.0.0.0 nw.almfwb.com
 0.0.0.0 nwlansing.screenconnect.com
 0.0.0.0 nze.work.gd
@@ -1218,6 +1221,7 @@
 0.0.0.0 oedturk.com
 0.0.0.0 ofice365.github.io
 0.0.0.0 ohhhhhmoney.com
+0.0.0.0 ohwcadvisor.com
 0.0.0.0 oj44472.com
 0.0.0.0 ojang.pe.kr
 0.0.0.0 okhan.net
@@ -1236,6 +1240,7 @@
 0.0.0.0 oopz.name
 0.0.0.0 opalcraftsmp.com
 0.0.0.0 opengraph.vip
+0.0.0.0 openrouter.srv-auth-dlt-msh.in.net
 0.0.0.0 opensolutions.sbs
 0.0.0.0 oper.atlas101.us.kg
 0.0.0.0 opsec-mod.com
@@ -1278,6 +1283,7 @@
 0.0.0.0 pcupd.com
 0.0.0.0 pdf-editore.com
 0.0.0.0 pdfmun.software
+0.0.0.0 pebbleanthem.shop
 0.0.0.0 peterson-legislation-civilization-assistance.trycloudflare.com
 0.0.0.0 pevrix.com
 0.0.0.0 pfatrivandrum.org
@@ -1396,7 +1402,6 @@
 0.0.0.0 pub-c1aae4eecd22436e835dc3a91e470062.r2.dev
 0.0.0.0 pub-c3947f4f3f2947e680cbf4cd2a18055d.r2.dev
 0.0.0.0 pub-c6d653e19fd545129fdfd7d6f8cd8b17.r2.dev
-0.0.0.0 pub-c9224963ee6a49b194bba4acac778b13.r2.dev
 0.0.0.0 pub-c9f0444b6f604c8d8f64366bb87d456d.r2.dev
 0.0.0.0 pub-cbeeb81b1c2d40df823a412f702451a3.r2.dev
 0.0.0.0 pub-cdd0dd27ae6a4aee9841d397e0496374.r2.dev
@@ -1447,6 +1452,7 @@
 0.0.0.0 rabbids.cc
 0.0.0.0 rabbitfuns.su
 0.0.0.0 radium-client.org
+0.0.0.0 raffcow4.beget.tech
 0.0.0.0 ramirex.ro
 0.0.0.0 ray-id-v3.com
 0.0.0.0 razao.pt
@@ -1457,6 +1463,7 @@
 0.0.0.0 reaffirm-neatness-rigid.ngrok-free.dev
 0.0.0.0 reauthenticator.com
 0.0.0.0 reavercncv4.duckdns.org
+0.0.0.0 recon-rival.nyc.boxd.sh
 0.0.0.0 records.dennisign.se
 0.0.0.0 redeamazoniaazul.org
 0.0.0.0 redxcvfsdgth.info
@@ -1472,7 +1479,6 @@
 0.0.0.0 rheddh.com
 0.0.0.0 riderspin.com
 0.0.0.0 rigmod.net
-0.0.0.0 rippled.cleverpondky.com
 0.0.0.0 rmm.smartscreen.lifestyle
 0.0.0.0 robertrowe.com
 0.0.0.0 robertsonelectrlcal.screenconnect.com
@@ -1504,6 +1510,7 @@
 0.0.0.0 safeifm.com
 0.0.0.0 sail.autolabsouthgate.com
 0.0.0.0 sail91.com
+0.0.0.0 sales.ifree.page
 0.0.0.0 salikae.store
 0.0.0.0 samiksha.com.sg
 0.0.0.0 samul.elblag.pl
@@ -1518,6 +1525,7 @@
 0.0.0.0 sayosay.cc
 0.0.0.0 sbmods.top
 0.0.0.0 sc.c1s.su
+0.0.0.0 schemaleap1.com
 0.0.0.0 scoala1gherla.ro
 0.0.0.0 scooter.cozyvistany.com
 0.0.0.0 screen.lixiiimunchiihamzzz.live
@@ -1533,6 +1541,7 @@
 0.0.0.0 sec.xiaojiji.nl
 0.0.0.0 sec.xiaoshabi.nl
 0.0.0.0 secomex.com.ar
+0.0.0.0 secure-link.club
 0.0.0.0 secure.eicar.org
 0.0.0.0 security-analyze.ltd
 0.0.0.0 sedrezltd.best
@@ -1631,6 +1640,7 @@
 0.0.0.0 stat.bestcompliance.net
 0.0.0.0 statementreaderdownload.com
 0.0.0.0 static.3001.net
+0.0.0.0 static.ilclock.com
 0.0.0.0 static.topxgun.com
 0.0.0.0 static.youdm.cn
 0.0.0.0 static.zongheng.com
@@ -1676,6 +1686,7 @@
 0.0.0.0 tapestryoftruth.com
 0.0.0.0 tapped.top
 0.0.0.0 tarkioweb.com
+0.0.0.0 tartaklegnica.pl
 0.0.0.0 taskercounselling.com
 0.0.0.0 taskerempresascol.co
 0.0.0.0 tattinamecheap.com
@@ -1701,6 +1712,7 @@
 0.0.0.0 tetris-supdate.xyz
 0.0.0.0 thankful-cliff-01dfec010.7.azurestaticapps.net
 0.0.0.0 theholidayroads.com
+0.0.0.0 thelkfklef.com
 0.0.0.0 themaintechnician.us
 0.0.0.0 thementordirectory.com
 0.0.0.0 therapygeorgia.com
@@ -1765,11 +1777,12 @@
 0.0.0.0 udn.jp
 0.0.0.0 udn48vb.com
 0.0.0.0 unby6r.oss-cn-beijing.aliyuncs.com
-0.0.0.0 union.macoms.la
 0.0.0.0 universalmobility.pro
 0.0.0.0 uno-play.online
 0.0.0.0 uno-play.xyz
+0.0.0.0 unoparty.online
 0.0.0.0 unoplayy.com
+0.0.0.0 unostroagesdeel.cc
 0.0.0.0 unrealclient.pages.dev
 0.0.0.0 up.devmicro7.workers.dev
 0.0.0.0 up.sb
@@ -1821,6 +1834,7 @@
 0.0.0.0 voltagec2.tech
 0.0.0.0 vps.atlas101.us.kg
 0.0.0.0 vrajras.com
+0.0.0.0 vstcl.com
 0.0.0.0 vtivision-fi.com
 0.0.0.0 vuelaviajero.com
 0.0.0.0 vunex.dev
@@ -1832,7 +1846,6 @@
 0.0.0.0 wappingerbicornshaps.com
 0.0.0.0 waveplus.mediabyte.be
 0.0.0.0 wda.messag.life
-0.0.0.0 wealthishealth.free.je
 0.0.0.0 webpagehelp.online
 0.0.0.0 website.mypetapp.co.za
 0.0.0.0 weco2.oss-me-east-1.aliyuncs.com
@@ -1875,7 +1888,6 @@
 0.0.0.0 ww.menara5d.net
 0.0.0.0 wwalucircle.com
 0.0.0.0 www-connect-secure-wellcfargo.sekolahkejarpaket.com
-0.0.0.0 www2.0zz0.com
 0.0.0.0 www999999asgasg-1327129302.cos.ap-chengdu.myqcloud.com
 0.0.0.0 www999999safagqwhg-1327129302.cos.ap-chengdu.myqcloud.com
 0.0.0.0 wwwiiisss.oss-ap-northeast-1.aliyuncs.com
