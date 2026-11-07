@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793962873 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1794046962 3600 600 86400 60 )
 @ IN NS localhost.
 ad-growth-in.heytapmobile.com CNAME .
 *.ad-growth-in.heytapmobile.com CNAME .
@@ -44,12 +44,16 @@ adx-op-ru.heytapmobile.com CNAME .
 *.adx-op-ru.heytapmobile.com CNAME .
 adx-op-sg.heytapmobile.com CNAME .
 *.adx-op-sg.heytapmobile.com CNAME .
+adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com CNAME .
+*.adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com CNAME .
 adx-u-in.heytapmobile.com CNAME .
 *.adx-u-in.heytapmobile.com CNAME .
 adx-u-ru.heytapmobile.com CNAME .
 *.adx-u-ru.heytapmobile.com CNAME .
 adx-u-sg.heytapmobile.com CNAME .
 *.adx-u-sg.heytapmobile.com CNAME .
+adx-union-sg.heytapmobile.com CNAME .
+*.adx-union-sg.heytapmobile.com CNAME .
 adxh3-op-sg.heytapmobile.com CNAME .
 *.adxh3-op-sg.heytapmobile.com CNAME .
 adxu-bigo-sg.heytapmobile.com CNAME .
