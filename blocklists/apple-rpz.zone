@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793962873 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1794046962 3600 600 86400 60 )
 @ IN NS localhost.
 acfeedbackws.icloud.com CNAME .
 *.acfeedbackws.icloud.com CNAME .
@@ -12,8 +12,6 @@ advp.apple.com CNAME .
 *.advp.apple.com CNAME .
 aios-otel-collector.g.apple.com CNAME .
 *.aios-otel-collector.g.apple.com CNAME .
-analytics-events.apple.com CNAME .
-*.analytics-events.apple.com CNAME .
 api-adservices.apple.com CNAME .
 *.api-adservices.apple.com CNAME .
 app-events.infoapps.apple.com CNAME .
@@ -52,8 +50,6 @@ diagnostics.apple.com CNAME .
 *.diagnostics.apple.com CNAME .
 diagnostics.apple.com.akadns.net CNAME .
 *.diagnostics.apple.com.akadns.net CNAME .
-dz1dt3wqswdezgx4j2ryem5iad.apple.com CNAME .
-*.dz1dt3wqswdezgx4j2ryem5iad.apple.com CNAME .
 experiments.apple.com CNAME .
 *.experiments.apple.com CNAME .
 experiments.apple.com.edgekey.net CNAME .
@@ -70,8 +66,6 @@ feedbackws.icloud.com CNAME .
 *.feedbackws.icloud.com CNAME .
 feedbackws.icloud.com.cn CNAME .
 *.feedbackws.icloud.com.cn CNAME .
-flirfvysba2opz0zmzqs5iuiad.apple.com CNAME .
-*.flirfvysba2opz0zmzqs5iuiad.apple.com CNAME .
 freeform-events.apple.com CNAME .
 *.freeform-events.apple.com CNAME .
 graffiti-tags.apple.com CNAME .
@@ -124,8 +118,6 @@ metrics.mzstatic.com CNAME .
 *.metrics.mzstatic.com CNAME .
 msc-dct-prod.msc.apple.com CNAME .
 *.msc-dct-prod.msc.apple.com CNAME .
-news-analytics-events.apple.com CNAME .
-*.news-analytics-events.apple.com CNAME .
 news-app-events.apple.com CNAME .
 *.news-app-events.apple.com CNAME .
 news-events.apple.com CNAME .
@@ -150,8 +142,6 @@ performance-partners.apple.com CNAME .
 *.performance-partners.apple.com CNAME .
 phonesubmissions.apple.com CNAME .
 *.phonesubmissions.apple.com CNAME .
-podcasts-analytics-events.apple.com CNAME .
-*.podcasts-analytics-events.apple.com CNAME .
 prd-usw2-requestattribution-iad.apple.com CNAME .
 *.prd-usw2-requestattribution-iad.apple.com CNAME .
 prod-app-analytics-event-gateway.v.aaplimg.com CNAME .
@@ -208,8 +198,6 @@ supportmetrics.apple.com CNAME .
 *.supportmetrics.apple.com CNAME .
 supportmetrics.v.aaplimg.com CNAME .
 *.supportmetrics.v.aaplimg.com CNAME .
-tv-analytics-events.apple.com CNAME .
-*.tv-analytics-events.apple.com CNAME .
 weather-analytics-events.apple.com CNAME .
 *.weather-analytics-events.apple.com CNAME .
 weather-analytics-events.news.apple-dns.net CNAME .

@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1793962873 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1794046962 3600 600 86400 60 )
 @ IN NS localhost.
 11-c3.bigdata.ctc.neo.xiaomi.com CNAME .
 *.11-c3.bigdata.ctc.neo.xiaomi.com CNAME .
@@ -382,8 +382,6 @@ micloudevents.preview.n.xiaomi.com CNAME .
 *.micloudevents.preview.n.xiaomi.com CNAME .
 migc.g.mi.com CNAME .
 *.migc.g.mi.com CNAME .
-migcreport.g.mi.com CNAME .
-*.migcreport.g.mi.com CNAME .
 milink.pandora.xiaomi.com CNAME .
 *.milink.pandora.xiaomi.com CNAME .
 mis.g.mi.com CNAME .
