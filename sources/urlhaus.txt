@@ -1,5 +1,5 @@
 # Title: Malicious Hosts Blocklist
-# Updated: 2026-11-07T00:10:36Z
+# Updated: 2026-11-08T00:10:55Z
 # Expires: 12 hours (update frequency)
 # Homepage: https://gitlab.com/malware-filter/urlhaus-filter
 # License: https://gitlab.com/malware-filter/urlhaus-filter#license
@@ -14,11 +14,13 @@
 0.0.0.0 10.185.202.64.host.secureserver.net
 0.0.0.0 123.ywxww.net
 0.0.0.0 132.red-81-42-249.staticip.rima-tde.net
+0.0.0.0 14-0-204-188.static.pccw-hkt.com
+0.0.0.0 150.co.il
 0.0.0.0 156.233.235.86.nip.io
 0.0.0.0 1717.1000uc.com
 0.0.0.0 172-104-49-49.ip.linodeusercontent.com
 0.0.0.0 178-83-121-204.cprapid.com
-0.0.0.0 179.248.3.202.ll.sta.mana.pf
+0.0.0.0 178.248.3.202.ll.sta.mana.pf
 0.0.0.0 198-144-179-82-host.colocrossing.com
 0.0.0.0 198-macros.com
 0.0.0.0 198348.gl
@@ -74,10 +76,11 @@
 0.0.0.0 accessdocu.b-cdn.net
 0.0.0.0 acd.munber.life
 0.0.0.0 acms.saleseos.com
-0.0.0.0 acrilicoporto.pt
 0.0.0.0 acrobat.proposal.name.ng
 0.0.0.0 activatef.win
+0.0.0.0 activation-gateway.cc
 0.0.0.0 activegrp.co.za
+0.0.0.0 activelypartnering.com
 0.0.0.0 acutelyunfailing.cc
 0.0.0.0 adcentral.com.mx
 0.0.0.0 adiyamancamkornis.com.tr
@@ -341,7 +344,6 @@
 0.0.0.0 chantcompass9.com
 0.0.0.0 chat-server.maverickpreviews.com
 0.0.0.0 chatgptiamega.ru
-0.0.0.0 cheatclients.com
 0.0.0.0 check.okx3.io
 0.0.0.0 checkfivem.com
 0.0.0.0 checkout.bloamnu.shop
@@ -376,6 +378,7 @@
 0.0.0.0 cloudeliveryenterprise.com
 0.0.0.0 cloudenterprise26.com
 0.0.0.0 cloudflare.gd
+0.0.0.0 cloudflareconfirm.com
 0.0.0.0 cloudsenterprise26.com
 0.0.0.0 clownguard.us
 0.0.0.0 clubdetiroelpicarcho.com
@@ -390,6 +393,7 @@
 0.0.0.0 configprovider.short.gy
 0.0.0.0 connectmagazineads.com
 0.0.0.0 contididit.conti.pk
+0.0.0.0 continentalgroup.net.in
 0.0.0.0 controliumbt.com
 0.0.0.0 copiose.org
 0.0.0.0 coreprotector.org
@@ -524,7 +528,6 @@
 0.0.0.0 dipre.com.tr
 0.0.0.0 dir.sonikjp.org
 0.0.0.0 discordzapretik.sbs
-0.0.0.0 disk.accord1key.cn
 0.0.0.0 divinex.to
 0.0.0.0 dklak.cam
 0.0.0.0 dl.1003b.56a.com
@@ -598,7 +601,6 @@
 0.0.0.0 download.tg1101.com
 0.0.0.0 download.vertex-software.digital
 0.0.0.0 download.youlovemybiba.com
-0.0.0.0 download2.huduntech.com
 0.0.0.0 downloader.exeexe.workers.dev
 0.0.0.0 downloads.go-xlr.com
 0.0.0.0 draft-loop.com
@@ -647,6 +649,7 @@
 0.0.0.0 emphasis-friday-even-administrator.trycloudflare.com
 0.0.0.0 empty-violet-63e1.maskify.workers.dev
 0.0.0.0 emwqkekwqmekwq.work.gd
+0.0.0.0 en.taichuan.com
 0.0.0.0 entry-code-cdn.codes
 0.0.0.0 eo3wuo9z334anlh.m.pipedream.net
 0.0.0.0 epanpano.com
@@ -705,7 +708,6 @@
 0.0.0.0 ficus.in
 0.0.0.0 fil.immortales.life
 0.0.0.0 file.blackint3.com
-0.0.0.0 file.uhsea.com
 0.0.0.0 fileget.plumbco.co.nz
 0.0.0.0 filegoat.s3.de.io.cloud.ovh.net
 0.0.0.0 filequanticore.com
@@ -724,7 +726,6 @@
 0.0.0.0 firstratezim.com
 0.0.0.0 fiscalizarais.xyz
 0.0.0.0 fkjhsdfg478fdm.com
-0.0.0.0 fkoqonr2vgbsw7qu.public.blob.vercel-storage.com
 0.0.0.0 flexsportpools.com
 0.0.0.0 flicargo.com
 0.0.0.0 flint-32.com
@@ -760,6 +761,7 @@
 0.0.0.0 funrat.co
 0.0.0.0 fussionmd.com
 0.0.0.0 fuzerom.cfd
+0.0.0.0 fz.tiansys.cn
 0.0.0.0 g6.wtf
 0.0.0.0 gabyagozetim.com
 0.0.0.0 gaenterprises.in
@@ -928,6 +930,7 @@
 0.0.0.0 ircftp.net
 0.0.0.0 isiore.com.co
 0.0.0.0 itbakersfield.com
+0.0.0.0 itco.pe
 0.0.0.0 itsmystik.com
 0.0.0.0 itssprout.com
 0.0.0.0 iyn4ce9o.casero.store
@@ -937,6 +940,7 @@
 0.0.0.0 javb.omsules.life
 0.0.0.0 jawaratekno.com
 0.0.0.0 jd-forever.com
+0.0.0.0 jdaram.com
 0.0.0.0 jenniferloeffler.com
 0.0.0.0 jessespridecharters.com
 0.0.0.0 johnsonsvalves.cam
@@ -996,6 +1000,7 @@
 0.0.0.0 kryptonv2-v1.lovable.app
 0.0.0.0 kss-kwt.cam
 0.0.0.0 kst.omsules.life
+0.0.0.0 ktrced.top
 0.0.0.0 kuakuawenjian.oss-cn-hangzhou.aliyuncs.com
 0.0.0.0 kupunasvolpiano.com
 0.0.0.0 l83.me
@@ -1044,6 +1049,7 @@
 0.0.0.0 lsmdngnakjbgazxv.com
 0.0.0.0 lucky-shadow-703a.modpages.workers.dev
 0.0.0.0 luizmatoso.com.br
+0.0.0.0 lumacrea.com
 0.0.0.0 luminexclient.com
 0.0.0.0 luminexclient.net
 0.0.0.0 luminouspower.com.pk
@@ -1081,6 +1087,7 @@
 0.0.0.0 maxxlavalink.cyou
 0.0.0.0 mbcasesores.com
 0.0.0.0 mc-modhub.vercel.app
+0.0.0.0 mc.heyiwei.net
 0.0.0.0 media-aviation.run.place
 0.0.0.0 medicosantiagomarrero.com
 0.0.0.0 mediocasavolponi.com
@@ -1092,7 +1099,6 @@
 0.0.0.0 metabolism-effectively-logo-chrome.trycloudflare.com
 0.0.0.0 meteor-sites-one.vercel.app
 0.0.0.0 meteoraddons.net
-0.0.0.0 meteorclient.shop
 0.0.0.0 meteorclient.us
 0.0.0.0 meteorclientplus.com
 0.0.0.0 meteorclients.com
@@ -1164,6 +1170,7 @@
 0.0.0.0 ncxps.com
 0.0.0.0 nd.tdpqnf.com
 0.0.0.0 ndigitals.in
+0.0.0.0 ndjvmuvkoahnopfqn2jpva.on.drv.tw
 0.0.0.0 nebula-client.com
 0.0.0.0 nebula-client.org
 0.0.0.0 nebulaclient.co
@@ -1190,7 +1197,6 @@
 0.0.0.0 nonspamplsgood.vercel.app
 0.0.0.0 nordertextil.de
 0.0.0.0 nordmann-automobilgruppe.de
-0.0.0.0 northernvirginiaeyeassociates.com
 0.0.0.0 nossl.segfault.net
 0.0.0.0 nota-fical-online.lat
 0.0.0.0 notbak.com
@@ -1292,6 +1298,7 @@
 0.0.0.0 phantom-client.com
 0.0.0.0 photolivebook.pro
 0.0.0.0 phubotnet.duckdns.org
+0.0.0.0 physioga.net
 0.0.0.0 pic.li
 0.0.0.0 pictureurl.com
 0.0.0.0 pinewoodchristian.screenconnect.com
@@ -1352,7 +1359,6 @@
 0.0.0.0 promnet.jp
 0.0.0.0 promotedial.com
 0.0.0.0 ps-ps.cc
-0.0.0.0 pub-00d54ae289e84e93a3c8640fb2301c5f.r2.dev
 0.0.0.0 pub-00f9bb8acaec41e6ba904da7d4d8e89a.r2.dev
 0.0.0.0 pub-0216fa08b2b94e129cb9e002cf7cb1f4.r2.dev
 0.0.0.0 pub-0462440f54f44b9fb3474df61e32d6ba.r2.dev
@@ -1749,7 +1755,6 @@
 0.0.0.0 triapfog.com
 0.0.0.0 tribot.co.uk
 0.0.0.0 trickgs-demo.vercel.app
-0.0.0.0 triflackcom.com
 0.0.0.0 tripfarely.com
 0.0.0.0 tronzadorasnng.com
 0.0.0.0 trouserstreak.net
@@ -1812,6 +1817,7 @@
 0.0.0.0 vaibhavtripathi.in
 0.0.0.0 vape-client-landing.netlify.app
 0.0.0.0 vc.tnygbw.com
+0.0.0.0 vcc-data.bond
 0.0.0.0 vejnqoajk1soxy1x.public.blob.vercel-storage.com
 0.0.0.0 velmasqwxri.shop
 0.0.0.0 velvetcanyonline.xyz
@@ -1912,6 +1918,7 @@
 0.0.0.0 xn--yh4bx88a.com
 0.0.0.0 xolep1.tos-cn-beijing.volces.com
 0.0.0.0 xorados.com
+0.0.0.0 xorvanta-mvp.vercel.app
 0.0.0.0 xsealslogisticsltd.com
 0.0.0.0 xshop.com.tr
 0.0.0.0 xunyyymdfv.oss-cn-hongkong.aliyuncs.com
@@ -1937,7 +1944,6 @@
 0.0.0.0 zenledgerpolicy.com
 0.0.0.0 zetaval.metcalfphoto.com
 0.0.0.0 zhigao5191.com
-0.0.0.0 zhikey.com
 0.0.0.0 zhimaly.com
 0.0.0.0 zhostz.com
 0.0.0.0 ziio.oss-ap-southeast-1.aliyuncs.com
