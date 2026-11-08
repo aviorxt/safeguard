@@ -5,112 +5,82 @@
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 553,
-    "rule": "0.0.0.0 _adsp._domainkey.goofy-cray.87-106-236-104.plesk.page",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 554,
-    "rule": "0.0.0.0 _bimi.goofy-cray.87-106-236-104.plesk.page",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 555,
-    "rule": "0.0.0.0 _dmarc.87-106-236-104.plesk.page",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 556,
-    "rule": "0.0.0.0 _dmarc.goofy-cray.87-106-236-104.plesk.page",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 557,
-    "rule": "0.0.0.0 _domainkey.goofy-cray.87-106-236-104.plesk.page",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 4422,
+    "line": 4312,
     "rule": "0.0.0.0 bridge_trezo-cdn.teachable.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 5377,
-    "rule": "0.0.0.0 coinbase_1_login.godaddysites.com",
-    "reason": "Not a portable DNS hostname"
-  },
-  {
-    "line": 5378,
+    "line": 5247,
     "rule": "0.0.0.0 coinbase_prologin_log.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 5940,
+    "line": 5809,
     "rule": "0.0.0.0 cuuibase_prou_logi.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 7231,
+    "line": 7088,
     "rule": "0.0.0.0 en-live-ledger-docs_support.typedream.app",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 7243,
+    "line": 7100,
     "rule": "0.0.0.0 en_us-official.teachable.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 7825,
+    "line": 7670,
     "rule": "0.0.0.0 ffnnbb_js_loader.rukkibospa5287.workers.dev",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 9799,
+    "line": 9600,
     "rule": "0.0.0.0 inventory_management_186.jetadmin.io",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 10514,
+    "line": 10309,
     "rule": "0.0.0.0 kucoin_-login.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 10515,
+    "line": 10310,
     "rule": "0.0.0.0 kucoin_se-login-po.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 10525,
+    "line": 10319,
     "rule": "0.0.0.0 kuconi_exchang.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 10540,
+    "line": 10334,
     "rule": "0.0.0.0 kukoin_logiusaa.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 11489,
+    "line": 11261,
     "rule": "0.0.0.0 mailer_b.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 16199,
+    "line": 15882,
     "rule": "0.0.0.0 reduce-repair-.start.page",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 17417,
+    "line": 17069,
     "rule": "0.0.0.0 site-exouds_webs.teachable.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 19448,
+    "line": 19057,
     "rule": "0.0.0.0 uphold_logp_us.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   },
   {
-    "line": 19503,
+    "line": 19110,
     "rule": "0.0.0.0 us-mettaa-mask_loggin.godaddysites.com",
     "reason": "Not a portable DNS hostname"
   }

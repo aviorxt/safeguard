@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1794046962 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1794133821 3600 600 86400 60 )
 @ IN NS localhost.
 ad-growth-in.heytapmobile.com CNAME .
 *.ad-growth-in.heytapmobile.com CNAME .
@@ -490,6 +490,8 @@ fourier-videoclip-sg.allawnos.com CNAME .
 *.fourier-videoclip-sg.allawnos.com CNAME .
 fourier-videoclip-us.allawnos.com CNAME .
 *.fourier-videoclip-us.allawnos.com CNAME .
+fxltsbl.com CNAME .
+*.fxltsbl.com CNAME .
 globalcolor-service-eu.allawnos.com CNAME .
 *.globalcolor-service-eu.allawnos.com CNAME .
 globalcolor-service-in.allawnos.com CNAME .
@@ -516,6 +518,8 @@ i-cn01a.ocloud.heytapmobi.com CNAME .
 *.i-cn01a.ocloud.heytapmobi.com CNAME .
 i-in.browser.heytapmobile.com CNAME .
 *.i-in.browser.heytapmobile.com CNAME .
+i-insurance.finzfin.com CNAME .
+*.i-insurance.finzfin.com CNAME .
 i-sg.browser.heytapmobile.com CNAME .
 *.i-sg.browser.heytapmobile.com CNAME .
 i-sg01a.ocloud.heytapmobi.com CNAME .
@@ -800,6 +804,8 @@ moa-upload-sg.allawnos.com CNAME .
 *.moa-upload-sg.allawnos.com CNAME .
 obus-cn.dc.heytapmobi.com CNAME .
 *.obus-cn.dc.heytapmobi.com CNAME .
+obus-conf-cn.heytapmobi.com CNAME .
+*.obus-conf-cn.heytapmobi.com CNAME .
 obus-conf-fr.heytapmobile.com CNAME .
 *.obus-conf-fr.heytapmobile.com CNAME .
 obus-conf-in.heytapmobile.com CNAME .
@@ -890,6 +896,8 @@ oversea-nebula-sg.heytapmobi.com CNAME .
 *.oversea-nebula-sg.heytapmobi.com CNAME .
 predragate.dc.oppomobile.com CNAME .
 *.predragate.dc.oppomobile.com CNAME .
+push-ads-cn.heytapmobi.com CNAME .
+*.push-ads-cn.heytapmobi.com CNAME .
 push-dc-us.heytapmobile.com CNAME .
 *.push-dc-us.heytapmobile.com CNAME .
 push.heytapmobile.com CNAME .
