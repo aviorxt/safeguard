@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1794133821 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1794224645 3600 600 86400 60 )
 @ IN NS localhost.
 a-ring-fallback.msedge.net CNAME .
 *.a-ring-fallback.msedge.net CNAME .
