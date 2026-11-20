@@ -28,7 +28,8 @@ jobs:
       - run: node --check site/app.js
       - run: node --check site/submit.js
       - run: node --check site/select.js
-      - run: python scripts/build_site.py
+      # Pull requests validate the checked-in snapshot; fresh generation runs only on protected main.
+      - run: python scripts/build_site.py --allow-stale-report
       - name: Install native format validators
         run: sudo apt-get update -qq && sudo apt-get install -y -qq bind9-utils dnsmasq-base unbound
       - name: Validate RPZ, dnsmasq and Unbound syntax

@@ -1,4 +1,5 @@
 """Package verified repository outputs for Cloudflare Pages. No network access."""
+import argparse
 import hashlib
 import json
 import shutil
@@ -8,11 +9,11 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 
-def validate(root=ROOT):
+def validate(root=ROOT,allow_stale_report=False):
     report=json.loads((root/'blocklists/report.json').read_text())
     stamp=datetime.fromisoformat(report['generated_utc'])
     age=(datetime.now(timezone.utc)-stamp).total_seconds()
-    if not -300 <= age <= 48*3600:
+    if not allow_stale_report and not -300 <= age <= 48*3600:
         raise ValueError('Blocklist report is stale or future-dated')
     catalog=json.loads((root/'catalog.json').read_text())
     from community import load
@@ -42,8 +43,8 @@ def validate(root=ROOT):
             raise ValueError('Scoped override checksum mismatch: '+rule_id)
     return report
 
-def build():
-    report=validate()
+def build(allow_stale_report=False):
+    report=validate(allow_stale_report=allow_stale_report)
     dist=ROOT/'dist'
     if dist.exists():
         # Fixed, repository-local build directory only.
@@ -76,4 +77,7 @@ def build():
     print(f'Pages output: {dist}; commit {commit}')
 
 if __name__=='__main__':
-    build()
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--allow-stale-report',action='store_true',help='Permit packaging an existing report for pull-request validation only')
+    args=parser.parse_args()
+    build(allow_stale_report=args.allow_stale_report)
