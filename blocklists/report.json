@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-09T11:43:50.558081+00:00",
+  "generated_utc": "2026-11-20T11:50:41.288686+00:00",
   "sources": [
     {
       "id": "normal",
@@ -11,8 +11,8 @@
         "ads-trackers"
       ],
       "minimum": 50000,
-      "domains": 207061,
-      "sha256": "217a135c5c9a384924ffa0405a6166cdbdef14d75bbbb8e27681b4e0b5e8c9f0",
+      "domains": 194288,
+      "sha256": "7b26a2bc307801fe7e8a7a9b4625d753e53f353fbcc137bf847cc63100ae1412",
       "rejected_rules": 0
     },
     {
@@ -25,8 +25,8 @@
         "threats"
       ],
       "minimum": 10000,
-      "domains": 186188,
-      "sha256": "9d7d5f7ae8086a86239718898b50872673333c70687ef02775e1a66c43756287",
+      "domains": 210413,
+      "sha256": "99128d1d68ba769cd1613fc80c7130c9e20c27326f110beed2dbdf000e2bd6c2",
       "rejected_rules": 0
     },
     {
@@ -38,8 +38,8 @@
         "adult"
       ],
       "minimum": 1000,
-      "domains": 80665,
-      "sha256": "798e70519049e67ee0029d86694c3e472ef538685c80e366ed0d87c837568507",
+      "domains": 87268,
+      "sha256": "207a2898b817bba3feb5f6ace7601d0c1325ee8c0ba7ec8d9553fda807f51bf8",
       "rejected_rules": 0
     },
     {
@@ -50,8 +50,9 @@
         "gambling"
       ],
       "minimum": 1000,
-      "domains": 72987,
-      "sha256": "5029106c705d253d9e108de76a6a489faaff91ee95fb7ca2fc43901c3204af62",
+      "maximum_reduction": 0.6,
+      "domains": 52410,
+      "sha256": "9684ffc470ad771ceab5a8f6dadfb4e2eabc767267240e38a8543d0e02d42300",
       "rejected_rules": 0
     },
     {
@@ -62,8 +63,8 @@
         "social"
       ],
       "minimum": 100,
-      "domains": 8159,
-      "sha256": "f18a5fb29bc77cdc86264e38739ddd2848d2a605097abd65ff7492874038db1f",
+      "domains": 8197,
+      "sha256": "72b9bdfa29ee65611be01cb31b44ec167822b557c3f642cd51bede63f8264903",
       "rejected_rules": 0
     },
     {
@@ -74,8 +75,8 @@
         "windows"
       ],
       "minimum": 5,
-      "domains": 365,
-      "sha256": "354f31453470c61a3213f130b9cdff717e6200536d2d36e804ff0f3d4ddadfc9",
+      "domains": 398,
+      "sha256": "68c00443a6e68e0ac74c4e1ce10c6111254a66908f51999300c9ff589a33f996",
       "rejected_rules": 0
     },
     {
@@ -87,7 +88,7 @@
       ],
       "minimum": 5,
       "domains": 104,
-      "sha256": "13b7d4447ff90cc2d06aa9e67680c9705cc821cb45579089f8927e6b5b999a07",
+      "sha256": "cdd2ffa4c647fcdf92a3f4a0ea3402a37b132996837808f146d71590cb345ba2",
       "rejected_rules": 0
     },
     {
@@ -99,7 +100,7 @@
       ],
       "minimum": 5,
       "domains": 201,
-      "sha256": "3f2195e8eb08d40c482634fd4ab1c752f07dc4ffd55735eac28c1a3d16c13837",
+      "sha256": "3550594c970b244de60af785900228d25ca3f64fbd39f147380bd7da4c50bbfa",
       "rejected_rules": 0
     },
     {
@@ -110,8 +111,8 @@
         "xiaomi"
       ],
       "minimum": 5,
-      "domains": 349,
-      "sha256": "f70f38ddd7722a1c961fcfb90f1b0d3f1aef8b861cb6a428aa7457f01db583e3",
+      "domains": 410,
+      "sha256": "01b3935f5f7d7a6f35b64785f57447c5b7cb8e8520f01c5b26b94f34f6240f57",
       "rejected_rules": 0
     },
     {
@@ -122,8 +123,8 @@
         "oppo-realme"
       ],
       "minimum": 5,
-      "domains": 496,
-      "sha256": "ac0676e48ee50f0bb92b35b32518cfbefafbbea91f8ee202c7dfcc4bfddbc494",
+      "domains": 530,
+      "sha256": "2261cd8a184c581eb901c0e9f430c311d6a77f6d47b908fcc038bd44ae82b14a",
       "rejected_rules": 0
     },
     {
@@ -134,8 +135,8 @@
         "amazon"
       ],
       "minimum": 5,
-      "domains": 373,
-      "sha256": "7923b68ae253cca251b4d0a35987d6e04abda7f4b93d66a7818b6bc78220f380",
+      "domains": 382,
+      "sha256": "b101a9f5dc80b3f6b7dcf60451007b3e8edb4ace4a0e592aa50d6d0550110eea",
       "rejected_rules": 0
     },
     {
@@ -146,8 +147,8 @@
         "smart-tv"
       ],
       "minimum": 5,
-      "domains": 315,
-      "sha256": "c37cd87289d0d442e57fdc980a9b3cb0ab2e6b81cef3903970c15c8b201cb8cf",
+      "domains": 460,
+      "sha256": "1b92150b4c2c6519cfa58bce6e410a87edbd3fb350c9f6bbf3f861c7ad466be7",
       "rejected_rules": 0
     },
     {
@@ -158,8 +159,8 @@
         "smart-tv"
       ],
       "minimum": 5,
-      "domains": 57,
-      "sha256": "96ea39f5c028be57412fae2fcaa6c344b09904dd05dc44ee104e8e96b87472f8",
+      "domains": 64,
+      "sha256": "d9315f1324e0ebc19a92255084b6fca369d14558caea06b5d97efa0d0988aca0",
       "rejected_rules": 0
     },
     {
@@ -193,9 +194,9 @@
       "license": "MIT",
       "license_url": "https://raw.githubusercontent.com/curbengh/phishing-filter/main/LICENSE",
       "exclude_invalid_hostnames": true,
-      "domains": 20495,
-      "sha256": "3c11a59d5015c981533c0c3c032ba3ea2ad62a77f4cd86dff888106bc0219694",
-      "rejected_rules": 17
+      "domains": 17009,
+      "sha256": "a33fbfa4f52b4b3448fa39a2bac23152f6b2e8698c3efdde0806039f143e47bc",
+      "rejected_rules": 18
     },
     {
       "id": "urlhaus",
@@ -211,42 +212,42 @@
       "license": "MIT",
       "license_url": "https://raw.githubusercontent.com/curbengh/urlhaus-filter/main/LICENSE",
       "exclude_invalid_hostnames": true,
-      "domains": 1940,
-      "sha256": "fe977f684b2ad20d7de2dace9cea0bb24c4a7be816de6faeaa26c743cd8fca8e",
+      "domains": 2113,
+      "sha256": "0134a1337066b70e81f67e45e32312c024e59e92758515edd8d508e4f9e09fce",
       "rejected_rules": 0
     }
   ],
   "profiles": {
     "family": {
-      "domains": 423262,
+      "domains": 439144,
       "suppressed_by_allowlist": []
     },
     "standard": {
-      "domains": 342757,
+      "domains": 352162,
       "suppressed_by_allowlist": []
     },
     "ads-trackers": {
-      "domains": 207069,
+      "domains": 194296,
       "suppressed_by_allowlist": []
     },
     "threats": {
-      "domains": 203865,
+      "domains": 225465,
       "suppressed_by_allowlist": []
     },
     "adult": {
-      "domains": 80667,
+      "domains": 87272,
       "suppressed_by_allowlist": []
     },
     "gambling": {
-      "domains": 72987,
+      "domains": 52410,
       "suppressed_by_allowlist": []
     },
     "social": {
-      "domains": 8159,
+      "domains": 8197,
       "suppressed_by_allowlist": []
     },
     "windows": {
-      "domains": 365,
+      "domains": 398,
       "suppressed_by_allowlist": []
     },
     "apple": {
@@ -258,19 +259,19 @@
       "suppressed_by_allowlist": []
     },
     "xiaomi": {
-      "domains": 349,
+      "domains": 410,
       "suppressed_by_allowlist": []
     },
     "oppo-realme": {
-      "domains": 496,
+      "domains": 530,
       "suppressed_by_allowlist": []
     },
     "amazon": {
-      "domains": 373,
+      "domains": 382,
       "suppressed_by_allowlist": []
     },
     "smart-tv": {
-      "domains": 372,
+      "domains": 524,
       "suppressed_by_allowlist": []
     },
     "cryptomining": {
@@ -278,11 +279,11 @@
       "suppressed_by_allowlist": []
     },
     "phishing": {
-      "domains": 20495,
+      "domains": 17009,
       "suppressed_by_allowlist": []
     },
     "malware": {
-      "domains": 1940,
+      "domains": 2113,
       "suppressed_by_allowlist": []
     }
   },
@@ -324,107 +325,107 @@
     }
   ],
   "outputs": {
-    "blocklists/family.txt": "119ace8b2fbee862ae89be29f3f3124b5fab09d3016596bb4d2fb37347a72b96",
-    "blocklists/family-domains.txt": "318dfb44db9dcd5fd9fec0a55ff49167c13f55b5382b6f7615cfbb9c94e46e14",
-    "blocklists/family-hosts.txt": "115e685b1c7a51709b2b0607ff189cb248e2750a764e228828a7dd99dd838fe4",
-    "blocklists/family-dnsmasq.conf": "80d9851b720fc66edc2e9f2666b309a19980580df77dce22f78f2c82f55f956e",
-    "blocklists/family-unbound.conf": "741b64f6d9d488d43125f943b36e2b9a33e47485319664f5cc158956463f184e",
-    "blocklists/family-rpz.zone": "8215c95d09be244825e359d1f5525e058593715391d875626a8765ccb1a5f6fe",
-    "blocklists/standard.txt": "4b020652659d0a276e1fd32c4543003b0f4f4b531a36e69be9bb11513f104fb8",
-    "blocklists/standard-domains.txt": "f3bf2efb1588b92619229a6c3b3d313341d952ee6af088fed395e38dd75ee809",
-    "blocklists/standard-hosts.txt": "46727c301c95fa3b04b76bbd748fc4eecc4711f54bd7d6da604b293f2d5ef2e6",
-    "blocklists/standard-dnsmasq.conf": "b2c4eeea3c5f3aa9d3e1bf8fedce595c01d78dd3889fbfd35df7ca6ae6e2dfdc",
-    "blocklists/standard-unbound.conf": "80cf7cbf05d11e09a5c601ab9551ecc7d53657c7a70a97d5ff041f8b2cdcc0bd",
-    "blocklists/standard-rpz.zone": "4d42813d4bf03b9748bc76ace69029afbe3e6a218a05a9a239956b1b63fd61ba",
-    "blocklists/ads-trackers.txt": "87b40e7de0afbb4b92b3943ee0d492b441929da4912ae91042990c230025b017",
-    "blocklists/ads-trackers-domains.txt": "9584d544de774a82d34658574e271fcb4070a9478fde9cc453befea87d11e7f7",
-    "blocklists/ads-trackers-hosts.txt": "754e4e9773fc73ab2ec2c9849cd2638b07588652eac195dc6b40f90d5fb2d4e7",
-    "blocklists/ads-trackers-dnsmasq.conf": "9774051f77acd1784f3ed582f46c729ae88d4ae46b391a8e893aa3a1fd291693",
-    "blocklists/ads-trackers-unbound.conf": "9222603c828ad62ac2909cd27a87827eece82fd5381f64f6eefc49f40fa49b01",
-    "blocklists/ads-trackers-rpz.zone": "1b9988c79a38141f34117cfb44cace9969a41b8aa66dfd87f1eacf9faf5a0036",
-    "blocklists/threats.txt": "4fff05b7d10ee9922989d22ba1135df4ead62563dd512bad81067ce8134debd5",
-    "blocklists/threats-domains.txt": "9741169118b97d0685a835a3ac9b3101b59f74625cdc4f277967b04f0393d286",
-    "blocklists/threats-hosts.txt": "c1fd6310c7fa463c9b44e428bcd5aa127b82a30bf6202ccc3fc5ce8a02a6d2fd",
-    "blocklists/threats-dnsmasq.conf": "4a3a910ca286f21a7fdfad7a7dbbe51512d9e1749a28123782b9c701acaa758a",
-    "blocklists/threats-unbound.conf": "d9cc95672a83a9c2b9d567c9996c4b07515f02be26bbbe00b38a944b69146c52",
-    "blocklists/threats-rpz.zone": "aa09a3bccc3f25a69acacdf9510192bad56835a360ea5d0050b5049961784fc4",
-    "blocklists/adult.txt": "8b995402e8f8df0f79b94b66f15fe1435d293e5dc6a1484b76f244474929c4c9",
-    "blocklists/adult-domains.txt": "97371976e14fb99a8fa26b940f2627bd8c6dbfd7fe8be0d0ab65d01daac99abd",
-    "blocklists/adult-hosts.txt": "7d66cb9c3417a908cddefcc79e1e4414800bbf5b8f6dcaa31e3b84f5c767316a",
-    "blocklists/adult-dnsmasq.conf": "c2b17fe2f14632fcd2bb1b4f773965b6c764b59c25a588c93d1ae683cf51f567",
-    "blocklists/adult-unbound.conf": "3bc6c98dc0b80ddd3a95f58038122e4399d783f5f4f369bbcfe6cf70fc78ba77",
-    "blocklists/adult-rpz.zone": "6251ed47e4b219cd4fcb1e1eab5108cd4ca056507718e7bb6a198c1fa359cdd8",
-    "blocklists/gambling.txt": "4a3652ee3861397ac7f63dfc05090fac6c1f6a6ade541696a6881f106e21b10a",
-    "blocklists/gambling-domains.txt": "538818882f9ac83cecb912ef97e7235a7e05ff0a710d6ce8ed6e3072ab96e7a8",
-    "blocklists/gambling-hosts.txt": "b567dca2a0c5c6af13f0f93d48a6e57529cda1dd164e7b124ef96b3201be3785",
-    "blocklists/gambling-dnsmasq.conf": "6af363e876280b62331daf7d47af9a23d53bdfa3f5f0d0215aa811fee4bf5ae3",
-    "blocklists/gambling-unbound.conf": "09887b64c571467f893ea3c569dd01b2c501471d7c78b510b8fbddcc8a4411f3",
-    "blocklists/gambling-rpz.zone": "40d86de04784a1f636910de18038d5a8567defe6842ffb4031424a5bc0a1f38f",
-    "blocklists/social.txt": "fce4c0507ef5dd90067cf1b5fa08a9564e1e53d31491bc921b80c09f0d64394c",
-    "blocklists/social-domains.txt": "13fa44a6058825d33417389d00fc777572945373720adbef88238af2b42865f3",
-    "blocklists/social-hosts.txt": "a3b0c0cdff4b759cf2e97e89f301e966df97c9c2af205e8a0518020f7fe4c9ef",
-    "blocklists/social-dnsmasq.conf": "65478805ddb98fd075f3e1e02a9e858ecd0af6c7fb003d18fd6f39b1a85c6f92",
-    "blocklists/social-unbound.conf": "2905424889f8096dc5ed92bf824bdbcefc42ee5df16d8f82bef14781547a326b",
-    "blocklists/social-rpz.zone": "0809560be3c465a8cbcb7437e7b0988547eb566d7d6037ea9f65fb861c72bc34",
-    "blocklists/windows.txt": "310ab3c1e64116b95c5c5a44f922d3c731e58427e03d7cfd0112f31ec9f4ed51",
-    "blocklists/windows-domains.txt": "506fcbd426146bb2c00030862bce58610fea3ec9308f7f653eeff0ff6aa03007",
-    "blocklists/windows-hosts.txt": "36a8daacd10817d1fd3ba2dfc46412be6004017b85ac1bf102ae60326ca190df",
-    "blocklists/windows-dnsmasq.conf": "49626d382f139e0f03e657e2647847171f8600efa8be921df8e22cb67ac8a838",
-    "blocklists/windows-unbound.conf": "8185e9e631396c01af46b9554dbeb4728693038e5e944a3d3b6a7cd822540965",
-    "blocklists/windows-rpz.zone": "77e8809e38f6b163766990d73f95270dc3b51320e9622402d2939f65c5aaaa00",
+    "blocklists/family.txt": "246fea4056484e3069e7d40020a66b8c00b4ec34f2d048e05ea927d781a7624f",
+    "blocklists/family-domains.txt": "48abd85cde7d56f12a13afe1887b51d52915e2b729c09d239d12623e34a6f114",
+    "blocklists/family-hosts.txt": "1e6da4547b6a42d1cf4f9bbeff0e72b28a40c11cab910520138cb22031af7165",
+    "blocklists/family-dnsmasq.conf": "aff58c7a5b92555353f7c35d1538877ba7274706c518bd5da393362033c56010",
+    "blocklists/family-unbound.conf": "1e87999571a759078794729cb7701b0700063a011f94d26116c7158281b6bbc8",
+    "blocklists/family-rpz.zone": "e1342cc2713931dc7655ca6dc81b9acaf99cd71b19dbecf5200feed40591a7fd",
+    "blocklists/standard.txt": "3bf1215602d6cea25c8677ea2ec3e18f9d6c28356e2ee7726d022445d3ab9d46",
+    "blocklists/standard-domains.txt": "d2b9291586134613ba7a1ffe3f444b5e92ac8a3f1208bc0c07f15c3975c76a25",
+    "blocklists/standard-hosts.txt": "7f7a4a1210fb4f867f661b97f1efb4087362d9fcf33acfec1e6ea89826a83a31",
+    "blocklists/standard-dnsmasq.conf": "4969e464a12c10a2725620d3d9a547c74212009d54f66e5f68802c957af25274",
+    "blocklists/standard-unbound.conf": "a7d2081044acc903f1d68e89dc26c5d517124865c1500456b21bf0e31b88ed08",
+    "blocklists/standard-rpz.zone": "21be525042bb78b2ec7384fc2d7c323c8037bc4b97a75ca17bf87ce93332fcf4",
+    "blocklists/ads-trackers.txt": "51fa398bb34802bd4d41690b651267efb239b4829952a45f86df803428ce9769",
+    "blocklists/ads-trackers-domains.txt": "cf15e37cc391a7e5b0e0399c4ffb8f2847c7fc21c84a9d961581f52616133350",
+    "blocklists/ads-trackers-hosts.txt": "a7ef301e32e8c2033abec0877bea9deeec2ab50a07b5f6673954f99fade2cb30",
+    "blocklists/ads-trackers-dnsmasq.conf": "3c16e6aa55a393baedc387e49054c2630c35d3ad3bebd1dfaf08899a81333d37",
+    "blocklists/ads-trackers-unbound.conf": "bc2272de432b1a531da205ea8bcc049d5b8d70338728323e27deb7f99e0e5ff4",
+    "blocklists/ads-trackers-rpz.zone": "1367892f370460971563aec232da14dddc6beb7da1104d0b803af9ca925c71d7",
+    "blocklists/threats.txt": "c6881ee8f039a0f6052f04387657c7d6231b5d35775ce341d8a3d8edd114601b",
+    "blocklists/threats-domains.txt": "143b2db3ec83bb171aa0fbe0d257ecd901ecfdcf2a582c2afe57f1f216847f28",
+    "blocklists/threats-hosts.txt": "dd54ac7ffee4678860717308e8e366a05e3c49fd8244be51cd8a08f6ec224086",
+    "blocklists/threats-dnsmasq.conf": "2bb9d1d9c3c511e0785d9b7273f80fa06effff64d1de40e97b3b5a209f92c5c6",
+    "blocklists/threats-unbound.conf": "709bc0688083cf68e742d0a02fdab965041b66ed7a5048ae7e5bdd606e6552db",
+    "blocklists/threats-rpz.zone": "4844fcfd16aa82a10ef39c69bcb8e1afd1af719da0bd8a6921dd7a72e061c1dc",
+    "blocklists/adult.txt": "0837211b2a72dc9d20e82d16f70407f9ed3ab43d2c71a5c70dc83828191b082f",
+    "blocklists/adult-domains.txt": "6bb1344402812135e77b52269770b8805a11c2fa026e1f1d7138aa7c6f7a422a",
+    "blocklists/adult-hosts.txt": "8ee89b49982cd2594edae385a18372692b3ce349c80e4183bd43ec480b5c18ee",
+    "blocklists/adult-dnsmasq.conf": "a9ebe2a2436719bcddd46b48285e913ca0f55e7d0d849b679b42fcb81b903fc9",
+    "blocklists/adult-unbound.conf": "a46a4ebb072450cf2337cd479c004c9b9cbaa5b7ce597889609ec62e8b1ade5a",
+    "blocklists/adult-rpz.zone": "f29d6829c8bb67036d9922b6bcee0f4f7b56121327e3329e0a227dc21e1d7442",
+    "blocklists/gambling.txt": "f02613fcc19ef2545b1165cf223c8cc245eaa4e34986c2253c21c1e9eb1ead47",
+    "blocklists/gambling-domains.txt": "002ac8f8c61073df6f8104aba0a3018ecfa1c789f46d14503c07494687c04cd9",
+    "blocklists/gambling-hosts.txt": "796400cab7076579522b56b56725b6cec7c5328e922bdd99d57f75afb02aa7bb",
+    "blocklists/gambling-dnsmasq.conf": "85dfb76520e857d9e8cfa9af582e6f4bc4b1ed61af6ae19ff753c1e587075765",
+    "blocklists/gambling-unbound.conf": "63d47bb5316a3e64f32b6d43d8e536baf5764a57f8ad7c58f5bea5fa86cb8ff5",
+    "blocklists/gambling-rpz.zone": "2303fc64c3d2230d022e08ca086efb739f9e0193531547da59886100706ac1cd",
+    "blocklists/social.txt": "7a5e647c82b7c72a890b7f92349be812d972abf2e421b2576eb405e177becda4",
+    "blocklists/social-domains.txt": "0f6b7b4b2d12bc83653f1215a75044908323139e01e4efd18ad15152d3599aab",
+    "blocklists/social-hosts.txt": "3e2ce492da155687ddffa5e46813f9df68199e358889ac85e61d2fc2626b2f25",
+    "blocklists/social-dnsmasq.conf": "dd73f4b94a34d3d91cbfd47a1900eae68f0624730e63b322f91e4f250a0f5bf5",
+    "blocklists/social-unbound.conf": "6164e7ecf80ddb81a4b6a37278464755ecb8d9b51b508739a4b2be6a8d38fce7",
+    "blocklists/social-rpz.zone": "a491057e4a3bba99cb3f95ad6d6a85feb3db3327b8396ac6aaa5793b9458ad58",
+    "blocklists/windows.txt": "cb13d99b2e6bda2a2d75c362064ee0860d3cdfb3ef8bf3ee4694a44cf57c6f49",
+    "blocklists/windows-domains.txt": "739b3874ca7d712a72cb5b1ce05fcbede4bc0653e57575ee7978812d8cdf7658",
+    "blocklists/windows-hosts.txt": "0aba6f1b49b316c1c3f36a87d26e3564ae1d530e4e75c23753d7986f08ce5e2c",
+    "blocklists/windows-dnsmasq.conf": "1fc24b824e065d23ac8bdb3aeb58747295add9b93a30159dea2aa07df9f3ed0b",
+    "blocklists/windows-unbound.conf": "3162d022383112ffd0a41315635500ec37b35d6342d3b7802f7fef3317ec15ca",
+    "blocklists/windows-rpz.zone": "4d280c7cdf8dbd5ac5c7d02d723aa811740e7f640b59adc3dd320af71dbd183f",
     "blocklists/apple.txt": "c64756b5f9d13354c44f845d7cde0ee3d23c51847c7ca7c332ad5a3a50118b92",
     "blocklists/apple-domains.txt": "949715fefafebf62786faeed96bebd3842469564027b848a56c73f88de04ac51",
     "blocklists/apple-hosts.txt": "6962bf60fc5e80321e358c3900add62791e13a1dea140aa2d0254c0b9d57340b",
     "blocklists/apple-dnsmasq.conf": "e5dd5104731b539d8b972fec3fa117cc2e8237038748acfdf5282b3f1b4e19df",
     "blocklists/apple-unbound.conf": "1d0b6597bdc356e115c8055af11144ee269b5a73416233fbb829fb2f29a8eb73",
-    "blocklists/apple-rpz.zone": "9670cba5fa3a0a1965190b3af919f505d9cdbb1a8469a4b311c32bd095ca784a",
-    "blocklists/samsung.txt": "652e07854ca698e9760cce745720f8740df8b06d76c436894ef6186c5fef0269",
-    "blocklists/samsung-domains.txt": "35aa1232381cf757298348a2fbdeb3d3117cd5132d4730411b8b7fc1e40ee28a",
-    "blocklists/samsung-hosts.txt": "4bc9fb65fa5906b0815ac3cee4dd43761f7cf6d637fe9e028b885b2552165baf",
-    "blocklists/samsung-dnsmasq.conf": "b21f40fcb6eaf71ed1bb60e6e472b90214f93efc34e90ce90d179cb3d9ea579b",
-    "blocklists/samsung-unbound.conf": "c8935a90fd2b982ce10286bae9a309016a28b31bab78e9e0ecbc238273663f2e",
-    "blocklists/samsung-rpz.zone": "433a2b68fd51cd10651a13d7c5233b3a487898df966383ee69e44140dd611fc1",
-    "blocklists/xiaomi.txt": "5d3e7e27ee734923e83995c1dd1798165f14ee4ff292a784d3b6804cdee3bfd1",
-    "blocklists/xiaomi-domains.txt": "66451a4ce5e1f68701cbf0badf6e85ad70db593d9a30078c0b019c03131ca664",
-    "blocklists/xiaomi-hosts.txt": "bcba0d7be852824757d54b3e2567c585c6ed64c4f382bd83c7fbd52fa09ded31",
-    "blocklists/xiaomi-dnsmasq.conf": "cdc8dae6fc475dee52abf640ce36cc2444061ff3ee6a24e8a72dc00979ae1af7",
-    "blocklists/xiaomi-unbound.conf": "56ffba85adb0107d0d128fa2a161834c3c2cacdc8331db6c413095464486068e",
-    "blocklists/xiaomi-rpz.zone": "43b6ea7f10fdc1cdbc31405d56ff10268d0c33f32be6e1cc0877f216240fd746",
-    "blocklists/oppo-realme.txt": "ec6b0d49da850209f4d19c72241ba3d01f4d3310930e7959c70a1e87485b106a",
-    "blocklists/oppo-realme-domains.txt": "90e9b60bf5efccd32594df0e3c9b3d79e8c50b97839610eb7375d54ca35c95d0",
-    "blocklists/oppo-realme-hosts.txt": "cf372198b4cf3076d58d41e55067d340eff4dec21c3883f6d92a091017fce37b",
-    "blocklists/oppo-realme-dnsmasq.conf": "3654d53a37de5e9560908f8adb90c5447fc690481af7e5ad8286d54be329151a",
-    "blocklists/oppo-realme-unbound.conf": "a914f7430bd703725341a3af4b204fe546e1bb6eebcc7097949fa0076abd52b7",
-    "blocklists/oppo-realme-rpz.zone": "35d44da25314e10b3e5ee9f8eaa2565e19ac04c2600eb670097b0435cd554ebd",
-    "blocklists/amazon.txt": "ea3feeb63414c141f9bfa30c96d98430d47866c22037fa5f6e60983a77171562",
-    "blocklists/amazon-domains.txt": "15a12f3cd89a1ae900424ceb992ae20cf0760f2bc2634f859183231855766677",
-    "blocklists/amazon-hosts.txt": "70c58cdd865c69684130f8aa54b5ce984bba4ea0c7dea7571169d040cb5fccf9",
-    "blocklists/amazon-dnsmasq.conf": "20c01640c02a5e43db523810991340d97050de3959bab26c92b5c64fcf9e8296",
-    "blocklists/amazon-unbound.conf": "581463f0b4ec23fc7a9a1687a86c9feec25654030529a03a868f0107d889c974",
-    "blocklists/amazon-rpz.zone": "f4f3536ec42a3190b72d2872674a3a363fe7553e89598b0b730885d777e6004b",
-    "blocklists/smart-tv.txt": "df2776d93f375d931d616f8321f5804774049412f1c4f272cf25ff1a9577d6bf",
-    "blocklists/smart-tv-domains.txt": "6c386906ceeed571c1adb680fed187f3e189d5d425b54ec1453e2f6c422a6c5c",
-    "blocklists/smart-tv-hosts.txt": "9ec695978f46584354b99fb484d3b3a20cb461131e8f3bce9aa3b06ad8f4c217",
-    "blocklists/smart-tv-dnsmasq.conf": "facacda79acb845c8a14b6354ecc0fb8218b931e9d4d0e873f20d21fec97752c",
-    "blocklists/smart-tv-unbound.conf": "3be6f7df87649e4f8c2e368478c67b0c959f068d15965f216952f3d0bde3d853",
-    "blocklists/smart-tv-rpz.zone": "422140e31228632ddd55888db3dfa9ceacc7cb2a2bb44027b150f6991778a851",
+    "blocklists/apple-rpz.zone": "b6ee454dad1e0235a3f7ebe5e43d7b8788348086bf5d7c2c94396a1965b93337",
+    "blocklists/samsung.txt": "197424ae78bfcf55ee6f19ad4862dc3a4ce3a8feac913ba2d443b5e0d3827d5d",
+    "blocklists/samsung-domains.txt": "63d021b14a14585c06d504ef96027b20b4d6b91b1657b77c88a2ce9b430aa712",
+    "blocklists/samsung-hosts.txt": "a32b4b9fb9b55531acfc80b93d916dc3dc34361b59259be28bef015c04e39b59",
+    "blocklists/samsung-dnsmasq.conf": "feff7239615d1f3f68eaec1af4accfb07df3f1ce784118c44a39528cd4b15693",
+    "blocklists/samsung-unbound.conf": "e143b9e6e5a339ff21e97e7131c39a3bcf79c0606941df139fe721ab8c9e20ef",
+    "blocklists/samsung-rpz.zone": "f1a69db828a9be2386eb777b0a4e3ba9b919ce85de1e397485a30e50b91c8a70",
+    "blocklists/xiaomi.txt": "ae6b6e328cb78d03a6d5bceacfe0f532bd51a894b1f11b37344646ea1a65d19d",
+    "blocklists/xiaomi-domains.txt": "86bc85d835c98aedcedf2c1fdd40dcfceda8f5bed679d8a72dc4a7ea47501e8b",
+    "blocklists/xiaomi-hosts.txt": "c086da117e74769a1b6605777886b11ad67c456be2a6ff3627df42192911481a",
+    "blocklists/xiaomi-dnsmasq.conf": "da696b6a52fff035ef8529957a88bd83b40314ff26794c0a81650a676000ecd7",
+    "blocklists/xiaomi-unbound.conf": "87696e449bfc6312248e1da02186b19d027bf150a5760974e24328ad9880432a",
+    "blocklists/xiaomi-rpz.zone": "aaa50cd7b05eb755a7c17675642ccbbf08c76a1e9cd4ce0fd2b4f1cafb8458f0",
+    "blocklists/oppo-realme.txt": "7a8e461e296211923065c15b9ab28632e6af93d38240e08bc92d8eb334043537",
+    "blocklists/oppo-realme-domains.txt": "85d19097a01c0d21f83bab10966cd0379fd2eddc3553ed21816cce863ccd8acb",
+    "blocklists/oppo-realme-hosts.txt": "2a8dfa26b088c12698fa469c06c76f4eff5f900bab499f6c00236692192099ad",
+    "blocklists/oppo-realme-dnsmasq.conf": "731e9da1818abde37412c953b981c62e00df6138da13bc225543b76d84ab96f0",
+    "blocklists/oppo-realme-unbound.conf": "865ecd46344cfdce9e5df5a62d2ca37d62c8ff35db3f5b28797ce24b00632ff3",
+    "blocklists/oppo-realme-rpz.zone": "610717d750118e39a8939cef4fbf1985ba2b0abab4f447d133647b4d6ba24b70",
+    "blocklists/amazon.txt": "f371c779b74b790547f913bd96ccca2b9d641a6265c1853e1a1a67e4d391bd30",
+    "blocklists/amazon-domains.txt": "9a18ff80e500c7bb275b37d6613f024c9d24c07d1fa53aa074d1479253003e94",
+    "blocklists/amazon-hosts.txt": "382d6fb9fdb8f260c19646426c27c85ba8cefd5984abd0597a44c5cbe21f43c5",
+    "blocklists/amazon-dnsmasq.conf": "7700bc9b3fdb5694dd9a3b628aafc5214bf25d60f36139ee7a09dfc861e230a5",
+    "blocklists/amazon-unbound.conf": "c68b07b2d0c87d5fdef28c97a687a069c9919719f6173d8e40251b304a8a0773",
+    "blocklists/amazon-rpz.zone": "920f87f65a2221b4826255c9e41317508c16d7b887221f84907069dc26e5238b",
+    "blocklists/smart-tv.txt": "9555ef28698586f821049bcfa953ba33d2086eefc193ffda92617f72ab44b070",
+    "blocklists/smart-tv-domains.txt": "0ec53dc4391c3b90ff13c71a20de5d3a6cd12ce615ffc428ff7e6946d3b1d78d",
+    "blocklists/smart-tv-hosts.txt": "86cdfc466745736bf4e83b252f8a4849ed564d98db23d60b92ae548dfeaf1222",
+    "blocklists/smart-tv-dnsmasq.conf": "f7a9147cd521000814e82f9cd270278123772cfca6488911f55d521dc9806870",
+    "blocklists/smart-tv-unbound.conf": "0829288b2e3a74c4cffaf28d209e9844b82fe8f8af930c1679f3454918eef0b4",
+    "blocklists/smart-tv-rpz.zone": "c074ef81db34a5f60b0d9a8d3b31b1c8a896c421b1dd7142ee995692479c927f",
     "blocklists/cryptomining.txt": "e90e48724290489ebf4d1daa696c7718eba1abd3bdb027e9a2ed63b3372a9e1f",
     "blocklists/cryptomining-domains.txt": "9e5345c03a4ce2f925b016c2c21f4650c2e2ef94887c9f1d60bf8d398c2c78a1",
     "blocklists/cryptomining-hosts.txt": "b682220a8f37e2108a2941f309f482590af470e1dbe40aad9ff6368c205a67c6",
     "blocklists/cryptomining-dnsmasq.conf": "be5010010e72261e6407951c0714325c97d23699cbe3e6f90dccfe3da643042f",
     "blocklists/cryptomining-unbound.conf": "92bf2a4d7fd862a20df5f121274a06282c9a4ec1d1db197041013de3a0a1aae0",
-    "blocklists/cryptomining-rpz.zone": "16a5aeabee7ad6535b0e73051dc15e367bc85e4e46a568a63ccc5535f75bdf24",
-    "blocklists/phishing.txt": "9b3433f598412e38665f03e261ff491dccbc40267ecd21d925672a411363451a",
-    "blocklists/phishing-domains.txt": "ef0d1cb32b56dafda193de223a22fe9307eda68c225679c6d9713c9ff39031c8",
-    "blocklists/phishing-hosts.txt": "8d324dbccc2576b1ecacba9f9540f68bfe0275c61c61897f430ef00ce3cdeb38",
-    "blocklists/phishing-dnsmasq.conf": "d3d2fcb4113bb06bd5d17d231bf78351b444db4f9853cf9ec2bcdb76e6dfbe12",
-    "blocklists/phishing-unbound.conf": "a1771bec01182ad72c1c26280c5583c4f66dc0cdfb8f755d12d95cb38fdfcb7a",
-    "blocklists/phishing-rpz.zone": "d40e50980f45c78170d7c1a93ad0c4edf7430d3c1841a2107e0ecf88a7a5b0ef",
-    "blocklists/malware.txt": "b0ec2d6a081305f8072f2f110611d60b90f9cfded02a0257118bcc2274f73338",
-    "blocklists/malware-domains.txt": "49a6454b4b8170fc8fcdb9f6063a8998412748f37be5b605f2a83a2db2b1abef",
-    "blocklists/malware-hosts.txt": "eeda4d8396b96258b02df7911f29fa28f5976a2ec135458342abfd82872fff2d",
-    "blocklists/malware-dnsmasq.conf": "a2bdda506cababade9e20b526f50712483208372082d1368195b96aa2d6d4558",
-    "blocklists/malware-unbound.conf": "763975bb52b4171412d275639746fa003edb924e2c31eff4d363010fdf5ba1e6",
-    "blocklists/malware-rpz.zone": "e3ea95f23cfe21456bae7281759d2a8df5b641c8fa7b5e43b5e3a22fda71fe94"
+    "blocklists/cryptomining-rpz.zone": "1aa778b713d28a028b761ac55213f87828c8df09e3f0ffaa1d77510341082dd0",
+    "blocklists/phishing.txt": "d44eb6a1ac10e701ad2fc244a6a1244f570a54847cbdb2d9b42ef1c5df3a7203",
+    "blocklists/phishing-domains.txt": "bad7e9692ca015688265620330304c032da7aa7d5e6ae2a203d2fce9a4b2338d",
+    "blocklists/phishing-hosts.txt": "ddb589239ffb575fba6611c5e27a4524bb5a57e682ee746ec75bab864af70726",
+    "blocklists/phishing-dnsmasq.conf": "9baaed9c654e3fcf24224e495913cfc85d6fff4617bc6173a1b0b0cc1a158e83",
+    "blocklists/phishing-unbound.conf": "4866dacb394f1c9698621ab43609d97afe7d912d5865daca651a05e5a791a901",
+    "blocklists/phishing-rpz.zone": "3d3621104dc3642aa0bcf4f12d170f6ec117c24ab1c821c51d282f81a7ccab58",
+    "blocklists/malware.txt": "cb71e62467a924465ca95b0488672cc7cac3858dddcdec57b120e27e832b30cc",
+    "blocklists/malware-domains.txt": "8bd772cbe3d80aedbc5abd549c271182fbe46ac9b082cf838d32127dca153781",
+    "blocklists/malware-hosts.txt": "2f3c312fb3e7b22975a8fa2ae45c4d140417eb38001d69b367438061f8f9fd8d",
+    "blocklists/malware-dnsmasq.conf": "287697492e58b94c9286c77b519f5b7a9e5883394791392347c7749d42b7d64f",
+    "blocklists/malware-unbound.conf": "79206ec3335988d2bf9c74b29cfe70fac1dfb6285fb16785d9e6dc75d3dc6fb2",
+    "blocklists/malware-rpz.zone": "aec73548bdaaa308fa6de2daefe0fc07cf787d37452c7b969d6cd5dd3fc24bc1"
   }
 }

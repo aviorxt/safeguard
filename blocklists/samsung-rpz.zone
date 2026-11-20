@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1794224645 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
 @ IN NS localhost.
 acr-au-prd.samsungcloud.tv CNAME .
 *.acr-au-prd.samsungcloud.tv CNAME .
@@ -40,8 +40,6 @@ analytics.samsungknox.com CNAME .
 *.analytics.samsungknox.com CNAME .
 api-analytics-qa.samsungknox.com CNAME .
 *.api-analytics-qa.samsungknox.com CNAME .
-api-analytics.samsungknox.com CNAME .
-*.api-analytics.samsungknox.com CNAME .
 api-samsung.swypeconnect.com CNAME .
 *.api-samsung.swypeconnect.com CNAME .
 api.runestone.samsung.com CNAME .
@@ -104,6 +102,8 @@ event-tracking.samsung.com CNAME .
 *.event-tracking.samsung.com CNAME .
 fast.samsungsingapore.demdex.net CNAME .
 *.fast.samsungsingapore.demdex.net CNAME .
+gld.samsungosp.com CNAME .
+*.gld.samsungosp.com CNAME .
 h4g3z1-native-samsung.web.app CNAME .
 *.h4g3z1-native-samsung.web.app CNAME .
 images.frbusiness.samsung.com CNAME .

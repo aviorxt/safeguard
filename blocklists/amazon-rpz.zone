@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1794224645 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
 @ IN NS localhost.
 3px.axp.amazon-adsystem.com CNAME .
 *.3px.axp.amazon-adsystem.com CNAME .
@@ -186,6 +186,10 @@ ads.amazon.com CNAME .
 *.ads.amazon.com CNAME .
 adserver.pubtech.amazon.dev CNAME .
 *.adserver.pubtech.amazon.dev CNAME .
+adskit.juno.alexa.amazon.dev CNAME .
+*.adskit.juno.alexa.amazon.dev CNAME .
+advertising-api-cn.amazon.com CNAME .
+*.advertising-api-cn.amazon.com CNAME .
 advertising-api-eu.amazon.com CNAME .
 *.advertising-api-eu.amazon.com CNAME .
 advertising.a2z.com CNAME .
@@ -274,6 +278,12 @@ assoc-msdk-eu.amazon-adsystem.com CNAME .
 *.assoc-msdk-eu.amazon-adsystem.com CNAME .
 assoc-msdk-us.amazon-adsystem.com CNAME .
 *.assoc-msdk-us.amazon-adsystem.com CNAME .
+at-beta.amazon-adsystem.com CNAME .
+*.at-beta.amazon-adsystem.com CNAME .
+at-gamma-us-east.amazon-adsystem.com CNAME .
+*.at-gamma-us-east.amazon-adsystem.com CNAME .
+at-us-east.amazon-adsystem.com CNAME .
+*.at-us-east.amazon-adsystem.com CNAME .
 atfe.amazon-adsystem.com CNAME .
 *.atfe.amazon-adsystem.com CNAME .
 atue.amazon-adsystem.com CNAME .
@@ -286,12 +296,6 @@ aviary.amazon.de CNAME .
 *.aviary.amazon.de CNAME .
 bugs.firebat.prime-video.amazon.dev CNAME .
 *.bugs.firebat.prime-video.amazon.dev CNAME .
-bugsnag-event.monitor.core.app.alexa.a2z.com CNAME .
-*.bugsnag-event.monitor.core.app.alexa.a2z.com CNAME .
-bugsnag.appstore.a2z.com CNAME .
-*.bugsnag.appstore.a2z.com CNAME .
-bugsnag.shopbop.amazon.dev CNAME .
-*.bugsnag.shopbop.amazon.dev CNAME .
 c.amazon-adsystem.com CNAME .
 *.c.amazon-adsystem.com CNAME .
 cdn-a.amazon-adsystem.com CNAME .
@@ -300,6 +304,8 @@ cdn-d.amazon-adsystem.com CNAME .
 *.cdn-d.amazon-adsystem.com CNAME .
 cdn-t.amazon-adsystem.com CNAME .
 *.cdn-t.amazon-adsystem.com CNAME .
+cdn-vfw-us-test.amazon-adsystem.com CNAME .
+*.cdn-vfw-us-test.amazon-adsystem.com CNAME .
 d3p8zr0ffa9t17.cloudfront.net CNAME .
 *.d3p8zr0ffa9t17.cloudfront.net CNAME .
 da-cdn.amazon-adsystem.com CNAME .
@@ -324,6 +330,8 @@ fls-cn.amazon-adsystem.com CNAME .
 *.fls-cn.amazon-adsystem.com CNAME .
 fls-cn.amazon.cn CNAME .
 *.fls-cn.amazon.cn CNAME .
+fls-cn.amazon.com CNAME .
+*.fls-cn.amazon.com CNAME .
 fls-eu.amazon-adsystem.com CNAME .
 *.fls-eu.amazon-adsystem.com CNAME .
 fls-eu.amazon.ae CNAME .
@@ -380,6 +388,8 @@ fls-na.amazon.com.mx CNAME .
 *.fls-na.amazon.com.mx CNAME .
 forester.a2z.com CNAME .
 *.forester.a2z.com CNAME .
+global.prod.telemetry.taskei.amazon.dev CNAME .
+*.global.prod.telemetry.taskei.amazon.dev CNAME .
 h4g3z1-native-amazon.web.app CNAME .
 *.h4g3z1-native-amazon.web.app CNAME .
 identity.browserapps.amazon.de CNAME .
@@ -578,6 +588,8 @@ sponsored-ads.amazon.com.mx CNAME .
 *.sponsored-ads.amazon.com.mx CNAME .
 sponsored-ads.amazon.com.tr CNAME .
 *.sponsored-ads.amazon.com.tr CNAME .
+sponsored-ads.amazon.de CNAME .
+*.sponsored-ads.amazon.de CNAME .
 sponsored-ads.amazon.eg CNAME .
 *.sponsored-ads.amazon.eg CNAME .
 sponsored-ads.amazon.es CNAME .
@@ -614,6 +626,10 @@ ts-gamma.amazon-adsystem.com CNAME .
 *.ts-gamma.amazon-adsystem.com CNAME .
 ts.amazon-adsystem.com CNAME .
 *.ts.amazon-adsystem.com CNAME .
+unagi-cn.amazon.com CNAME .
+*.unagi-cn.amazon.com CNAME .
+unagi-eu-central-1.amazon.com CNAME .
+*.unagi-eu-central-1.amazon.com CNAME .
 unagi-eu.amazon.com CNAME .
 *.unagi-eu.amazon.com CNAME .
 unagi-fe.amazon.com CNAME .
@@ -714,6 +730,8 @@ vfws.amazon-adsystem.com CNAME .
 *.vfws.amazon-adsystem.com CNAME .
 video-ads.a2z.com CNAME .
 *.video-ads.a2z.com CNAME .
+vq-ap-southeast-1.amazon-adsystem.com CNAME .
+*.vq-ap-southeast-1.amazon-adsystem.com CNAME .
 vq-eu-west-1.amazon-adsystem.com CNAME .
 *.vq-eu-west-1.amazon-adsystem.com CNAME .
 vq-fe-us-west-2.amazon-adsystem.com CNAME .

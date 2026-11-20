@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1794224645 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
 @ IN NS localhost.
 a-ring-fallback.msedge.net CNAME .
 *.a-ring-fallback.msedge.net CNAME .
@@ -10,6 +10,8 @@ a4.bing.com CNAME .
 *.a4.bing.com CNAME .
 ac2.msn.com CNAME .
 *.ac2.msn.com CNAME .
+ac3.msn.com CNAME .
+*.ac3.msn.com CNAME .
 activity.windows.com CNAME .
 *.activity.windows.com CNAME .
 ad.msn.com CNAME .
@@ -28,6 +30,8 @@ ads.msn.com CNAME .
 *.ads.msn.com CNAME .
 ads1.msn.com CNAME .
 *.ads1.msn.com CNAME .
+ads2.msn.com CNAME .
+*.ads2.msn.com CNAME .
 adsdk.microsoft.com CNAME .
 *.adsdk.microsoft.com CNAME .
 adsdk.trafficmanager.net CNAME .
@@ -44,6 +48,10 @@ adserver.bing.com CNAME .
 *.adserver.bing.com CNAME .
 adstore.response.gcp.eastus.trafficmanager.net CNAME .
 *.adstore.response.gcp.eastus.trafficmanager.net CNAME .
+adsyndication.msn.com CNAME .
+*.adsyndication.msn.com CNAME .
+adsyndication.msn.com.nsatc.net CNAME .
+*.adsyndication.msn.com.nsatc.net CNAME .
 advertising.jp.msn.com CNAME .
 *.advertising.jp.msn.com CNAME .
 advertising.microsoft.com CNAME .
@@ -58,8 +66,12 @@ analytics-listener.trafficmanager.net CNAME .
 *.analytics-listener.trafficmanager.net CNAME .
 analytics.live.com CNAME .
 *.analytics.live.com CNAME .
+analytics.msn.com CNAME .
+*.analytics.msn.com CNAME .
 analytics.msnbc.msn.com CNAME .
 *.analytics.msnbc.msn.com CNAME .
+analytics.pstnhub.microsoft.com CNAME .
+*.analytics.pstnhub.microsoft.com CNAME .
 analytics.trafficmanager.net CNAME .
 *.analytics.trafficmanager.net CNAME .
 analyticsehnwe.servicebus.windows.net CNAME .
@@ -86,12 +98,8 @@ arc3.msn.com CNAME .
 *.arc3.msn.com CNAME .
 arc9.msn.com CNAME .
 *.arc9.msn.com CNAME .
-arctb53wmig1gagbqjqgolj2ig.msn.com CNAME .
-*.arctb53wmig1gagbqjqgolj2ig.msn.com CNAME .
 auc-visio-telemetry.officeapps.live.com CNAME .
 *.auc-visio-telemetry.officeapps.live.com CNAME .
-audiobible-production-analytics-eh.servicebus.windows.net CNAME .
-*.audiobible-production-analytics-eh.servicebus.windows.net CNAME .
 az667904.vo.msecnd.net CNAME .
 *.az667904.vo.msecnd.net CNAME .
 azurewatson.microsoft.com CNAME .
@@ -104,8 +112,6 @@ b-ring.msedge.net CNAME .
 *.b-ring.msedge.net CNAME .
 bat.bing.com CNAME .
 *.bat.bing.com CNAME .
-bat.r.msn.com CNAME .
-*.bat.r.msn.com CNAME .
 beacons.trafficmanager.net CNAME .
 *.beacons.trafficmanager.net CNAME .
 beacons.xboxlive.com CNAME .
@@ -248,8 +254,6 @@ collector-main.trafficmanager.net CNAME .
 *.collector-main.trafficmanager.net CNAME .
 collector.azure.cn CNAME .
 *.collector.azure.cn CNAME .
-collector.azure.eaglex.ic.gov CNAME .
-*.collector.azure.eaglex.ic.gov CNAME .
 collector.azure.microsoft.cloud CNAME .
 *.collector.azure.microsoft.cloud CNAME .
 commerce.bing.com CNAME .
@@ -276,8 +280,8 @@ eaus2watcab01.blob.core.windows.net CNAME .
 *.eaus2watcab01.blob.core.windows.net CNAME .
 eaus2watcab02.blob.core.windows.net CNAME .
 *.eaus2watcab02.blob.core.windows.net CNAME .
-ehtelemetrystaging.servicebus.windows.net CNAME .
-*.ehtelemetrystaging.servicebus.windows.net CNAME .
+esc-visio-telemetry.officeapps.live.com CNAME .
+*.esc-visio-telemetry.officeapps.live.com CNAME .
 euc-excel-telemetry.officeapps.live.com CNAME .
 *.euc-excel-telemetry.officeapps.live.com CNAME .
 euc-excel-telemetry.wac.trafficmanager.net CNAME .
@@ -326,8 +330,6 @@ ffc-excel-telemetry.officeapps.live.com CNAME .
 *.ffc-excel-telemetry.officeapps.live.com CNAME .
 ffc-word-telemetry.officeapps.live.com CNAME .
 *.ffc-word-telemetry.officeapps.live.com CNAME .
-fgteu1-word-telemetry-vip.officeapps.live.com CNAME .
-*.fgteu1-word-telemetry-vip.officeapps.live.com CNAME .
 flex.msn.com CNAME .
 *.flex.msn.com CNAME .
 fp.msedge.net CNAME .
@@ -344,6 +346,8 @@ ghochv3eng.trafficmanager.net CNAME .
 *.ghochv3eng.trafficmanager.net CNAME .
 glance-analytics.trafficmanager.net CNAME .
 *.glance-analytics.trafficmanager.net CNAME .
+h.msn.com CNAME .
+*.h.msn.com CNAME .
 h1.msn.com CNAME .
 *.h1.msn.com CNAME .
 h2.msn.com CNAME .
@@ -354,8 +358,6 @@ h6.msn.com CNAME .
 *.h6.msn.com CNAME .
 hk-tracker.trafficmanager.net CNAME .
 *.hk-tracker.trafficmanager.net CNAME .
-hme-live-loganalytics-namespace.servicebus.windows.net CNAME .
-*.hme-live-loganalytics-namespace.servicebus.windows.net CNAME .
 hme-uat-loganalytics-namespace.servicebus.windows.net CNAME .
 *.hme-uat-loganalytics-namespace.servicebus.windows.net CNAME .
 i1.services.social.microsoft.com CNAME .
@@ -410,6 +412,8 @@ k-ring-fallback.msedge.net CNAME .
 *.k-ring-fallback.msedge.net CNAME .
 k-ring.msedge.net CNAME .
 *.k-ring.msedge.net CNAME .
+keyniusprod-events.trafficmanager.net CNAME .
+*.keyniusprod-events.trafficmanager.net CNAME .
 kg-legacy-analytics.servicebus.windows.net CNAME .
 *.kg-legacy-analytics.servicebus.windows.net CNAME .
 legacywatson.trafficmanager.net CNAME .
@@ -462,6 +466,8 @@ noc-visio-telemetry.officeapps.live.com CNAME .
 *.noc-visio-telemetry.officeapps.live.com CNAME .
 o.xbox.com CNAME .
 *.o.xbox.com CNAME .
+o365diagtelemetry.trafficmanager.net CNAME .
+*.o365diagtelemetry.trafficmanager.net CNAME .
 oca.microsoft.com CNAME .
 *.oca.microsoft.com CNAME .
 office-events-data.trafficmanager.net CNAME .
@@ -472,6 +478,8 @@ outlookads.live.com CNAME .
 *.outlookads.live.com CNAME .
 partnerfraudevents.trafficmanager.net CNAME .
 *.partnerfraudevents.trafficmanager.net CNAME .
+pgtbr1-excel-telemetry-vip.officeapps.live.com CNAME .
+*.pgtbr1-excel-telemetry-vip.officeapps.live.com CNAME .
 pgtbr2-excel-telemetry-vip.officeapps.live.com CNAME .
 *.pgtbr2-excel-telemetry-vip.officeapps.live.com CNAME .
 pgteu1-excel-telemetry-vip.officeapps.live.com CNAME .
@@ -496,8 +504,14 @@ pgteu4-excel-telemetry-vip.officeapps.live.com CNAME .
 *.pgteu4-excel-telemetry-vip.officeapps.live.com CNAME .
 pgteu4-powerpoint-telemetry-vip.officeapps.live.com CNAME .
 *.pgteu4-powerpoint-telemetry-vip.officeapps.live.com CNAME .
+pgteu4-word-telemetry-vip.officeapps.live.com CNAME .
+*.pgteu4-word-telemetry-vip.officeapps.live.com CNAME .
+pgteu5-excel-telemetry-vip.officeapps.live.com CNAME .
+*.pgteu5-excel-telemetry-vip.officeapps.live.com CNAME .
 pgteu5-powerpoint-telemetry-vip.officeapps.live.com CNAME .
 *.pgteu5-powerpoint-telemetry-vip.officeapps.live.com CNAME .
+pgteu5-word-telemetry-vip.officeapps.live.com CNAME .
+*.pgteu5-word-telemetry-vip.officeapps.live.com CNAME .
 pgtus1-excel-telemetry-vip.officeapps.live.com CNAME .
 *.pgtus1-excel-telemetry-vip.officeapps.live.com CNAME .
 pgtus1-powerpoint-telemetry-vip.officeapps.live.com CNAME .
@@ -570,6 +584,8 @@ prod.editor.ads.trafficmanager.net CNAME .
 *.prod.editor.ads.trafficmanager.net CNAME .
 production-jobactivity-analytics.servicebus.windows.net CNAME .
 *.production-jobactivity-analytics.servicebus.windows.net CNAME .
+r.msn.com CNAME .
+*.r.msn.com CNAME .
 rad.live.com CNAME .
 *.rad.live.com CNAME .
 rad.microsoft.com CNAME .
@@ -582,6 +598,42 @@ rawtelemetry-east.servicebus.windows.net CNAME .
 *.rawtelemetry-east.servicebus.windows.net CNAME .
 rawtelemetry-west.servicebus.windows.net CNAME .
 *.rawtelemetry-west.servicebus.windows.net CNAME .
+rddiagnostics-g-apac-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-apac-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-au-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-au-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-br-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-br-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-ca-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-ca-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-ch-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-ch-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-de-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-de-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-es-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-es-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-eu-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-eu-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-fr-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-fr-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-gb-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-gb-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-il-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-il-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-in-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-in-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-jp-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-jp-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-kr-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-kr-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-mx-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-mx-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-no-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-no-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-sa-r1.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-sa-r1.wvd.microsoft.com CNAME .
+rddiagnostics-g-us-r0.wvd.microsoft.com CNAME .
+*.rddiagnostics-g-us-r0.wvd.microsoft.com CNAME .
 redir.metaservices.microsoft.com CNAME .
 *.redir.metaservices.microsoft.com CNAME .
 rel.msn.com CNAME .
@@ -688,6 +740,20 @@ ukc-onenote-telemetry.officeapps.live.com CNAME .
 *.ukc-onenote-telemetry.officeapps.live.com CNAME .
 ukc-visio-telemetry.officeapps.live.com CNAME .
 *.ukc-visio-telemetry.officeapps.live.com CNAME .
+us-mesh-events-data-leafs.trafficmanager.net CNAME .
+*.us-mesh-events-data-leafs.trafficmanager.net CNAME .
+us1-excel-telemetry.officeapps.live.com CNAME .
+*.us1-excel-telemetry.officeapps.live.com CNAME .
+us1-powerpoint-telemetry.officeapps.live.com CNAME .
+*.us1-powerpoint-telemetry.officeapps.live.com CNAME .
+us1-word-telemetry.officeapps.live.com CNAME .
+*.us1-word-telemetry.officeapps.live.com CNAME .
+us4-excel-telemetry.officeapps.live.com CNAME .
+*.us4-excel-telemetry.officeapps.live.com CNAME .
+us5-word-telemetry.officeapps.live.com CNAME .
+*.us5-word-telemetry.officeapps.live.com CNAME .
+us6-excel-telemetry.officeapps.live.com CNAME .
+*.us6-excel-telemetry.officeapps.live.com CNAME .
 usc-onenote-telemetry.officeapps.live.com CNAME .
 *.usc-onenote-telemetry.officeapps.live.com CNAME .
 usc-visio-telemetry.officeapps.live.com CNAME .
