@@ -44,7 +44,7 @@ def verify(base):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
-    parser.add_argument('--base',default='https://safeguard.avrxt.tech')
+    parser.add_argument('--base',default='https://safeguard.avrxt.dev')
     parser.add_argument('--attempts',type=int,default=1)
     args=parser.parse_args()
     if not args.base.startswith('https://'):
