@@ -124,8 +124,11 @@ def build():
         previous=ROOT/'sources'/f'{source_id}.txt'
         if len(entries)<source['minimum']:
             raise ValueError(f'{source_id}: below minimum')
-        if previous.exists() and len(entries)<len(parse_source(previous.read_text(encoding='utf-8-sig'),source)[0])*.75:
-            raise ValueError(f'{source_id}: unexpected reduction over 25%')
+        maximum_reduction=source.get('maximum_reduction',.25)
+        if not isinstance(maximum_reduction,(int,float)) or not 0 <= maximum_reduction < 1:
+            raise ValueError(f'{source_id}: invalid maximum reduction')
+        if previous.exists() and len(entries)<len(parse_source(previous.read_text(encoding='utf-8-sig'),source)[0])*(1-maximum_reduction):
+            raise ValueError(f'{source_id}: unexpected reduction over {maximum_reduction:.0%}')
         stage[f'sources/{source_id}.txt']=data
         stage[f'sources/{source_id}-excluded.json']=(json.dumps(rejected,indent=2)+'\n').encode()
         report['sources'].append({**source,'domains':len(entries),'sha256':hashlib.sha256(data).hexdigest(),'rejected_rules':len(rejected)})

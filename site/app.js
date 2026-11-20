@@ -13,7 +13,7 @@ document.addEventListener('click', async event => {
   }
 });
 document.querySelectorAll('.main-format').forEach(select=>select.addEventListener('change',()=>{
-  $(select.dataset.profile+'-url').value='https://safeguard.avrxt.tech/blocklists/'+select.dataset.profile+select.value;
+  $(select.dataset.profile+'-url').value='https://safeguard.avrxt.dev/blocklists/'+select.dataset.profile+select.value;
 }));
 let categoryCatalog=[], categoryReport={}, selectedGroup='All';
 function renderCategories() {
@@ -31,7 +31,7 @@ function renderCategories() {
     const description=document.createElement('p');description.textContent=item.description;
     const warning=document.createElement('p');warning.className='category-warning';warning.textContent=item.warning;
     const field=document.createElement('div');field.className='copy-field';
-    const input=document.createElement('input');input.id='category-'+item.id;input.readOnly=true;input.setAttribute('aria-label',item.name+' subscription URL');input.value='https://safeguard.avrxt.tech/blocklists/'+item.id+suffix;
+    const input=document.createElement('input');input.id='category-'+item.id;input.readOnly=true;input.setAttribute('aria-label',item.name+' subscription URL');input.value='https://safeguard.avrxt.dev/blocklists/'+item.id+suffix;
     const button=document.createElement('button');button.type='button';button.dataset.copy=input.id;button.setAttribute('aria-label','Copy '+item.name+' URL');button.textContent='Copy ↗';field.append(input,button);
     const links=document.createElement('div');links.className='formats';
     for(const [label,extension] of [['AdGuard','.txt'],['Domains','-domains.txt'],['Hosts','-hosts.txt'],['dnsmasq','-dnsmasq.conf'],['Unbound','-unbound.conf'],['RPZ','-rpz.zone']]) {

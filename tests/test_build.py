@@ -59,6 +59,9 @@ class BuilderTests(unittest.TestCase):
     def test_failed_source_preserves_published_files(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory)
+            (root/'rules').mkdir()
+            (root/'rules/allow.txt').write_text('')
+            (root/'rules/block.txt').write_text('')
             (root/'catalog.json').write_text('[{"id":"family","name":"Family"}]')
             (root/'blocklists').mkdir()
             published=root/'blocklists/family.txt'
@@ -80,6 +83,20 @@ class BuilderTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     b.build()
             self.assertIn('three.example.com',previous.read_text())
+
+    def test_reviewed_source_can_allow_larger_reduction(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'rules').mkdir()
+            (root/'rules/allow.txt').write_text('')
+            (root/'rules/block.txt').write_text('')
+            (root/'catalog.json').write_text('[{"id":"family","name":"Family"}]')
+            (root/'sources').mkdir()
+            (root/'sources/normal.txt').write_text('||one.example.com^\n||two.example.com^\n||three.example.com^\n')
+            (root/'sources.json').write_text(json.dumps([{'id':'normal','url':'https://example.com','minimum':1,'maximum_reduction':.7,'profiles':['family']}]))
+            with patch.object(b,'ROOT',root),patch.object(b,'download',return_value=b'||one.example.com^'):
+                b.build()
+            self.assertIn('one.example.com',(root/'blocklists/family.txt').read_text())
 
 if __name__=='__main__':
     unittest.main()

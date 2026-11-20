@@ -38,7 +38,8 @@
     "profiles": [
       "gambling"
     ],
-    "minimum": 1000
+    "minimum": 1000,
+    "maximum_reduction": 0.6
   },
   {
     "id": "social",

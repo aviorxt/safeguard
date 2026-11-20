@@ -41,7 +41,7 @@ def markdown(entries):
     text='# Community contributors\n\nCredit for accepted, published domain submissions. Usernames are verified against the GitHub issue author.\n\n'
     ordered=sorted(entries,key=lambda item:datetime.fromisoformat(item['accepted_utc']),reverse=True)
     if not ordered:
-        return text+'No community domain submissions have been published yet. [Suggest a domain](https://safeguard.avrxt.tech/update-list).\n'
+        return text+'No community domain submissions have been published yet. [Suggest a domain](https://safeguard.avrxt.dev/update-list).\n'
     latest=ordered[0]
     text+='Last updated by [@'+latest['username']+'](https://github.com/'+latest['username']+').\n\n'
     text+='| Contributor | Domain | Category | Accepted (UTC) | Request |\n| --- | --- | --- | --- | --- |\n'
