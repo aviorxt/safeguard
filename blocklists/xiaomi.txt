@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard Xiaomi
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 410 unique domains
+! Modified aggregation of reviewed upstream lists; 411 unique domains
 ! Expires: 1 day
 ||11-c3.bigdata.ctc.neo.xiaomi.com^
 ||3rdupgrade.pandora.xiaomi.com^
@@ -242,6 +242,7 @@
 ||mistat.rus.xiaomi.com.ksyna.net^
 ||mistat.xiaomi.com^
 ||mistat.xiaomi.com.download.ks-cdn.com^
+||mistat.xiaomi.com.mgslb.com^
 ||miui-l7-data-other-c3.pt.miui.com^
 ||miui-l7-data-other.pt.miui.com^
 ||miui.net^

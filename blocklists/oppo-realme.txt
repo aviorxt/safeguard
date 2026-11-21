@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard OPPO & Realme
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 530 unique domains
+! Modified aggregation of reviewed upstream lists; 532 unique domains
 ! Expires: 1 day
 ||ad-growth-in.heytapmobile.com^
 ||ad-growth-ru.heytapmobile.com^
@@ -53,6 +53,7 @@
 ||bdapi-ads-in.heytapmobile.com^
 ||bdapi-ads-sg.heytapmobile.com^
 ||br.ekatox.com^
+||browser-api-au.heytapmobile.com^
 ||browser-api-br.heytapmobile.com^
 ||browser-api-fr.heytapmobile.com^
 ||browser-api-gl-01.heytapmobile.com^
@@ -470,6 +471,7 @@
 ||omes-sec.heytapmobile.com^
 ||oop-installer-gl.heytapmobile.com^
 ||opay.heytapmobile.com^
+||opex-service-eu-allawna-e3dde.fr-w01.cngw.allawnos.com^
 ||opex-service-eu.allawnos.com^
 ||opex-service-in.allawnos.com^
 ||opex-service-sg.allawnos.com^

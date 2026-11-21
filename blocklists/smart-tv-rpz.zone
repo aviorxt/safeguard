@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795259764 3600 600 86400 60 )
 @ IN NS localhost.
 acr.roku.com CNAME .
 *.acr.roku.com CNAME .
@@ -382,6 +382,8 @@ et-rdx2-lgtvsdp-com.aws-prd.net CNAME .
 *.et-rdx2-lgtvsdp-com.aws-prd.net CNAME .
 eu7-info-lgsmartad-com.aws-prd.net CNAME .
 *.eu7-info-lgsmartad-com.aws-prd.net CNAME .
+eu7-rdx2-lgtvsdp-com.aws-prd.net CNAME .
+*.eu7-rdx2-lgtvsdp-com.aws-prd.net CNAME .
 fi-ad-lgsmartad-com.aws-prd.net CNAME .
 *.fi-ad-lgsmartad-com.aws-prd.net CNAME .
 fi-info-lgsmartad-com.aws-prd.net CNAME .

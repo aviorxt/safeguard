@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard Apple
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 104 unique domains
+! Modified aggregation of reviewed upstream lists; 105 unique domains
 ! Expires: 1 day
 ||acfeedbackws.icloud.com^
 ||ads.apple.com^
@@ -81,6 +81,7 @@
 ||prod-event-relay-sports-api.v.aaplimg.com^
 ||prod-event-relay-stocks-api.v.aaplimg.com^
 ||prod-event-relay-weather-api.v.aaplimg.com^
+||prod-event-relay-web-api.v.aaplimg.com^
 ||prod-iwork-events.v.aaplimg.com^
 ||prod-news-notification-events.v.aaplimg.com^
 ||proxy-skadnetwork.apple.com^
