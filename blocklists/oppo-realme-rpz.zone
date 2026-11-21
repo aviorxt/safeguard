@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795259764 3600 600 86400 60 )
 @ IN NS localhost.
 ad-growth-in.heytapmobile.com CNAME .
 *.ad-growth-in.heytapmobile.com CNAME .
@@ -102,6 +102,8 @@ bdapi-ads-sg.heytapmobile.com CNAME .
 *.bdapi-ads-sg.heytapmobile.com CNAME .
 br.ekatox.com CNAME .
 *.br.ekatox.com CNAME .
+browser-api-au.heytapmobile.com CNAME .
+*.browser-api-au.heytapmobile.com CNAME .
 browser-api-br.heytapmobile.com CNAME .
 *.browser-api-br.heytapmobile.com CNAME .
 browser-api-fr.heytapmobile.com CNAME .
@@ -936,6 +938,8 @@ oop-installer-gl.heytapmobile.com CNAME .
 *.oop-installer-gl.heytapmobile.com CNAME .
 opay.heytapmobile.com CNAME .
 *.opay.heytapmobile.com CNAME .
+opex-service-eu-allawna-e3dde.fr-w01.cngw.allawnos.com CNAME .
+*.opex-service-eu-allawna-e3dde.fr-w01.cngw.allawnos.com CNAME .
 opex-service-eu.allawnos.com CNAME .
 *.opex-service-eu.allawnos.com CNAME .
 opex-service-in.allawnos.com CNAME .

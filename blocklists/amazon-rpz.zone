@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795175451 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795259764 3600 600 86400 60 )
 @ IN NS localhost.
 3px.axp.amazon-adsystem.com CNAME .
 *.3px.axp.amazon-adsystem.com CNAME .
@@ -332,8 +332,6 @@ fls-cn.amazon.cn CNAME .
 *.fls-cn.amazon.cn CNAME .
 fls-cn.amazon.com CNAME .
 *.fls-cn.amazon.com CNAME .
-fls-eu.amazon-adsystem.com CNAME .
-*.fls-eu.amazon-adsystem.com CNAME .
 fls-eu.amazon.ae CNAME .
 *.fls-eu.amazon.ae CNAME .
 fls-eu.amazon.co.uk CNAME .
@@ -366,8 +364,6 @@ fls-eu.amazon.se CNAME .
 *.fls-eu.amazon.se CNAME .
 fls-fe-opf.amazon.com CNAME .
 *.fls-fe-opf.amazon.com CNAME .
-fls-fe.amazon-adsystem.com CNAME .
-*.fls-fe.amazon-adsystem.com CNAME .
 fls-fe.amazon.co.jp CNAME .
 *.fls-fe.amazon.co.jp CNAME .
 fls-fe.amazon.com CNAME .
@@ -376,8 +372,6 @@ fls-fe.amazon.com.au CNAME .
 *.fls-fe.amazon.com.au CNAME .
 fls-fe.amazon.sg CNAME .
 *.fls-fe.amazon.sg CNAME .
-fls-na.amazon-adsystem.com CNAME .
-*.fls-na.amazon-adsystem.com CNAME .
 fls-na.amazon.ca CNAME .
 *.fls-na.amazon.ca CNAME .
 fls-na.amazon.com CNAME .
@@ -564,6 +558,8 @@ sponsored-ads-eu.amazon.sa CNAME .
 *.sponsored-ads-eu.amazon.sa CNAME .
 sponsored-ads-eu.amazon.se CNAME .
 *.sponsored-ads-eu.amazon.se CNAME .
+sponsored-ads-euc-1.amazon-adsystem.com CNAME .
+*.sponsored-ads-euc-1.amazon-adsystem.com CNAME .
 sponsored-ads-fe.amazon-adsystem.com CNAME .
 *.sponsored-ads-fe.amazon-adsystem.com CNAME .
 sponsored-ads-na.amazon-adsystem.com CNAME .
