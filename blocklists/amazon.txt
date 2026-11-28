@@ -1,7 +1,7 @@
 ! Title: AVRXT Safeguard Amazon devices
 ! Homepage: https://github.com/aviorxt/safeguard
 ! License: GPL-3.0; MIT notices in licenses/; see NOTICE
-! Modified aggregation of reviewed upstream lists; 380 unique domains
+! Modified aggregation of reviewed upstream lists; 381 unique domains
 ! Expires: 1 day
 ||3px.axp.amazon-adsystem.com^
 ||aan.amazon.co.jp^
@@ -281,6 +281,7 @@
 ||sponsored-ads-eu.amazon.pl^
 ||sponsored-ads-eu.amazon.sa^
 ||sponsored-ads-eu.amazon.se^
+||sponsored-ads-eu.jobs.amazon.co.za^
 ||sponsored-ads-euc-1.amazon-adsystem.com^
 ||sponsored-ads-fe.amazon-adsystem.com^
 ||sponsored-ads-na.amazon-adsystem.com^

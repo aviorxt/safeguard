@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795783046 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795866940 3600 600 86400 60 )
 @ IN NS localhost.
 3px.axp.amazon-adsystem.com CNAME .
 *.3px.axp.amazon-adsystem.com CNAME .
@@ -558,6 +558,8 @@ sponsored-ads-eu.amazon.sa CNAME .
 *.sponsored-ads-eu.amazon.sa CNAME .
 sponsored-ads-eu.amazon.se CNAME .
 *.sponsored-ads-eu.amazon.se CNAME .
+sponsored-ads-eu.jobs.amazon.co.za CNAME .
+*.sponsored-ads-eu.jobs.amazon.co.za CNAME .
 sponsored-ads-euc-1.amazon-adsystem.com CNAME .
 *.sponsored-ads-euc-1.amazon-adsystem.com CNAME .
 sponsored-ads-fe.amazon-adsystem.com CNAME .

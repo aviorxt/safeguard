@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795783046 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795866940 3600 600 86400 60 )
 @ IN NS localhost.
 acr-au-prd.samsungcloud.tv CNAME .
 *.acr-au-prd.samsungcloud.tv CNAME .
@@ -192,8 +192,6 @@ samsung.telemetry.eyeo.com CNAME .
 *.samsung.telemetry.eyeo.com CNAME .
 samsungacr.com CNAME .
 *.samsungacr.com CNAME .
-samsungadhub.com CNAME .
-*.samsungadhub.com CNAME .
 samsungads.adsmeasurement.com CNAME .
 *.samsungads.adsmeasurement.com CNAME .
 samsungads.com CNAME .
