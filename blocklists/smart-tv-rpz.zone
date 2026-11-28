@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795783046 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795866940 3600 600 86400 60 )
 @ IN NS localhost.
 acr.roku.com CNAME .
 *.acr.roku.com CNAME .
@@ -8,10 +8,6 @@ ad-eng.prod.rpay.int.roku.com CNAME .
 *.ad-eng.prod.rpay.int.roku.com CNAME .
 ad-eng.staging.rpay.int.roku.com CNAME .
 *.ad-eng.staging.rpay.int.roku.com CNAME .
-ad.qa.ap.int.roku.com CNAME .
-*.ad.qa.ap.int.roku.com CNAME .
-ad.usw2.qa.ap.int.roku.com CNAME .
-*.ad.usw2.qa.ap.int.roku.com CNAME .
 adeng-identity-prod3.bdp.roku.com CNAME .
 *.adeng-identity-prod3.bdp.roku.com CNAME .
 adeng-looker-bi-oneview-prod-1001.bdp.roku.com CNAME .
@@ -614,8 +610,6 @@ logs.dev.sr.roku.com CNAME .
 *.logs.dev.sr.roku.com CNAME .
 logs.prod.ap.int.roku.com CNAME .
 *.logs.prod.ap.int.roku.com CNAME .
-logs.qa.ap.int.roku.com CNAME .
-*.logs.qa.ap.int.roku.com CNAME .
 logs.roku.com CNAME .
 *.logs.roku.com CNAME .
 logs.sr.roku.com CNAME .

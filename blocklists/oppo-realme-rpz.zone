@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795783046 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795866940 3600 600 86400 60 )
 @ IN NS localhost.
 ad-growth-in.heytapmobile.com CNAME .
 *.ad-growth-in.heytapmobile.com CNAME .
@@ -30,6 +30,8 @@ adsfs-sdkconfig.heytapimage.com CNAME .
 *.adsfs-sdkconfig.heytapimage.com CNAME .
 adsfs.oppomobile.com CNAME .
 *.adsfs.oppomobile.com CNAME .
+adx-ads-fr-heytapmobila-c7870.fr-w01.cngw.heytapmobile.com CNAME .
+*.adx-ads-fr-heytapmobila-c7870.fr-w01.cngw.heytapmobile.com CNAME .
 adx-ads-fr.heytapmobile.com CNAME .
 *.adx-ads-fr.heytapmobile.com CNAME .
 adx-ads-ru.heytapmobile.com CNAME .
@@ -48,6 +50,8 @@ adx-op-ru.heytapmobile.com CNAME .
 *.adx-op-ru.heytapmobile.com CNAME .
 adx-op-sg.heytapmobile.com CNAME .
 *.adx-op-sg.heytapmobile.com CNAME .
+adx-u-fr.heytapmobile.com CNAME .
+*.adx-u-fr.heytapmobile.com CNAME .
 adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com CNAME .
 *.adx-u-in-heytapmobile-a-9ae47.in-s01.cngw.heytapmobile.com CNAME .
 adx-u-in.heytapmobile.com CNAME .
@@ -118,6 +122,8 @@ browser-api-in.heytapmobile.com CNAME .
 *.browser-api-in.heytapmobile.com CNAME .
 browser-api-my.heytapmobile.com CNAME .
 *.browser-api-my.heytapmobile.com CNAME .
+browser-api-nz.heytapmobile.com CNAME .
+*.browser-api-nz.heytapmobile.com CNAME .
 browser-api-ph.heytapmobile.com CNAME .
 *.browser-api-ph.heytapmobile.com CNAME .
 browser-api-ru.heytapmobile.com CNAME .

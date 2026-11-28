@@ -1,6 +1,6 @@
 ; AVRXT Safeguard; GPL-3.0; see NOTICE
 $TTL 60
-@ IN SOA localhost. hostmaster.localhost. ( 1795783046 3600 600 86400 60 )
+@ IN SOA localhost. hostmaster.localhost. ( 1795866940 3600 600 86400 60 )
 @ IN NS localhost.
 11-c3.bigdata.ctc.neo.xiaomi.com CNAME .
 *.11-c3.bigdata.ctc.neo.xiaomi.com CNAME .
@@ -44,6 +44,8 @@ ad.rus.xiaomi.com CNAME .
 *.ad.rus.xiaomi.com CNAME .
 ad.xiaomi.com CNAME .
 *.ad.xiaomi.com CNAME .
+ad.xiaomi.com.mgslb.com CNAME .
+*.ad.xiaomi.com.mgslb.com CNAME .
 ads.mi.com CNAME .
 *.ads.mi.com CNAME .
 adv.l7.34.sec.miui.com CNAME .
